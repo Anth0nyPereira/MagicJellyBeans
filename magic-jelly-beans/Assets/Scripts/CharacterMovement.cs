@@ -7,35 +7,31 @@ public class CharacterMovement : MonoBehaviour
 {
     public CharacterController controller;
 
+    private Rigidbody rb;
+
     // gravity attributes
     private Vector3 velocity;
     private float gravity = -9.81f;
 
     // collision with ground terrain
     public Transform groundCheck;
-    private float groundRadius = 0.4f;
+    private float groundRadius = 1.0f;
     public LayerMask groundMask;
     private bool isGrounded;
 
     // walking attributes
-    public Transform initialPos;
+    //public Transform initialPos;
+    //public Transform anotherPos;
     public Vector3 direction;
-    public float speed = 6f;
+    public float speed = 2f;
 
     // jumping attributes
     private float jumpHeight = 8.0f;
 
-
-
-    void Awake()
-    {
-        
-    }
-
     
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -63,12 +59,18 @@ public class CharacterMovement : MonoBehaviour
             float verticalI = Input.GetAxisRaw("Vertical");
             direction = new Vector3(horizontalI, 0f, verticalI).normalized;
 
-            handleRotation();//Turn to where is running
+            // handleRotation();//Turn to where is running
 
             if (direction.magnitude >= 0.1)
             {
                 controller.Move(direction * speed * Time.deltaTime);
             }
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                // rb.AddForce(Vector3.left * 10000 * speed);
+            }
+
         }
     }
 
@@ -77,7 +79,7 @@ public class CharacterMovement : MonoBehaviour
         if (transform.position.y <= -10)
         {
             velocity.y = -2f;
-            transform.position = initialPos.position;
+            // transform.position = initialPos.position;
             // Debug.Log(velocity);
             return true;
         }
@@ -98,5 +100,17 @@ public class CharacterMovement : MonoBehaviour
         Vector3 positionToLookAt = currentPosition + newPosition;
 
         transform.LookAt(positionToLookAt);
+    }
+
+    public float calculateAngle(Vector3 point1, Vector3 point2, Vector3 point3)
+    {
+        Vector3 firstVector = point2 - point1;
+        firstVector = new Vector3(0, firstVector.y, firstVector.z);
+        Vector3 secondVector = point2 - point3;
+        secondVector = new Vector3(0, secondVector.y, secondVector.z);
+
+        float angle = Vector3.Angle(firstVector, secondVector); // in rads
+
+        return Mathf.Rad2Deg * angle;
     }
 }
