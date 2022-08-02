@@ -8,12 +8,12 @@ public class CollectableData : ScriptableObject
     [SerializeField]
     private string collectableName;
     [SerializeField]
-    private Material material;
+    private List<Material> materials = new List<Material>();
 
     public string CollectableName
     { get{ return collectableName; } }
 
-    public Material Material
-    { get { return material; } }
+    public List<Material> Materials
+    { get { return materials; } }
 }
 

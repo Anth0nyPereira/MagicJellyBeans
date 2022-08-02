@@ -13,6 +13,7 @@ public class Collectable : Collidable
         {
             Debug.Log("I'm colliding with the player");
             // do something to the player
+            // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
 
         }
