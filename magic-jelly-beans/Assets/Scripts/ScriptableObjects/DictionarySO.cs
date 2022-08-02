@@ -5,12 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Dictionary Storage", menuName = "Dictionary Storage", order = 52)]
 public class DictionarySO : ScriptableObject
 {
+    // keys are the color name, which is a string, and the corresponding value is a 
     [SerializeField]
-    private List<string> keys = new();
+    private string color;
 
     [SerializeField]
-    private List<Material> values = new();
+    private List<Material> materials = new();
 
-    public List<string> Keys { get => keys; set => keys = value; }
-    public List<Material> Values { get => values; set => values = value; }
+    public string Color { get => color; set => color = value; }
+    public List<Material> Materials { get => materials; set => materials = value; }
 }
