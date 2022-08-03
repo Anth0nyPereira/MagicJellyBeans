@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public CharacterController controller;
+    // public CharacterController controller;
 
     private Rigidbody rb;
 
@@ -52,7 +52,7 @@ public class CharacterMovement : MonoBehaviour
 
             // character gravity
             velocity.y += gravity * Time.deltaTime;
-            controller.Move(velocity * Time.deltaTime);
+            // controller.Move(velocity * Time.deltaTime);
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
@@ -63,7 +63,8 @@ public class CharacterMovement : MonoBehaviour
 
             if (direction.magnitude >= 0.1)
             {
-                controller.Move(direction * speed * Time.deltaTime);
+                //controller.Move(direction * speed * Time.deltaTime);
+                transform.Translate(direction * speed * Time.deltaTime);
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))

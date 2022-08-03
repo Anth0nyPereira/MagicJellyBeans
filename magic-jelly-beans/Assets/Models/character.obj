@@ -1,7 +1,7 @@
 # Blender v3.2.2 OBJ File: 'character.blend'
 # www.blender.org
 mtllib character.mtl
-o Cube
+o Character_Cube
 v 0.061337 -0.123717 -0.034815
 v 0.022617 -0.338793 -0.034815
 v 0.061337 -0.129741 0.031847
