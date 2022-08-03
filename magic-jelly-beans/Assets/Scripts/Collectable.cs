@@ -16,9 +16,9 @@ public class Collectable : Collidable
     public override void OnCollisionEnter(Collision other)
     {
         Debug.Log(other);
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Character")
         {
-            Debug.Log("I'm colliding with the player");
+            Debug.Log("I'm colliding with the character");
             // do something to the player
             // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
