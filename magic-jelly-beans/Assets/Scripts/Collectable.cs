@@ -24,8 +24,12 @@ public class Collectable : Collidable
             // destroy the gameObject
             foreach (ColorSO item in colorList.ColorList)
             {
-                Debug.Log(item);
+                if (item.Color == color)
+                {
+                    other.gameObject.GetComponent<Renderer>().material = item.Materials[0];
+                }
             }
+            Destroy(gameObject);
         }
     }
 }

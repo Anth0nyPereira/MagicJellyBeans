@@ -450,8 +450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 772279152}
-  color: 
-  colorList: {fileID: 0}
+  color: yellow
+  colorList: {fileID: 11400000, guid: 576225a41ea329741bdc60843bb8242d, type: 2}
 --- !u!64 &772279152
 MeshCollider:
   m_ObjectHideFlags: 0
