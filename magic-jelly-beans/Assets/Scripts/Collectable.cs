@@ -19,7 +19,7 @@ public class Collectable : Collidable
             // do something to the player
             // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
-            ColorSO colorSO = getColorBasedOnName(color);
+            ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
             other.gameObject.GetComponent<Renderer>().material = colorSO.Materials[0];
             Destroy(gameObject);
         }

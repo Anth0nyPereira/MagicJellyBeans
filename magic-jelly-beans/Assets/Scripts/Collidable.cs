@@ -26,6 +26,18 @@ public class Collidable : MonoBehaviour
         return null;
     }
 
+    public ColorSO getColorBasedOnMaterial(Material m)
+    {
+        foreach (ColorSO item in colorList.ColorList)
+        {
+            if (item.Materials.Contains(m))
+            {
+                return item;
+            }
+        }
+        return null;
+    }
+
     public void getColorList(ColorListSO cl)
     {
         colorList = cl;
