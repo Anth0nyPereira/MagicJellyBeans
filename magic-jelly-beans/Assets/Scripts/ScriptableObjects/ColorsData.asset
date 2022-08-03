@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cb7f609fc7a94d499cacf29ef443773, type: 3}
-  m_Name: YellowData
+  m_Script: {fileID: 11500000, guid: f721961698311ca4085a20c6823ee687, type: 3}
+  m_Name: ColorsData
   m_EditorClassIdentifier: 
-  color: yellow
-  materials:
-  - {fileID: 2100000, guid: 844f02e913def6b4d966a46d4c73990a, type: 2}
-  - {fileID: 2100000, guid: b8679a50ade1853419765af51b7374ad, type: 2}
+  colorList:
+  - {fileID: 11400000, guid: 2a7851f8de1e6cc4d9201cc2867e1463, type: 2}
