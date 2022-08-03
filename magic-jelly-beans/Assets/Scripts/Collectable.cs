@@ -10,9 +10,6 @@ public class Collectable : Collidable
     [SerializeField]
     private string color;
 
-    [SerializeField]
-    private ColorListSO colorList;
-
     public override void OnCollisionEnter(Collision other)
     {
         Debug.Log(other);
@@ -22,13 +19,8 @@ public class Collectable : Collidable
             // do something to the player
             // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
-            foreach (ColorSO item in colorList.ColorList)
-            {
-                if (item.Color == color)
-                {
-                    other.gameObject.GetComponent<Renderer>().material = item.Materials[0];
-                }
-            }
+            ColorSO colorSO = getColorBasedOnName(color);
+            other.gameObject.GetComponent<Renderer>().material = colorSO.Materials[0];
             Destroy(gameObject);
         }
     }
