@@ -7,6 +7,13 @@ public class Obstacle : Collidable
     private float damage; // damage that the player will receive if he's hit by the obstacle and his color is not the same 
     // as the obstacle itself
 
+    private bool firstCollision;
+
+    public void Awake()
+    {
+        firstCollision = true;
+    }
+
     public override void OnCollisionEnter(Collision other)
     {
         Debug.Log("entered oncollisionenter");
@@ -20,6 +27,7 @@ public class Obstacle : Collidable
             } else
             {
                 Debug.Log("They have not the same color, character collides once with the obstacle, is pushed backwards and then can pass through; character stress points increase");
+                characterCannotPass(other);
             }
         }
     }
@@ -44,8 +52,13 @@ public class Obstacle : Collidable
         Debug.Log("Hurraaayyyyy!! Decrease stress level");
     }
 
-    public void characterCannotPass()
+    public void characterCannotPass(Collision character)
     {
-
+        if (firstCollision)
+        {
+            Debug.Log("First time colliding, character should be pulled back!");
+            character.gameObject.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 2000);
+            firstCollision = false;
+        }
     }
 }
