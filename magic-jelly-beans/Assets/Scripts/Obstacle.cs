@@ -9,12 +9,14 @@ public class Obstacle : Collidable
 
     public override void OnCollisionEnter(Collision other)
     {
+        Debug.Log("entered oncollisionenter");
         if (other.gameObject.tag == "Character")
         {
             Debug.Log("Character was hit by an obstacle!");
             if (checkIfSameColor(other))
             {
                 Debug.Log("Character and obstacle have the same color, so character can pass through and damage/stress points decrease");
+                characterCanPass(other);
             } else
             {
                 Debug.Log("They have not the same color, character collides once with the obstacle, is pushed backwards and then can pass through; character stress points increase");
