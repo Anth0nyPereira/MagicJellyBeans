@@ -58,7 +58,11 @@ public class Obstacle : Collidable
         {
             Debug.Log("First time colliding, character should be pulled back!");
             character.gameObject.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 2000);
+            Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
             firstCollision = false;
+        } else // second time colliding
+        {
+            Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
         }
     }
 }
