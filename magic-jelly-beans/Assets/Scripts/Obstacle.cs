@@ -12,13 +12,20 @@ public class Obstacle : Collidable
         if (other.gameObject.tag == "Character")
         {
             Debug.Log("Character was hit by an obstacle!");
+            if (checkIfSameColor(other))
+            {
+                Debug.Log("Character and obstacle have the same color, so character can pass through and damage/stress points decrease");
+            } else
+            {
+                Debug.Log("They have not the same color, character collides once with the obstacle, is pushed backwards and then can pass through; character stress points increase");
+            }
         }
     }
 
     /* TODO: use scriptable object event system to have access to the player (and their parameters)
      * check how the color data will be stored (scriptable object??)
      */
-    public bool ifPlayerHasSameColor(Collision character) 
+    public bool checkIfSameColor(Collision character) 
     {
         ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
         Material foundMaterial = colorSO.Materials[0];
@@ -27,5 +34,16 @@ public class Obstacle : Collidable
             return true;
         }
         return false;
+    }
+
+    public void characterCanPass(Collision character)
+    {
+        Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
+        Debug.Log("Hurraaayyyyy!! Decrease stress level");
+    }
+
+    public void characterCannotPass()
+    {
+
     }
 }
