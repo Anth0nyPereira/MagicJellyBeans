@@ -7,8 +7,6 @@ public class Collectable : Collidable
     /* TODO: make the collectable change player's behavior and destroy it
      * add parameters: collectable data (color and name of material) via scriptable object
      * */
-    [SerializeField]
-    private string color;
 
     public override void OnCollisionEnter(Collision other)
     {

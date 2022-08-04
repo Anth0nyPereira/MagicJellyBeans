@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Obstacle : Collidable
 {
-    private string color; // color of the gameObject; it will probably be a scriptable object tho
     private float damage; // damage that the player will receive if he's hit by the obstacle and his color is not the same 
     // as the obstacle itself
 
@@ -24,12 +23,6 @@ public class Obstacle : Collidable
         ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
         Material foundMaterial = colorSO.Materials[0];
         if (foundMaterial == character.gameObject.GetComponent<Renderer>().sharedMaterial)
-        {
-            return true;
-        }
-        return false;
-        string playerColor = "red";
-        if (color == playerColor)
         {
             return true;
         }
