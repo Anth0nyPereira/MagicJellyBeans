@@ -10,17 +10,24 @@ public class Obstacle : Collidable
 
     public override void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Character")
         {
-            Debug.Log("Player was hit by an obstacle!");
+            Debug.Log("Character was hit by an obstacle!");
         }
     }
 
     /* TODO: use scriptable object event system to have access to the player (and their parameters)
      * check how the color data will be stored (scriptable object??)
      */
-    public bool ifPlayerHasSameColor() 
+    public bool ifPlayerHasSameColor(Collision character) 
     {
+        ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
+        Material foundMaterial = colorSO.Materials[0];
+        if (foundMaterial == character.gameObject.GetComponent<Renderer>().sharedMaterial)
+        {
+            return true;
+        }
+        return false;
         string playerColor = "red";
         if (color == playerColor)
         {
