@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Obstacle : Collidable
 {
-    private float damage; // damage that the player will receive if he's hit by the obstacle and his color is not the same 
-    // as the obstacle itself
+    [SerializeField]
+    private FloatSO damage; // damage that the player will receive if he's hit by the obstacle and their colors are not the same 
+    
 
     private bool firstCollision;
 
@@ -50,6 +51,8 @@ public class Obstacle : Collidable
     {
         Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
         Debug.Log("Hurraaayyyyy!! Decrease stress level");
+
+        // invoke event to make character's stress level decrease
     }
 
     public void characterCannotPass(Collision character)
