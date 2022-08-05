@@ -10,6 +10,11 @@ public class Terrain : Collidable
 
     public override void OnCollisionEnter(Collision other)
     {
+        base.OnCollisionEnter(other);
+    }
+
+    public void OnCollisionStay(Collision other)
+    {
         if (other.gameObject.tag == "Character")
         {
             Debug.Log("Character is on terrain!!");
