@@ -12,12 +12,12 @@ public class StressLevelManager : MonoBehaviour
         if (damage < 0)
         {
             Debug.Log("Make stress level decrease");
+            decreaseStress(damage);
         } else
         {
             Debug.Log("Make stress level increase");
-        }
-
-        
+            increaseStress(damage);
+        } 
     }
 
     private void decreaseStress(float damage)

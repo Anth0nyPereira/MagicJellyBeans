@@ -20,12 +20,13 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+    
     }
 
     private float computeStartingStressLevel()
     {
         float stress = (minStressLevel.Value + maxStressLevel.Value)/2;
+        Debug.Log("starting stress level: " + stress);
         return stress;
     }
 
@@ -36,5 +37,6 @@ public class Character : MonoBehaviour
     public void increaseStressLevel(float dam)
     {
         stressLevel += dam;
+        Debug.Log("new stress level: " + stressLevel);
     }
 }
