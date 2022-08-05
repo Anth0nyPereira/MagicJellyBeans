@@ -6,7 +6,9 @@ public class Obstacle : Collidable
 {
     [SerializeField]
     private FloatSO damage; // damage that the player will receive if he's hit by the obstacle and their colors are not the same 
-    
+
+    [SerializeField]
+    private FloatEvent updateStressLevel;
 
     private bool firstCollision;
 
@@ -53,6 +55,7 @@ public class Obstacle : Collidable
         Debug.Log("Hurraaayyyyy!! Decrease stress level");
 
         // invoke event to make character's stress level decrease
+        updateStressLevel.Raise(-damage.Value);
     }
 
     public void characterCannotPass(Collision character)
@@ -63,6 +66,10 @@ public class Obstacle : Collidable
             character.gameObject.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 2000);
             Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
             firstCollision = false;
+
+            // invoke event to make character's stress level increase
+            updateStressLevel.Raise(damage.Value);
+
         } else // second time colliding
         {
             Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
