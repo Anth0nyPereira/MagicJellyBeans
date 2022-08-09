@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6082029774698902390
+--- !u!114 &-3317978227027998297
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DissolveMaterial
+  m_Name: BananaBlack
   m_Shader: {fileID: -6465566751694194690, guid: 5bb816995f62279449c86fdb0fc521eb, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -47,15 +47,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cutoff_Height: 0.05
-    - _Edge_Width: 0.08
-    - _Glow_Power: 0.53
-    - _Noise_Scale: 25
-    - _Noise_Strength: 4
+    - _Cutoff_Height: 1.5
+    - _Edge_Width: 0.5
+    - _Glow_Power: 2
+    - _Noise_Scale: 80
+    - _Noise_Strength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Albedo: {r: 0, g: 0, b: 0, a: 0}
-    - _Edge_Color: {r: 0.31413612, g: 1, b: 0, a: 0}
-    - _Glow_Color: {r: 0.9468937, g: 1, b: 0, a: 0}
+    - _Edge_Color: {r: 0.2041885, g: 1, b: 0, a: 0}
+    - _Glow_Color: {r: 25.801044, g: 25.801044, b: 21.109945, a: 0}
   m_BuildTextureStacks: []

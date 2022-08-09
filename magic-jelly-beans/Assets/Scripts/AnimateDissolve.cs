@@ -16,7 +16,7 @@ public class AnimateDissolve : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            animator.SetTrigger("makeDissolve");
+            animator.SetTrigger("dissolve");
         }
         
         
