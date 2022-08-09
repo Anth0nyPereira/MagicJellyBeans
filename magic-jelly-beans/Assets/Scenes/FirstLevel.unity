@@ -543,6 +543,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8f1d60eb18d8da4399113a3a5718e19, type: 3}
+--- !u!1 &1329269130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3252421505399915395, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
+  m_PrefabInstance: {fileID: 3252421506406606139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329269134 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3252421505399915392, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
+  m_PrefabInstance: {fileID: 3252421506406606139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329269130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908d63ac65c5f654b9ea9c4600e36c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1329269139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329269130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: ee310aaf569c476438782da871c9e503, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1329269134}
+        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+        m_MethodName: reactivateNormalGravity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1330683963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6271551630220867529, guid: b8f1d60eb18d8da4399113a3a5718e19, type: 3}
@@ -566,6 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1330683966}
+  reactivateNormalGravity: {fileID: 11400000, guid: ee310aaf569c476438782da871c9e503, type: 2}
 --- !u!114 &1330683970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,11 +652,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3252421505399915399, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
       propertyPath: m_Height
-      value: 0.98496115
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252421505399915399, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
+      propertyPath: m_Radius
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3252421505399915399, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
       propertyPath: m_Center.y
-      value: 0.010954621
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3252421505399915399, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
+      propertyPath: m_Center.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7574650190024337461, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
       propertyPath: m_Name
@@ -631,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7574650190024337462, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.617
+      value: -14.43
       objectReference: {fileID: 0}
     - target: {fileID: 7574650190024337462, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
       propertyPath: m_LocalRotation.w

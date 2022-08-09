@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Ground : Collidable
 {
-    [SerializeField]
+    // [SerializeField]
     // private FloatEvent updateStressLevel; // maybe you use a child trigger and then after passing the water slide,
     // the character obtains some points??
+
+    [SerializeField]
+    private VoidEvent reactivateNormalGravity;
 
     public override void OnCollisionEnter(Collision other)
     {
@@ -21,6 +24,7 @@ public class Ground : Collidable
             if (checkIfSameColor(other))
             {
                 deactivateCollider();
+                reactivateNormalGravity.Raise();
             }
             else
             {
@@ -34,6 +38,7 @@ public class Ground : Collidable
         if (other.gameObject.tag == "Character")
         {
             deactivateCollider();
+            reactivateNormalGravity.Raise();
         }
     }
 

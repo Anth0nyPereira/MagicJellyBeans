@@ -31,15 +31,16 @@ public class CharacterMovement : MonoBehaviour
     private float jumpHeight = 8.0f;
 
     
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        rb.useGravity = false;
         parent = this.transform.parent.gameObject;
     }
 
     void Update()
     {
-        parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
+        // parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
 
         if (!checkIfFallen())
         {
@@ -117,5 +118,10 @@ public class CharacterMovement : MonoBehaviour
         float angle = Vector3.Angle(firstVector, secondVector); // in rads
 
         return Mathf.Rad2Deg * angle;
+    }
+
+    public void reactivateNormalGravity()
+    {
+        rb.useGravity = true;
     }
 }
