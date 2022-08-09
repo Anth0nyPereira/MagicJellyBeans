@@ -24,10 +24,16 @@ public class Collectable : Collidable
             // do something to the player
             // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
+            DisableCollider();
             ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
             animator.SetTrigger("dissolve");
             other.gameObject.GetComponent<Renderer>().material = colorSO.Materials[0];
         }
+    }
+
+    public void DisableCollider()
+    {
+        col.enabled = false;
     }
 
     public void Remove()
