@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ground : Collidable
 {
     [SerializeField]
-    private FloatEvent updateStressLevel; // maybe you use a child trigger and then after passing the water slide,
+    // private FloatEvent updateStressLevel; // maybe you use a child trigger and then after passing the water slide,
     // the character obtains some points??
 
     public override void OnCollisionEnter(Collision other)
@@ -26,6 +26,14 @@ public class Ground : Collidable
             {
                 ;
             }
+        }
+    }
+
+    public void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Character")
+        {
+            deactivateCollider();
         }
     }
 

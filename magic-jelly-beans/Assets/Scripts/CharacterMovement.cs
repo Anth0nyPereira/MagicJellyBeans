@@ -9,6 +9,8 @@ public class CharacterMovement : MonoBehaviour
 
     private Rigidbody rb;
 
+    private GameObject parent;
+
     // gravity attributes
     private Vector3 velocity;
     private float gravity = -9.81f;
@@ -32,10 +34,12 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        parent = this.transform.parent.gameObject;
     }
 
     void Update()
     {
+        parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
 
         if (!checkIfFallen())
         {
