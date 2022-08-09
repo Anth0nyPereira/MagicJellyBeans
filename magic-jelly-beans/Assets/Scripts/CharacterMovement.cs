@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        // parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
+        parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
 
         if (!checkIfFallen())
         {
