@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Terrain : Collidable
+public class Ground : Collidable
 {
     [SerializeField]
     private FloatEvent updateStressLevel; // maybe you use a child trigger and then after passing the water slide,
