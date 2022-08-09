@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6082029774698902390
+--- !u!114 &-1291962202455559399
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DissolveMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 5bb816995f62279449c86fdb0fc521eb, type: 3}
+  m_Name: BananaYellowComponent
+  m_Shader: {fileID: -6465566751694194690, guid: 835d3d033172cb34081cea9a72cf4c0c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -47,15 +47,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Cutoff_Height: 0.05
-    - _Edge_Width: 0.08
-    - _Glow_Power: 0.53
-    - _Noise_Scale: 25
-    - _Noise_Strength: 4
+    - _Glow_Power: 2
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Albedo: {r: 0, g: 0, b: 0, a: 0}
-    - _Edge_Color: {r: 0.31413612, g: 1, b: 0, a: 0}
-    - _Glow_Color: {r: 0.9468937, g: 1, b: 0, a: 0}
+    - _Glow_Color: {r: 1.294118, g: 1.945098, b: 0, a: 0}
   m_BuildTextureStacks: []
