@@ -8,6 +8,13 @@ public class Collectable : Collidable
      * add parameters: collectable data (color and name of material) via scriptable object
      * */
 
+    private Animator animator;
+
+    public void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     public override void OnCollisionEnter(Collision other)
     {
         Debug.Log(other);
@@ -18,8 +25,13 @@ public class Collectable : Collidable
             // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
             ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
+            animator.SetTrigger("dissolve");
             other.gameObject.GetComponent<Renderer>().material = colorSO.Materials[0];
-            Destroy(gameObject);
         }
+    }
+
+    public void Remove()
+    {
+        Destroy(gameObject);
     }
 }
