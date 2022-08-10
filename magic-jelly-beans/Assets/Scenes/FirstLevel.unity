@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: c213ff381f5fdf84b94a3de069ef3cb0, type: 3}
+      propertyPath: m_Name
+      value: pink_gummy_mesh
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c213ff381f5fdf84b94a3de069ef3cb0, type: 3}
 --- !u!1 &124462968 stripped
