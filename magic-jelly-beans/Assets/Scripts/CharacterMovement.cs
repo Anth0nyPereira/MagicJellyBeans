@@ -80,8 +80,8 @@ public class CharacterMovement : MonoBehaviour
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
-            float verticalI = Input.GetAxisRaw("Vertical");
-            direction = new Vector3(horizontalI, 0f, verticalI).normalized;
+            // float verticalI = Input.GetAxisRaw("Vertical");
+            direction = new Vector3(-horizontalI, 0f, 0f).normalized;
 
             // handleRotation();//Turn to where is running
 
