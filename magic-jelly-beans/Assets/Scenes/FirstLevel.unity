@@ -704,6 +704,10 @@ PrefabInstance:
       propertyPath: initialPos
       value: 
       objectReference: {fileID: 718105646}
+    - target: {fileID: 270306763120290654, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d4444d8ce0642b74f94e8bb87a1a08e0, type: 2}
     - target: {fileID: 5187072024406737133, guid: 461e85e4855106c4ca5d343baebbbfef, type: 3}
       propertyPath: m_RootOrder
       value: 4
