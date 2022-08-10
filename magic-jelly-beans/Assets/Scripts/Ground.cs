@@ -43,10 +43,7 @@ public class Ground : Collidable
     {
         if (other.gameObject.tag == "Character")
         {
-            other.gameObject.transform.Translate(vectorParentCharacter);
-            deactivateCollider();
-            deactivatePlanet.Raise();
-            reactivateNormalGravity.Raise();
+            makeCharacterFallDown(other);
         }
     }
 
@@ -61,9 +58,22 @@ public class Ground : Collidable
         return false;
     }
 
+    public void makeCharacterFallDown(Collision character)
+    {
+        deactivatePlanet.Raise();
+        reactivateNormalGravity.Raise();
+        deactivateCollider();
+        character.gameObject.transform.Translate(vectorParentCharacter * 0.35f);
+    }
+
    public void deactivateCollider()
     {
         this.GetComponent<Collider>().enabled = false;
+    }
+
+    public void reactivateCollider()
+    {
+        this.GetComponent<Collider>().enabled = true;
     }
 
    public void getDirectionParentCharacter(Vector3 vec)

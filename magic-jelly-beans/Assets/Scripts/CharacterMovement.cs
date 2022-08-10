@@ -7,6 +7,8 @@ public class CharacterMovement : MonoBehaviour
 {
     // public CharacterController controller;
 
+    public GameObject prefab;
+
     private Rigidbody rb;
 
     private GameObject parent;
@@ -24,7 +26,7 @@ public class CharacterMovement : MonoBehaviour
     private bool isGrounded;
 
     // walking attributes
-    //public Transform initialPos;
+    public Transform initialPos;
     //public Transform anotherPos;
     public Vector3 direction;
     public float speed = 2f;
@@ -34,6 +36,9 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField]
     private Vector3Event getVectorParentCharacter;
+
+    [SerializeField]
+    private VoidEvent reactivateGroundCollider;
 
 
     void Awake()
@@ -46,6 +51,10 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(transform.position);
+
+
+
         parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
 
         getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
@@ -67,7 +76,7 @@ public class CharacterMovement : MonoBehaviour
 
             // character gravity
             velocity.y += gravity * Time.deltaTime;
-            // controller.Move(velocity * Time.deltaTime);
+            // rb.MovePosition(velocity * Time.deltaTime);
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
@@ -87,16 +96,19 @@ public class CharacterMovement : MonoBehaviour
                 // rb.AddForce(Vector3.left * 10000 * speed);
             }
 
+        } else
+        {
+            resetCharacter();
         }
     }
 
     bool checkIfFallen()
     {
-        if (transform.position.y <= -10)
+        if (transform.position.y <= -3)
         {
             velocity.y = -2f;
-            // transform.position = initialPos.position;
-            // Debug.Log(velocity);
+            Debug.Log(velocity);
+            reactivateGroundCollider.Raise();
             return true;
         }
         return false;
@@ -144,5 +156,10 @@ public class CharacterMovement : MonoBehaviour
     public void deactivatePlanet()
     {
         planet.SetActive(false);
+    }
+
+    public void resetCharacter()
+    {
+        Destroy(parent.gameObject);
     }
 }
