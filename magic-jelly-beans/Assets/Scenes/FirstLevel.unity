@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4457763657895524399, guid: df4243baaf65b144090b9fac3e5f351d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.195
+      value: -0.585
       objectReference: {fileID: 0}
     - target: {fileID: 4457763657895524399, guid: df4243baaf65b144090b9fac3e5f351d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961739749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: -1.25}
+  m_LocalPosition: {x: 0, y: 0, z: -2.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -560,6 +560,7 @@ GameObject:
   - component: {fileID: 1275127482}
   - component: {fileID: 1275127488}
   - component: {fileID: 1329269139}
+  - component: {fileID: 1329269140}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Character
@@ -615,6 +616,7 @@ MonoBehaviour:
     m_Bits: 128
   direction: {x: 0, y: 0, z: 0}
   speed: 2
+  getVectorParentCharacter: {fileID: 11400000, guid: 1da3e128a1d15fe4895ac68df612a099, type: 2}
 --- !u!136 &1275127484
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -737,6 +739,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1329269140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275127480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e02a4009aad438949b901d99286d0c9e, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1275127483}
+        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+        m_MethodName: deactivatePlanet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1330683963 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6271551630220867529, guid: b8f1d60eb18d8da4399113a3a5718e19, type: 3}
@@ -761,6 +791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   col: {fileID: 1330683966}
   reactivateNormalGravity: {fileID: 11400000, guid: ee310aaf569c476438782da871c9e503, type: 2}
+  deactivatePlanet: {fileID: 11400000, guid: e02a4009aad438949b901d99286d0c9e, type: 2}
 --- !u!114 &1330683970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,6 +811,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1330683969}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1330683975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330683963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa0c6bcc280a6ba40ad27f7c71caff8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1da3e128a1d15fe4895ac68df612a099, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1330683969}
+        m_TargetAssemblyTypeName: Ground, Assembly-CSharp
+        m_MethodName: getDirectionParentCharacter
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

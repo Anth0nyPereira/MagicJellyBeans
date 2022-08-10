@@ -11,6 +11,12 @@ public class Ground : Collidable
     [SerializeField]
     private VoidEvent reactivateNormalGravity;
 
+    [SerializeField]
+    private VoidEvent deactivatePlanet;
+
+    private Vector3 vectorParentCharacter;
+
+
     public override void OnCollisionEnter(Collision other)
     {
         base.OnCollisionEnter(other);
@@ -37,7 +43,9 @@ public class Ground : Collidable
     {
         if (other.gameObject.tag == "Character")
         {
+            other.gameObject.transform.Translate(vectorParentCharacter);
             deactivateCollider();
+            deactivatePlanet.Raise();
             reactivateNormalGravity.Raise();
         }
     }
@@ -56,5 +64,10 @@ public class Ground : Collidable
    public void deactivateCollider()
     {
         this.GetComponent<Collider>().enabled = false;
+    }
+
+   public void getDirectionParentCharacter(Vector3 vec)
+    {
+        vectorParentCharacter = vec;
     }
 }

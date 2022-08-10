@@ -11,6 +11,8 @@ public class CharacterMovement : MonoBehaviour
 
     private GameObject parent;
 
+    private GameObject planet;
+
     // gravity attributes
     private Vector3 velocity;
     private float gravity = -9.81f;
@@ -30,17 +32,25 @@ public class CharacterMovement : MonoBehaviour
     // jumping attributes
     private float jumpHeight = 8.0f;
 
-    
+    [SerializeField]
+    private Vector3Event getVectorParentCharacter;
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
         parent = this.transform.parent.gameObject;
+        planet = parent.transform.Find("Planet").gameObject;
     }
 
     void Update()
     {
         parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
+
+        getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
+
+        Debug.Log(getVectorBetweenParentCharacter());
 
         if (!checkIfFallen())
         {
@@ -120,8 +130,19 @@ public class CharacterMovement : MonoBehaviour
         return Mathf.Rad2Deg * angle;
     }
 
+    public Vector3 getVectorBetweenParentCharacter()
+    {
+        Vector3 direct = (transform.position - parent.transform.position).normalized;
+        return direct;
+    }
+
     public void reactivateNormalGravity()
     {
         rb.useGravity = true;
+    }
+
+    public void deactivatePlanet()
+    {
+        planet.SetActive(false);
     }
 }
