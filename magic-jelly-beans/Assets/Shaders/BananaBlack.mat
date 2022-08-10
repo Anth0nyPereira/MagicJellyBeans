@@ -49,7 +49,7 @@ Material:
     m_Floats:
     - _Cutoff_Height: 1.5
     - _Edge_Width: 0.5
-    - _Glow_Power: 2
+    - _Glow_Power: 0.5
     - _Noise_Scale: 80
     - _Noise_Strength: 1
     - _QueueControl: 0
