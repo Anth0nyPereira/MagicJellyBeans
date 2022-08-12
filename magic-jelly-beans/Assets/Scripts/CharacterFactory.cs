@@ -9,6 +9,9 @@ public class CharacterFactory : MonoBehaviour
 
     public Transform initialPos;
 
+    [SerializeField]
+    private VoidEvent resetAllCollidables;
+
     public void Update()
     {
         if (GameObject.FindGameObjectsWithTag("Character").Length < 1)
@@ -19,6 +22,7 @@ public class CharacterFactory : MonoBehaviour
 
     public void createCharacter()
     {
+        resetAllCollidables.Raise();
         Instantiate(prefab, initialPos.position, Quaternion.identity);
     }
 }

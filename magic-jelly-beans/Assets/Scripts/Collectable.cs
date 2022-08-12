@@ -38,6 +38,7 @@ public class Collectable : Collidable
 
     public void Remove()
     {
-        Destroy(gameObject);
+        // Destroy(gameObject);
+        this.gameObject.SetActive(false);
     }
 }

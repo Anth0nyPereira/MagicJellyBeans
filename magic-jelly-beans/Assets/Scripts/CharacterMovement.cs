@@ -51,7 +51,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(transform.position);
+        // Debug.Log(transform.position);
 
 
 
@@ -59,7 +59,7 @@ public class CharacterMovement : MonoBehaviour
 
         getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
 
-        Debug.Log(getVectorBetweenParentCharacter());
+        // Debug.Log(getVectorBetweenParentCharacter());
 
         if (!checkIfFallen())
         {
