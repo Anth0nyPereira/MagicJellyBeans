@@ -39,4 +39,9 @@ public class Character : MonoBehaviour
         stressLevel += dam;
         Debug.Log("new stress level: " + stressLevel);
     }
+
+    public void Die()
+    {
+        Debug.Log("I died rip me :(");
+    }
 }

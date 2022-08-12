@@ -7,7 +7,18 @@ public class Collidable : MonoBehaviour
 
     public Collider col;
 
+    [SerializeField]
+    private CollidableData data;
+
     private ColorListSO colorList;
+
+    private bool isVisible;
+
+    public void Awake()
+    {
+        isVisible = data.IsVisible;
+        this.gameObject.SetActive(isVisible);
+    }
 
     public virtual void OnCollisionEnter(Collision other)
     {
