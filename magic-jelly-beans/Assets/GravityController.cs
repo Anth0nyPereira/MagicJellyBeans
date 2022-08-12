@@ -25,9 +25,11 @@ public class GravityController : MonoBehaviour
 
             Vector3 localUp = transform.up;
 
-            transform.up = Vector3.Lerp(transform.up, gravityUp, rotationSpeed * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.FromToRotation(localUp, gravityUp) * transform.rotation;
+            rb.GetComponent<Rigidbody>().rotation = targetRotation;
 
-            rb.AddForce((-gravityUp * gravityOrbit.gravity) * rb.mass);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            rb.GetComponent<Rigidbody>().AddForce((-gravityUp * gravityOrbit.gravity) * rb.mass);
         }
     }
 }
