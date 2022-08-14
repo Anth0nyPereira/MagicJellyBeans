@@ -12,6 +12,9 @@ public class CollidableData : ScriptableObject
     [SerializeField]
     private bool isVisible;
 
+    [SerializeField]
+    private TransformSO transform;
+
     public string CollidableName { get => collidableName; set => collidableName = value; }
     public bool IsVisible { get => isVisible; set => isVisible = value; }
 }

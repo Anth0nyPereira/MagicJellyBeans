@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minStressLevel: {fileID: 11400000, guid: 050a10962dd3496488b2e377033cbdb4, type: 2}
   maxStressLevel: {fileID: 11400000, guid: 6ea229d4fd08e344f88ac9e216b83476, type: 2}
+  characterData: {fileID: 0}
 --- !u!114 &270306763120290592
 MonoBehaviour:
   m_ObjectHideFlags: 0

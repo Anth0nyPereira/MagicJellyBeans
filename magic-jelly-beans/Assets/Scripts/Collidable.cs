@@ -8,7 +8,7 @@ public class Collidable : MonoBehaviour
     public Collider col;
 
     [SerializeField]
-    private CollidableData data;
+    private BoolSO boolean;
 
     private ColorListSO colorList;
 
@@ -16,7 +16,7 @@ public class Collidable : MonoBehaviour
 
     public void Awake()
     {
-        isVisible = data.IsVisible;
+        isVisible = boolean.Val;
         this.gameObject.SetActive(isVisible);
     }
 

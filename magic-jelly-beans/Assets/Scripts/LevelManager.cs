@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    /*
-    [SerializeField]
-    private CollidableListSO listOfCollectables;
 
-    [SerializeField]
-    private CollidableListSO listOfObstacles;
-
-    [SerializeField]
-    private CollidableListSO listOfGround;
-    */
 
     private GameObject[] collidables; // later this list will be only the collidables that exist after the last checkpoint
-    // store collidable data --> n<me, prefab, position and isVisible I guess??
+    // store collidable data --> name, prefab, position and isVisible I guess??
 
 
     public void Awake()
@@ -35,4 +26,5 @@ public class LevelManager : MonoBehaviour
             collidable.GetComponent<Collider>().enabled = true;
         }
     }
+
 }

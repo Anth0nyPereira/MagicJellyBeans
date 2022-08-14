@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdb4172c6d8a1f24d8549a323887ee99, type: 3}
-  m_Name: Slider1Data
+  m_Script: {fileID: 11500000, guid: 3627c77dea7e36a4cba854f7b8db8c81, type: 3}
+  m_Name: GameEvent_updateNewCharacterTransform
   m_EditorClassIdentifier: 
-  collidableName: slider1
-  isVisible: 1

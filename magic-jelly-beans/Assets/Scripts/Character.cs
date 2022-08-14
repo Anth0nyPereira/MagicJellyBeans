@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+
+
     [SerializeField]
     private FloatSO minStressLevel;
 
@@ -11,6 +13,9 @@ public class Character : MonoBehaviour
     private FloatSO maxStressLevel;
 
     private float stressLevel;
+
+    [SerializeField]
+    private CharacterData characterData;
 
     private void Awake()
     {
@@ -43,5 +48,23 @@ public class Character : MonoBehaviour
     public void Die()
     {
         Debug.Log("I died rip me :(");
+    }
+
+    public void updateTransformData(Transform newTransform) 
+    {
+        characterData.Transform.Position = newTransform.position;
+        characterData.Transform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
+    }
+
+    public void updateMaterialData(Material newMaterial)
+    {
+        characterData.Material = newMaterial;
+    }
+
+    public void updateParentTransformData(Transform newTransform) // this is actually the parent aka "Character object" position
+    {
+        characterData.ParentTransform.Position = newTransform.position;
+        characterData.ParentTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
+
     }
 }

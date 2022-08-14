@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e61f56824875304fae73e70ca3a7351, type: 3}
-  m_Name: ListOfCollectables
+  m_Script: {fileID: 11500000, guid: 2cb7f609fc7a94d499cacf29ef443773, type: 3}
+  m_Name: DefaultData
   m_EditorClassIdentifier: 
-  lst:
-  - {fileID: 0}
+  color: default
+  materials:
+  - {fileID: 2100000, guid: d4444d8ce0642b74f94e8bb87a1a08e0, type: 2}
