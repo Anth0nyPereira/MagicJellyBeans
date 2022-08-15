@@ -10,9 +10,12 @@ public class Collidable : MonoBehaviour
     [SerializeField]
     private BoolSO boolean;
 
+    public StringSO collidableName;
+
     private ColorListSO colorList;
 
     private bool isVisible;
+
 
     public void Awake()
     {

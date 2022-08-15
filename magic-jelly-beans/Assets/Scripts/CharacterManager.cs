@@ -26,8 +26,11 @@ public class CharacterManager : MonoBehaviour
     public void createCharacter()
     {
         resetAllCollidables.Raise();
-        Instantiate(prefab, cData.Transform.Position, Quaternion.Euler(cData.Transform.Rotation));
+        Instantiate(prefab, cData.ParentTransform.Position, Quaternion.identity);
+        GameObject mesh = prefab.transform.Find("mesh").gameObject;
         prefab.transform.Find("mesh").GetComponent<Renderer>().sharedMaterial = cData.Material;
+        mesh.transform.position = cData.Transform.Position;
+        mesh.transform.rotation = Quaternion.Euler(cData.Transform.Rotation);
         // quaternion.euler is used to convert from Vector3 to Quaternion
     }
 }

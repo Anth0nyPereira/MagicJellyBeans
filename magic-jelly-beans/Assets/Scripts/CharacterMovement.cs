@@ -7,8 +7,6 @@ public class CharacterMovement : MonoBehaviour
 {
     // public CharacterController controller;
 
-    public GameObject prefab;
-
     private Rigidbody rb;
 
     private GameObject parent;
