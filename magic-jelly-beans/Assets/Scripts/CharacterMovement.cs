@@ -112,34 +112,6 @@ public class CharacterMovement : MonoBehaviour
         return false;
     }
 
-    public void Jump()
-    {
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-    }
-
-    void handleRotation()
-    {
-        Vector3 currentPosition = transform.position;
-
-        Vector3 newPosition = new Vector3(direction.x, 0, direction.z);
-
-        Vector3 positionToLookAt = currentPosition + newPosition;
-
-        transform.LookAt(positionToLookAt);
-    }
-
-    public float calculateAngle(Vector3 point1, Vector3 point2, Vector3 point3)
-    {
-        Vector3 firstVector = point2 - point1;
-        firstVector = new Vector3(0, firstVector.y, firstVector.z);
-        Vector3 secondVector = point2 - point3;
-        secondVector = new Vector3(0, secondVector.y, secondVector.z);
-
-        float angle = Vector3.Angle(firstVector, secondVector); // in rads
-
-        return Mathf.Rad2Deg * angle;
-    }
-
     public Vector3 getVectorBetweenParentCharacter()
     {
         Vector3 direct = (transform.position - parent.transform.position).normalized;
