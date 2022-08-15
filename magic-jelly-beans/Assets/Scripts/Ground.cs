@@ -11,9 +11,6 @@ public class Ground : Collidable
     [SerializeField]
     private VoidEvent reactivateNormalGravity;
 
-    [SerializeField]
-    private VoidEvent deactivatePlanet;
-
     private Vector3 vectorParentCharacter;
 
 
@@ -60,7 +57,6 @@ public class Ground : Collidable
 
     public void makeCharacterFallDown(Collision character)
     {
-        deactivatePlanet.Raise();
         reactivateNormalGravity.Raise();
         deactivateCollider();
         character.gameObject.transform.Translate(vectorParentCharacter * 0.35f);

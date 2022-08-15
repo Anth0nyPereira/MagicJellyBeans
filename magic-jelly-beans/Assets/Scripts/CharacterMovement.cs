@@ -9,20 +9,13 @@ public class CharacterMovement : MonoBehaviour
 
     private Rigidbody rb;
 
-    private GameObject parent;
+    private GameObject father;
 
-    private GameObject planet;
+    private GameObject grandpa;
 
     // gravity attributes
     private Vector3 velocity;
     private float gravity = -9.81f;
-
-    // collision with ground terrain
-    public Transform groundCheck;
-    private float groundRadius = 1.0f;
-    public LayerMask groundMask;
-    private bool isGrounded;
-
     // walking attributes
     public Transform initialPos;
     //public Transform anotherPos;
@@ -43,8 +36,8 @@ public class CharacterMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = false;
-        parent = this.transform.parent.gameObject;
-        planet = parent.transform.Find("Planet").gameObject;
+        father = this.transform.parent.gameObject;
+        grandpa = father.transform.parent.gameObject;
     }
 
     void Update()
@@ -53,7 +46,7 @@ public class CharacterMovement : MonoBehaviour
 
 
 
-        parent.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
+        grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
 
         getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
 
@@ -61,16 +54,6 @@ public class CharacterMovement : MonoBehaviour
 
         if (!checkIfFallen())
         {
-            // check collision with some ground terrain
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, groundMask);
-            Debug.Log(isGrounded);
-
-            // reset the velocity when it hits terrain
-            if (isGrounded && velocity.y < 0)
-            {
-                velocity.y = -2f;
-            }
-
 
             // character gravity
             velocity.y += gravity * Time.deltaTime;
@@ -79,14 +62,16 @@ public class CharacterMovement : MonoBehaviour
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
             // float verticalI = Input.GetAxisRaw("Vertical");
-            direction = new Vector3(-horizontalI, 0f, 0f).normalized;
+            direction = new Vector3(0f, 0f, -horizontalI).normalized;
+            
 
             // handleRotation();//Turn to where is running
 
             if (direction.magnitude >= 0.1)
             {
                 //controller.Move(direction * speed * Time.deltaTime);
-                transform.Translate(direction * speed * Time.deltaTime);
+                father.transform.Rotate(speed * Time.deltaTime * direction * 100, Space.World);
+
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -114,7 +99,7 @@ public class CharacterMovement : MonoBehaviour
 
     public Vector3 getVectorBetweenParentCharacter()
     {
-        Vector3 direct = (transform.position - parent.transform.position).normalized;
+        Vector3 direct = (transform.position - father.transform.position).normalized;
         return direct;
     }
 
@@ -123,13 +108,8 @@ public class CharacterMovement : MonoBehaviour
         rb.useGravity = true;
     }
 
-    public void deactivatePlanet()
-    {
-        planet.SetActive(false);
-    }
-
     public void resetCharacter()
     {
-        Destroy(parent.gameObject);
+        Destroy(grandpa.gameObject);
     }
 }
