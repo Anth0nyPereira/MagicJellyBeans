@@ -43,7 +43,8 @@ public class CharacterMovement : MonoBehaviour
 
         getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
 
-        
+        // I guess it's better to send an event telling that the character is no longer in contact with ground and give that information
+        // to this class
 
         if (!checkIfFallen())
         {
