@@ -13,12 +13,6 @@ public class CharacterMovement : MonoBehaviour
 
     private GameObject grandpa;
 
-    // gravity attributes
-    private Vector3 velocity;
-    private float gravity = -9.81f;
-    // walking attributes
-    public Transform initialPos;
-    //public Transform anotherPos;
     public Vector3 direction;
     public float speed = 2f;
 
@@ -45,41 +39,22 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(velocity);
-
-
-
         grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
 
         getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
 
-        // Debug.Log(getVectorBetweenParentCharacter());
+        
 
         if (!checkIfFallen())
         {
 
-            // character gravity
-            // velocity.y += gravity * Time.deltaTime;
-            // rb.MovePosition(velocity * Time.deltaTime);
-
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
-            // float verticalI = Input.GetAxisRaw("Vertical");
             direction = new Vector3(0f, 0f, -horizontalI).normalized;
-            
-
-            // handleRotation();//Turn to where is running
 
             if (direction.magnitude >= 0.1)
             {
-                //controller.Move(direction * speed * Time.deltaTime);
                 father.transform.Rotate(speed * Time.deltaTime * direction * 100, Space.World);
-
-            }
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                // rb.AddForce(Vector3.left * 10000 * speed);
             }
 
         } else
@@ -93,8 +68,6 @@ public class CharacterMovement : MonoBehaviour
         Debug.Log(transform.position.y);
         if (transform.position.y <= -3)
         {
-            // velocity.y = -2f;
-            // Debug.Log(velocity);
             reactivateGroundCollider.Raise();
             return true;
         }
@@ -109,7 +82,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void reactivateNormalGravity()
     {
-        rb.useGravity = true;
+        // rb.useGravity = true;
     }
 
     public void resetCharacter()

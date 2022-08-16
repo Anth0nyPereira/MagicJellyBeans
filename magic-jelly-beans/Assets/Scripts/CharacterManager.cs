@@ -32,7 +32,7 @@ public class CharacterManager : MonoBehaviour
         /*
         character.GetComponent<Renderer>().sharedMaterial = cData.Material;
         */
-        character.GetComponent<Rigidbody>().useGravity = false;
+        // character.GetComponent<Rigidbody>().useGravity = false;
         
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
