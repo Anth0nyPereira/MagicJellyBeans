@@ -22,6 +22,7 @@ public class Ground : Collidable
         base.OnCollisionEnter(other);
     }
 
+
     public void OnCollisionStay(Collision other)
     {
         if (other.gameObject.tag == "Character")
@@ -61,9 +62,9 @@ public class Ground : Collidable
     public void makeCharacterFallDown(Collision character)
     {
         deactivatePlanet.Raise();
-        reactivateNormalGravity.Raise();
+        // reactivateNormalGravity.Raise(); // IT'S HERE IG
         deactivateCollider();
-        character.gameObject.transform.Translate(vectorParentCharacter * 0.35f);
+        // character.gameObject.transform.Translate(vectorParentCharacter * 0.35f);
     }
 
    public void deactivateCollider()

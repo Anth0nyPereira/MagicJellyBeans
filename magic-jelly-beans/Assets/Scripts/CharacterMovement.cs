@@ -38,6 +38,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private VoidEvent reactivateGroundCollider;
 
+    [SerializeField]
+    private VoidEvent resetCharacterEvent;
 
     void Awake()
     {
@@ -61,21 +63,6 @@ public class CharacterMovement : MonoBehaviour
 
         if (!checkIfFallen())
         {
-            // check collision with some ground terrain
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundRadius, groundMask);
-            Debug.Log(isGrounded);
-
-            // reset the velocity when it hits terrain
-            if (isGrounded && velocity.y < 0)
-            {
-                velocity.y = -2f;
-            }
-
-
-            // character gravity
-            velocity.y += gravity * Time.deltaTime;
-            // rb.MovePosition(velocity * Time.deltaTime);
-
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
             // float verticalI = Input.GetAxisRaw("Vertical");
@@ -89,11 +76,6 @@ public class CharacterMovement : MonoBehaviour
                 transform.Translate(direction * speed * Time.deltaTime);
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                // rb.AddForce(Vector3.left * 10000 * speed);
-            }
-
         } else
         {
             resetCharacter();
@@ -102,42 +84,12 @@ public class CharacterMovement : MonoBehaviour
 
     bool checkIfFallen()
     {
-        if (transform.position.y <= -3)
+        if (transform.position.y <= -1)
         {
-            velocity.y = -2f;
-            Debug.Log(velocity);
             reactivateGroundCollider.Raise();
             return true;
         }
         return false;
-    }
-
-    public void Jump()
-    {
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-    }
-
-    void handleRotation()
-    {
-        Vector3 currentPosition = transform.position;
-
-        Vector3 newPosition = new Vector3(direction.x, 0, direction.z);
-
-        Vector3 positionToLookAt = currentPosition + newPosition;
-
-        transform.LookAt(positionToLookAt);
-    }
-
-    public float calculateAngle(Vector3 point1, Vector3 point2, Vector3 point3)
-    {
-        Vector3 firstVector = point2 - point1;
-        firstVector = new Vector3(0, firstVector.y, firstVector.z);
-        Vector3 secondVector = point2 - point3;
-        secondVector = new Vector3(0, secondVector.y, secondVector.z);
-
-        float angle = Vector3.Angle(firstVector, secondVector); // in rads
-
-        return Mathf.Rad2Deg * angle;
     }
 
     public Vector3 getVectorBetweenParentCharacter()
@@ -153,11 +105,14 @@ public class CharacterMovement : MonoBehaviour
 
     public void deactivatePlanet()
     {
+        Debug.Log("here");
         planet.SetActive(false);
+        this.GetComponent<GravityController>().enabled = false;
     }
 
     public void resetCharacter()
     {
-        Destroy(parent.gameObject);
+        planet.SetActive(true);
+        resetCharacterEvent.Raise();
     }
 }

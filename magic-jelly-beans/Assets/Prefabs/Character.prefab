@@ -345,6 +345,7 @@ MonoBehaviour:
   speed: 2
   getVectorParentCharacter: {fileID: 11400000, guid: 1da3e128a1d15fe4895ac68df612a099, type: 2}
   reactivateGroundCollider: {fileID: 11400000, guid: e1cab9b38039e5346ba9c515762ca584, type: 2}
+  resetCharacterEvent: {fileID: 0}
 --- !u!114 &6425721419702378695
 MonoBehaviour:
   m_ObjectHideFlags: 0

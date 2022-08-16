@@ -5,7 +5,9 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
 
-    public GameObject prefab;
+    private GameObject go;
+
+    private GameObject mesh;
 
     public Transform initialPos;
 
@@ -15,20 +17,21 @@ public class CharacterManager : MonoBehaviour
     [SerializeField]
     private VoidEvent resetAllCollidables;
 
-    public void Update()
+    private void Awake()
     {
-        if (GameObject.FindGameObjectsWithTag("Character").Length < 1)
-        {
-            createCharacter();
-        }
+        mesh = GameObject.FindGameObjectWithTag("Character");
+        Debug.Log(mesh);
+        go = mesh.transform.parent.gameObject;
     }
 
-    public void createCharacter()
+    
+
+    public void resetCharacter()
     {
         resetAllCollidables.Raise();
-        Instantiate(prefab, cData.ParentTransform.Position, Quaternion.identity);
-        GameObject mesh = prefab.transform.Find("mesh").gameObject;
-        prefab.transform.Find("mesh").GetComponent<Renderer>().sharedMaterial = cData.Material;
+        go.transform.position = cData.ParentTransform.Position;
+        go.transform.rotation = Quaternion.Euler(cData.ParentTransform.Rotation);
+        mesh.GetComponent<Renderer>().sharedMaterial = cData.Material;
         mesh.transform.position = cData.Transform.Position;
         mesh.transform.rotation = Quaternion.Euler(cData.Transform.Rotation);
         // quaternion.euler is used to convert from Vector3 to Quaternion
