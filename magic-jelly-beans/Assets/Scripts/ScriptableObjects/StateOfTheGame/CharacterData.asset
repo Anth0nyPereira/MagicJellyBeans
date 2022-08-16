@@ -15,3 +15,4 @@ MonoBehaviour:
   transform: {fileID: 11400000, guid: 39850859a0f845c49b172b7e399805b2, type: 2}
   material: {fileID: 2100000, guid: d4444d8ce0642b74f94e8bb87a1a08e0, type: 2}
   parentTransform: {fileID: 11400000, guid: 5b39048c450bb8348815a224f91076d1, type: 2}
+  grandfatherTransform: {fileID: 11400000, guid: 27484b19c1860774ab74a32241b03fd7, type: 2}

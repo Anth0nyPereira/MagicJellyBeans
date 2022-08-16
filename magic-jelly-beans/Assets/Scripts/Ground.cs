@@ -54,8 +54,8 @@ public class Ground : Collidable
 
     public void makeCharacterFallDown(Collision character)
     {
-        makeCharacterFallDownEvent.Raise();
         deactivateCollider();
+        makeCharacterFallDownEvent.Raise();
     }
 
    public void deactivateCollider()

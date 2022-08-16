@@ -20,13 +20,9 @@ public class CharacterMovement : MonoBehaviour
     private float jumpHeight = 8.0f;
 
     [SerializeField]
-    private Vector3Event getVectorParentCharacter;
-
-    [SerializeField]
-    private VoidEvent reactivateGroundCollider;
-
-    [SerializeField]
     private VoidEvent resetCharacterEvent;
+
+    private bool fallingDown;
 
 
     void Awake()
@@ -35,19 +31,17 @@ public class CharacterMovement : MonoBehaviour
         rb.useGravity = false;
         father = this.transform.parent.gameObject;
         grandpa = father.transform.parent.gameObject;
+        fallingDown = false;
     }
 
     void Update()
     {
-        grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
-
-        getVectorParentCharacter.Raise(getVectorBetweenParentCharacter());
-
         // I guess it's better to send an event telling that the character is no longer in contact with ground and give that information
         // to this class
 
-        if (!checkIfFallen())
+        if (!fallingDown)
         {
+            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
@@ -58,10 +52,6 @@ public class CharacterMovement : MonoBehaviour
                 father.transform.Rotate(speed * Time.deltaTime * direction * 100, Space.World);
             }
 
-        } else
-        {
-            Debug.Log("Make animation character rotating T-posed");
-            resetCharacter();
         }
     }
 
@@ -70,7 +60,7 @@ public class CharacterMovement : MonoBehaviour
         Debug.Log(transform.position.y);
         if (transform.position.y <= -3)
         {
-            reactivateGroundCollider.Raise();
+            // reactivateGroundCollider.Raise();
             return true;
         }
         return false;
@@ -90,5 +80,32 @@ public class CharacterMovement : MonoBehaviour
     public void resetCharacter()
     {
         resetCharacterEvent.Raise();
+    }
+
+    public float getDistanceBetweenPositions(Vector3 pos1, Vector3 pos2)
+    {
+        Vector3 directionVector = pos2 - pos1;
+        float distance = Mathf.Sqrt(Mathf.Pow(directionVector.x, 2) + Mathf.Pow(directionVector.y, 2) + Mathf.Pow(directionVector.z, 2));
+        return distance;
+    }
+
+    public void makeCharacterFallDown()
+    {
+        fallingDown = true;
+        doFallingDownBehaviour();
+    }
+
+    public void doFallingDownBehaviour()
+    {
+        Debug.Log("called");
+        Vector3 initialPosition = grandpa.transform.position;
+        
+        while (getDistanceBetweenPositions(initialPosition, grandpa.transform.position) <= 2)
+        {
+            grandpa.transform.Translate(getVectorBetweenParentCharacter() * 100);
+            
+
+        }
+        Debug.Log("Have a break, have a kit kat");
     }
 }
