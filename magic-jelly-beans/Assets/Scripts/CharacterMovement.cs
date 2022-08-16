@@ -108,7 +108,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void reactivateNormalGravity()
     {
-        // rb.useGravity = true;
+        rb.useGravity = true;
     }
 
     public void resetCharacter()
