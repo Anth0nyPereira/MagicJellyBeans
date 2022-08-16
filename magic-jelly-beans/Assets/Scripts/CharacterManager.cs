@@ -26,7 +26,7 @@ public class CharacterManager : MonoBehaviour
         grandpa = father.transform.parent.gameObject; // the one called Character
     }
 
-    public void createCharacter()
+    public void resetCharacter()
     {
         // resetAllCollidables.Raise();
         /*

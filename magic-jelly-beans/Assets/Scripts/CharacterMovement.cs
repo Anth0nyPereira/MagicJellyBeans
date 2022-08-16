@@ -90,6 +90,7 @@ public class CharacterMovement : MonoBehaviour
 
     bool checkIfFallen()
     {
+        Debug.Log(transform.position.y);
         if (transform.position.y <= -3)
         {
             // velocity.y = -2f;
