@@ -5,8 +5,6 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
 
-    public GameObject prefab;
-
     public Transform initialPos;
 
     [SerializeField]
@@ -15,22 +13,48 @@ public class CharacterManager : MonoBehaviour
     [SerializeField]
     private VoidEvent resetAllCollidables;
 
-    public void Update()
+    private GameObject character; // the child one, actually
+
+    private GameObject father;
+
+    private GameObject grandpa;
+
+    private void Awake()
     {
-        if (GameObject.FindGameObjectsWithTag("Character").Length < 1)
-        {
-            createCharacter();
-        }
+        character = GameObject.FindGameObjectWithTag("Character"); // the one called mesh
+        father = character.transform.parent.gameObject; // the one called meshCenter
+        grandpa = father.transform.parent.gameObject; // the one called Character
     }
 
     public void createCharacter()
     {
-        resetAllCollidables.Raise();
-        Instantiate(prefab, cData.ParentTransform.Position, Quaternion.identity);
-        GameObject mesh = prefab.transform.Find("mesh").gameObject;
-        prefab.transform.Find("mesh").GetComponent<Renderer>().sharedMaterial = cData.Material;
-        mesh.transform.position = cData.Transform.Position;
-        mesh.transform.rotation = Quaternion.Euler(cData.Transform.Rotation);
+        // resetAllCollidables.Raise();
+        /*
+        character.GetComponent<Renderer>().sharedMaterial = cData.Material;
+        */
+        character.GetComponent<Rigidbody>().useGravity = false;
+        
+        setTransform(grandpa, cData.GrandfatherTransform);
+        setTransform(father, cData.ParentTransform, true);
+        setTransform(character, cData.Transform, true);
+        
+        
+        
+
         // quaternion.euler is used to convert from Vector3 to Quaternion
+    }
+
+    private void setTransform(GameObject obj, TransformSO trans, bool localSpace = false)
+    {
+        if (!localSpace)
+        {
+            obj.transform.position = trans.Position;
+            obj.transform.rotation = Quaternion.Euler(trans.Rotation);
+        } else
+        {
+            obj.transform.localPosition = trans.Position;
+            obj.transform.localRotation = Quaternion.Euler(trans.Rotation);
+        }
+        
     }
 }

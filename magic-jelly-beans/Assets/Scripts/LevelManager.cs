@@ -12,12 +12,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private CollidableNameListSO listOfVisibleCollidables;
 
-    private string collidableNameInFocus;
-    private GameObject collidableInFocus;
-
-    private List<GameObject> collidables;
-
-
     public void Awake()
     {
         collidablesGOs = GameObject.FindGameObjectsWithTag("Collidable");
@@ -46,12 +40,4 @@ public class LevelManager : MonoBehaviour
             
         }
     }
-
-    public void getLogCollidable(GameObject collidable)
-    {
-        collidableNameInFocus = collidable.GetComponent<Collidable>().collidableName.Str;
-        collidableInFocus = collidable;
-        collidables.Add(collidable);
-    }
-
 }

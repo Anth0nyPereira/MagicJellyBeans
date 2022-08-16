@@ -31,6 +31,9 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private VoidEvent reactivateGroundCollider;
 
+    [SerializeField]
+    private VoidEvent resetCharacterEvent;
+
 
     void Awake()
     {
@@ -42,7 +45,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        // Debug.Log(transform.position);
+        Debug.Log(velocity);
 
 
 
@@ -56,7 +59,7 @@ public class CharacterMovement : MonoBehaviour
         {
 
             // character gravity
-            velocity.y += gravity * Time.deltaTime;
+            // velocity.y += gravity * Time.deltaTime;
             // rb.MovePosition(velocity * Time.deltaTime);
 
             // character walking
@@ -89,8 +92,8 @@ public class CharacterMovement : MonoBehaviour
     {
         if (transform.position.y <= -3)
         {
-            velocity.y = -2f;
-            Debug.Log(velocity);
+            // velocity.y = -2f;
+            // Debug.Log(velocity);
             reactivateGroundCollider.Raise();
             return true;
         }
@@ -110,6 +113,6 @@ public class CharacterMovement : MonoBehaviour
 
     public void resetCharacter()
     {
-        Destroy(grandpa.gameObject);
+        resetCharacterEvent.Raise();
     }
 }
