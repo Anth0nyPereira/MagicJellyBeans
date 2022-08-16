@@ -9,9 +9,7 @@ public class Ground : Collidable
     // the character obtains some points??
 
     [SerializeField]
-    private VoidEvent reactivateNormalGravity;
-
-    private Vector3 vectorParentCharacter;
+    private VoidEvent makeCharacterFallDownEvent;
 
 
     public override void OnCollisionEnter(Collision other)
@@ -26,8 +24,7 @@ public class Ground : Collidable
             Debug.Log("Character is on terrain!!");
             if (checkIfSameColor(other))
             {
-                deactivateCollider();
-                reactivateNormalGravity.Raise();
+                makeCharacterFallDown(other);
             }
             else
             {
@@ -57,23 +54,12 @@ public class Ground : Collidable
 
     public void makeCharacterFallDown(Collision character)
     {
-        reactivateNormalGravity.Raise();
+        makeCharacterFallDownEvent.Raise();
         deactivateCollider();
-        character.gameObject.transform.Translate(vectorParentCharacter * 0.35f);
     }
 
    public void deactivateCollider()
     {
         this.GetComponent<Collider>().enabled = false;
-    }
-
-    public void reactivateCollider()
-    {
-        this.GetComponent<Collider>().enabled = true;
-    }
-
-   public void getDirectionParentCharacter(Vector3 vec)
-    {
-        vectorParentCharacter = vec;
     }
 }

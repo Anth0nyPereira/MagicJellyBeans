@@ -60,6 +60,7 @@ public class CharacterMovement : MonoBehaviour
 
         } else
         {
+            Debug.Log("Make animation character rotating T-posed");
             resetCharacter();
         }
     }
