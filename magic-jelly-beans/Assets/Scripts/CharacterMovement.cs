@@ -55,26 +55,10 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    bool checkIfFallen()
-    {
-        Debug.Log(transform.position.y);
-        if (transform.position.y <= -3)
-        {
-            // reactivateGroundCollider.Raise();
-            return true;
-        }
-        return false;
-    }
-
     public Vector3 getVectorBetweenParentCharacter()
     {
         Vector3 direct = (transform.position - father.transform.position).normalized;
         return direct;
-    }
-
-    public void reactivateNormalGravity()
-    {
-        // rb.useGravity = true;
     }
 
     public void resetCharacter()
