@@ -24,6 +24,10 @@ public class CharacterManager : MonoBehaviour
         character = GameObject.FindGameObjectWithTag("Character"); // the one called mesh
         father = character.transform.parent.gameObject; // the one called meshCenter
         grandpa = father.transform.parent.gameObject; // the one called Character
+
+        setTransform(grandpa, cData.GrandfatherTransform);
+        setTransform(father, cData.ParentTransform, true);
+        setTransform(character, cData.Transform, true);
     }
 
     public void resetCharacter()

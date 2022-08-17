@@ -17,9 +17,12 @@ public class Character : MonoBehaviour
     [SerializeField]
     private CharacterData characterData;
 
+   
     private void Awake()
     {
         stressLevel = computeStartingStressLevel();
+
+
     }
 
     // Update is called once per frame
@@ -58,13 +61,13 @@ public class Character : MonoBehaviour
     public void updateParentTransformData(Transform newTransform) // this is actually the parent aka "meshCenter" position
     {
         characterData.ParentTransform.Position = newTransform.localPosition;
-        characterData.ParentTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
+        characterData.ParentTransform.Rotation = new Vector3(newTransform.localRotation.x, newTransform.localRotation.y, newTransform.localRotation.z);
 
     }
 
     public void updateGrandParentTransformData(Transform newTransform) // this is actually the grandfather aka "Character object" position
     {
-        characterData.GrandfatherTransform.Position = newTransform.localPosition;
+        characterData.GrandfatherTransform.Position = newTransform.position;
         characterData.GrandfatherTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
 
     }
