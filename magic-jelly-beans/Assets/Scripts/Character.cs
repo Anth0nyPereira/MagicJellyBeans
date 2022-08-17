@@ -57,14 +57,14 @@ public class Character : MonoBehaviour
 
     public void updateParentTransformData(Transform newTransform) // this is actually the parent aka "meshCenter" position
     {
-        characterData.ParentTransform.Position = newTransform.position;
+        characterData.ParentTransform.Position = newTransform.localPosition;
         characterData.ParentTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
 
     }
 
     public void updateGrandParentTransformData(Transform newTransform) // this is actually the grandfather aka "Character object" position
     {
-        characterData.GrandfatherTransform.Position = newTransform.position;
+        characterData.GrandfatherTransform.Position = newTransform.localPosition;
         characterData.GrandfatherTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
 
     }
