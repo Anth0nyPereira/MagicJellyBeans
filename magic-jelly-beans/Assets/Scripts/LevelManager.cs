@@ -24,8 +24,6 @@ public class LevelManager : MonoBehaviour
 
     private void resetAllCollidables()
     {
-        // Debug.Log("Function called");
-
         foreach (StringSO collidableName in listOfVisibleCollidables.ListOfCollidableNames)
         {
             string cName = collidableName.Str;
