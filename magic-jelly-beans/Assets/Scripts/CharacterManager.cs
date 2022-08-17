@@ -28,11 +28,7 @@ public class CharacterManager : MonoBehaviour
 
     public void resetCharacter()
     {
-        // resetAllCollidables.Raise();
-        /*
         character.GetComponent<Renderer>().sharedMaterial = cData.Material;
-        */
-        // character.GetComponent<Rigidbody>().useGravity = false;
         
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
