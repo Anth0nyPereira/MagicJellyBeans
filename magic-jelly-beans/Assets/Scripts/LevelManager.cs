@@ -15,14 +15,14 @@ public class LevelManager : MonoBehaviour
     public void Awake()
     {
         collidablesGOs = GameObject.FindGameObjectsWithTag("Collidable");
-        foreach (GameObject item in collidablesGOs)
-        {
-            Debug.Log(item.gameObject.name);
-        }
     }
 
+    public void makeCharacterNotFallDown()
+    {
+        resetAllCollidables();
+    }
 
-    public void resetAllCollidables()
+    private void resetAllCollidables()
     {
         // Debug.Log("Function called");
 
@@ -33,6 +33,7 @@ public class LevelManager : MonoBehaviour
             {
                 if (cName == collidable.GetComponent<Collidable>().collidableName.Str)
                 {
+                    Debug.Log(cName);
                     collidable.SetActive(true);
                     collidable.GetComponent<Collider>().enabled = true;
                 }

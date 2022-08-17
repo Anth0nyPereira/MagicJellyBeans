@@ -24,6 +24,8 @@ public class CharacterMovement : MonoBehaviour
 
     private bool fallingDown;
 
+    private bool coroutineFinished;
+
 
     void Awake()
     {
@@ -32,6 +34,7 @@ public class CharacterMovement : MonoBehaviour
         father = this.transform.parent.gameObject;
         grandpa = father.transform.parent.gameObject;
         fallingDown = false;
+        coroutineFinished = false;
     }
 
     void Update()
@@ -52,6 +55,12 @@ public class CharacterMovement : MonoBehaviour
                 father.transform.Rotate(speed * Time.deltaTime * direction * 100, Space.World);
             }
 
+        }
+
+        if (coroutineFinished)
+        {
+            resetCharacter();
+            coroutineFinished = false;
         }
     }
 
@@ -81,16 +90,16 @@ public class CharacterMovement : MonoBehaviour
 
     public void doFallingDownBehaviour()
     {
-        Debug.Log("called");
-        
+        StartCoroutine(makeFallingAnimation(whenCoroutineEnds));
 
-        StartCoroutine(makeFallingAnimation());
-        
-        
+
         Debug.Log("Have a break, have a kit kat");
+
+        
+        
     }
 
-    public IEnumerator makeFallingAnimation()
+    public IEnumerator makeFallingAnimation(Action whenCEnds)
     {
         Vector3 initialPosition = grandpa.transform.position;
         while (getDistanceBetweenPositions(initialPosition, grandpa.transform.position) <= 2)
@@ -98,5 +107,17 @@ public class CharacterMovement : MonoBehaviour
             grandpa.transform.Translate(getVectorBetweenParentCharacter() * 0.01f);
             yield return new WaitForSeconds(Time.deltaTime);
         }
+        whenCEnds();
+    }
+
+    public void whenCoroutineEnds()
+    {
+        Debug.Log("finished coroutine");
+        coroutineFinished = true;
+    }
+
+    public void makeCharacterNotFallDown()
+    {
+        fallingDown = false;
     }
 }

@@ -11,7 +11,7 @@ public class CharacterManager : MonoBehaviour
     private CharacterData cData;
 
     [SerializeField]
-    private VoidEvent resetAllCollidables;
+    private VoidEvent makeCharacterNotFallDownEvent;
 
     private GameObject character; // the child one, actually
 
@@ -37,9 +37,9 @@ public class CharacterManager : MonoBehaviour
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
         setTransform(character, cData.Transform, true);
-        
-        
-        
+
+
+        makeCharacterNotFallDownEvent.Raise();
 
         // quaternion.euler is used to convert from Vector3 to Quaternion
     }
