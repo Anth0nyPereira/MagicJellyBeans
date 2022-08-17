@@ -27,7 +27,6 @@ public class CharacterManager : MonoBehaviour
 
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
-        setTransform(character, cData.Transform, true);
     }
 
     public void resetCharacter()
@@ -36,8 +35,6 @@ public class CharacterManager : MonoBehaviour
         
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
-        setTransform(character, cData.Transform, true);
-
 
         makeCharacterNotFallDownEvent.Raise();
 

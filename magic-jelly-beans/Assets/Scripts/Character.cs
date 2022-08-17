@@ -58,17 +58,23 @@ public class Character : MonoBehaviour
         characterData.Material = newMaterial;
     }
 
+    public Vector3 getTransformInEulerAngles(Quaternion quaternion)
+    {
+        return quaternion.eulerAngles;
+    }
     public void updateParentTransformData(Transform newTransform) // this is actually the parent aka "meshCenter" position
     {
+        Vector3 rotationTransform = getTransformInEulerAngles(newTransform.rotation);
         characterData.ParentTransform.Position = newTransform.localPosition;
-        characterData.ParentTransform.Rotation = new Vector3(newTransform.localRotation.x, newTransform.localRotation.y, newTransform.localRotation.z);
+        characterData.ParentTransform.Rotation = new Vector3(rotationTransform.x, rotationTransform.y, rotationTransform.z);
 
     }
 
     public void updateGrandParentTransformData(Transform newTransform) // this is actually the grandfather aka "Character object" position
     {
+        Vector3 rotationTransform = getTransformInEulerAngles(newTransform.rotation);
         characterData.GrandfatherTransform.Position = newTransform.position;
-        characterData.GrandfatherTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
+        characterData.GrandfatherTransform.Rotation = new Vector3(rotationTransform.x, rotationTransform.y, rotationTransform.z);
 
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ParentTransform
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0, z: 0}
-  rotation: {x: -0, y: -0, z: -0.99784327}
+  rotation: {x: -0, y: -0, z: 0}

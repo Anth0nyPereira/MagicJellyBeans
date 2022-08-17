@@ -671,7 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minStressLevel: {fileID: 11400000, guid: 050a10962dd3496488b2e377033cbdb4, type: 2}
   maxStressLevel: {fileID: 11400000, guid: 6ea229d4fd08e344f88ac9e216b83476, type: 2}
-  characterData: {fileID: 11400000, guid: d7f481d047d09f64797092166e878c0e, type: 2}
+  characterData: {fileID: 11400000, guid: b424833523f1c4a4ba775bf73fe6664a, type: 2}
 --- !u!114 &1275127483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialPos: {fileID: 718105646}
-  cData: {fileID: 11400000, guid: d7f481d047d09f64797092166e878c0e, type: 2}
+  cData: {fileID: 11400000, guid: b424833523f1c4a4ba775bf73fe6664a, type: 2}
   makeCharacterNotFallDownEvent: {fileID: 11400000, guid: 25d7da2048b05994eb92f4b7a2697df5, type: 2}
 --- !u!4 &1379797501
 Transform:

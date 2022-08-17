@@ -23,8 +23,8 @@ public class Checkpoint : Trigger
             GameObject father = other.transform.parent.gameObject;
             GameObject grandpa = father.transform.parent.gameObject;
 
-            updateNewParentTransform.Raise(father.GetComponentInParent<Transform>());
-            updateNewGrandParentTransform.Raise(grandpa.GetComponentInParent<Transform>());
+            updateNewParentTransform.Raise(father.transform);
+            updateNewGrandParentTransform.Raise(grandpa.transform);
             updateNewCharacterColorMaterial.Raise(other.gameObject.GetComponent<Renderer>().sharedMaterial);
         }
         
