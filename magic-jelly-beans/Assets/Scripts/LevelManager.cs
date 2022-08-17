@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 
 
     private GameObject[] collidablesGOs; // later this list will be only the collidables that exist after the last checkpoint
-    // store collidable data --> name, prefab, position and isVisible I guess??
+    // store collidable data --> name, position and isVisible I guess??
 
     [SerializeField]
     private CollidableNameListSO listOfVisibleCollidables;

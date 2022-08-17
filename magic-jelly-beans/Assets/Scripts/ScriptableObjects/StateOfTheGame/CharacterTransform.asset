@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CharacterTransform
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0.704, z: 0}
-  rotation: {x: 0, y: 0, z: 0}
+  rotation: {x: -0, y: -0, z: 0}

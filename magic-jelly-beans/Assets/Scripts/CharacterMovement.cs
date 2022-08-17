@@ -44,7 +44,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (!fallingDown)
         {
-            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.2f);
+            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");

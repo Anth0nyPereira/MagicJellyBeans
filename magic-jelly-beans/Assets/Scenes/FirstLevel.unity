@@ -1021,9 +1021,9 @@ MonoBehaviour:
   col: {fileID: 2101654089}
   boolean: {fileID: 11400000, guid: 92dd329da1836ad459406a7d666e49f4, type: 2}
   collidableName: {fileID: 11400000, guid: b3cfa6995b22f3345911a344f42df02a, type: 2}
-  updateNewCharacterTransform: {fileID: 11400000, guid: d1cabe54998c95240b3b2fa616c8bac7, type: 2}
+  updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
+  updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
-  updateNewParentCharacterTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
 --- !u!65 &2101654089
 BoxCollider:
   m_ObjectHideFlags: 0

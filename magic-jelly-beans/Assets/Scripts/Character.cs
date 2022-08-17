@@ -50,21 +50,22 @@ public class Character : MonoBehaviour
         Debug.Log("I died rip me :(");
     }
 
-    public void updateTransformData(Transform newTransform) 
-    {
-        characterData.Transform.Position = newTransform.position;
-        characterData.Transform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
-    }
-
     public void updateMaterialData(Material newMaterial)
     {
         characterData.Material = newMaterial;
     }
 
-    public void updateParentTransformData(Transform newTransform) // this is actually the parent aka "Character object" position
+    public void updateParentTransformData(Transform newTransform) // this is actually the parent aka "meshCenter" position
     {
         characterData.ParentTransform.Position = newTransform.position;
         characterData.ParentTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
+
+    }
+
+    public void updateGrandParentTransformData(Transform newTransform) // this is actually the grandfather aka "Character object" position
+    {
+        characterData.GrandfatherTransform.Position = newTransform.position;
+        characterData.GrandfatherTransform.Rotation = new Vector3(newTransform.rotation.x, newTransform.rotation.y, newTransform.rotation.z);
 
     }
 }
