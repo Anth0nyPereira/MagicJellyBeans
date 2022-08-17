@@ -82,14 +82,21 @@ public class CharacterMovement : MonoBehaviour
     public void doFallingDownBehaviour()
     {
         Debug.Log("called");
-        Vector3 initialPosition = grandpa.transform.position;
         
+
+        StartCoroutine(makeFallingAnimation());
+        
+        
+        Debug.Log("Have a break, have a kit kat");
+    }
+
+    public IEnumerator makeFallingAnimation()
+    {
+        Vector3 initialPosition = grandpa.transform.position;
         while (getDistanceBetweenPositions(initialPosition, grandpa.transform.position) <= 2)
         {
-            grandpa.transform.Translate(getVectorBetweenParentCharacter() * 100);
-            
-
+            grandpa.transform.Translate(getVectorBetweenParentCharacter() * 0.01f);
+            yield return new WaitForSeconds(Time.deltaTime);
         }
-        Debug.Log("Have a break, have a kit kat");
     }
 }
