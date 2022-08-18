@@ -901,6 +901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialPos: {fileID: 718105646}
   cData: {fileID: 11400000, guid: b424833523f1c4a4ba775bf73fe6664a, type: 2}
+  cInitialData: {fileID: 11400000, guid: 5b279fca782c6c549a8ba1324999f2d5, type: 2}
   makeCharacterNotFallDownEvent: {fileID: 11400000, guid: 25d7da2048b05994eb92f4b7a2697df5, type: 2}
 --- !u!4 &1379797501
 Transform:

@@ -11,6 +11,9 @@ public class CharacterManager : MonoBehaviour
     private CharacterData cData;
 
     [SerializeField]
+    private CharacterData cInitialData;
+
+    [SerializeField]
     private VoidEvent makeCharacterNotFallDownEvent;
 
     private GameObject character; // the child one, actually
@@ -25,8 +28,8 @@ public class CharacterManager : MonoBehaviour
         father = character.transform.parent.gameObject; // the one called meshCenter
         grandpa = father.transform.parent.gameObject; // the one called Character
 
-        setTransform(grandpa, cData.GrandfatherTransform);
-        setTransform(father, cData.ParentTransform, true);
+        setTransform(grandpa, cInitialData.GrandfatherTransform);
+        setTransform(father, cInitialData.ParentTransform, true);
     }
 
     public void resetCharacter()
