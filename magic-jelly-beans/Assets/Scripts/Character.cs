@@ -15,7 +15,9 @@ public class Character : MonoBehaviour
     private float stressLevel;
 
     [SerializeField]
-    private CharacterData characterData;
+    public CharacterData characterData;
+
+   
 
    
     private void Awake()
@@ -23,12 +25,6 @@ public class Character : MonoBehaviour
         stressLevel = computeStartingStressLevel();
 
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    
     }
 
     private float computeStartingStressLevel()

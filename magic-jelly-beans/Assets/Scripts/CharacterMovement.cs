@@ -16,9 +16,6 @@ public class CharacterMovement : MonoBehaviour
     public Vector3 direction;
     public float speed = 2f;
 
-    // jumping attributes
-    private float jumpHeight = 8.0f;
-
     [SerializeField]
     private VoidEvent resetCharacterEvent;
 
@@ -44,11 +41,11 @@ public class CharacterMovement : MonoBehaviour
 
         if (!fallingDown)
         {
-            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime);
+            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
-            direction = new Vector3(0f, 0f, -horizontalI).normalized;
+            direction = new Vector3(0f, 0f, horizontalI).normalized;
 
             if (direction.magnitude >= 0.1)
             {
@@ -61,6 +58,24 @@ public class CharacterMovement : MonoBehaviour
         {
             resetCharacter();
             coroutineFinished = false;
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        RaycastHit hit;
+        int layerMask = 1 << 8;
+        layerMask = ~layerMask;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, getVectorBetweenParentCharacter(), out hit, Mathf.Infinity, layerMask))
+        {
+            Debug.Log("Did Hit");
+        }
+        else
+        {
+            Debug.Log("Did not Hit");
+            makeCharacterFallDown();
+            // Debug.Break();
         }
     }
 

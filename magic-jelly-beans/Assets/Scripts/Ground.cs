@@ -11,6 +11,19 @@ public class Ground : Collidable
     [SerializeField]
     private VoidEvent makeCharacterFallDownEvent;
 
+    private bool characterIsGround;
+
+    private GameObject character;
+    private GameObject father;
+    private GameObject grandpa;
+
+    private void Awake()
+    {
+        character = GameObject.FindGameObjectWithTag("Character"); // the one called mesh
+        father = character.transform.parent.gameObject; // the one called meshCenter
+        grandpa = father.transform.parent.gameObject; // the one called Character
+    }
+
 
     public override void OnCollisionEnter(Collision other)
     {
@@ -33,13 +46,24 @@ public class Ground : Collidable
         }
     }
 
+    /*
     public void OnCollisionExit(Collision other)
     {
         if (other.gameObject.tag == "Character")
         {
-            makeCharacterFallDown(other);
+            // before falling down, check if the character is colliding with another ground, if not, then make character fall down
+            if (characterIsGround)
+            {
+                Debug.Log("character is ground");
+            } else
+            {
+                makeCharacterFallDown(other);
+            }
+            characterIsGround = false;
+            
         }
     }
+    */
 
     public bool checkIfSameColor(Collision character)
     {
@@ -61,5 +85,10 @@ public class Ground : Collidable
    public void deactivateCollider()
     {
         this.GetComponent<Collider>().enabled = false;
+    }
+
+    public void characterIsStillOnGround()
+    {
+        characterIsGround = true;
     }
 }
