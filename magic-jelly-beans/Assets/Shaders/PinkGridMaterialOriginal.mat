@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PinkGridMaterial
+  m_Name: PinkGridMaterialOriginal
   m_Shader: {fileID: -6465566751694194690, guid: f95dcf66ba6d63341b4a3c3c2f6c1523, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -34,12 +34,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Line_Dimension: 0.841
+    - _Line_Dimension: 0.9
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _GridColor: {r: 257.00394, g: 0, b: 156.61177, a: 0}
-    - _Tiling: {r: 60, g: 10, b: 0, a: 0}
+    - _Tiling: {r: 50, g: 50, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4341574943544869253
 MonoBehaviour:

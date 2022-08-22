@@ -15,3 +15,4 @@ MonoBehaviour:
   colorList:
   - {fileID: 11400000, guid: 2a7851f8de1e6cc4d9201cc2867e1463, type: 2}
   - {fileID: 11400000, guid: 3b9a23bdce33f7e44978ac7259311011, type: 2}
+  - {fileID: 11400000, guid: 8bb952b4c0c5e0b4d8496a776b5abe34, type: 2}
