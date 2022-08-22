@@ -41,7 +41,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (!fallingDown)
         {
-            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
+            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 1.3f);
 
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
@@ -119,7 +119,7 @@ public class CharacterMovement : MonoBehaviour
         Vector3 initialPosition = grandpa.transform.position;
         while (getDistanceBetweenPositions(initialPosition, grandpa.transform.position) <= 2)
         {
-            grandpa.transform.Translate(getVectorBetweenParentCharacter() * 0.01f);
+            grandpa.transform.Translate(getVectorBetweenParentCharacter() * 0.001f);
             yield return new WaitForSeconds(Time.deltaTime);
         }
         whenCEnds();

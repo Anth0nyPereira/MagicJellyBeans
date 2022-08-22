@@ -34,12 +34,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Line_Dimension: 0.9
+    - _Line_Dimension: 0.941
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
     - _GridColor: {r: 4.695924, g: 66.15112, b: 0, a: 1}
-    - _Tiling: {r: 50, g: 50, b: 0, a: 0}
+    - _Tiling: {r: 40, g: 40, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4341574943544869253
 MonoBehaviour:
