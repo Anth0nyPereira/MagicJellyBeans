@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OrangeGridMaterial 1
+  m_Name: YellowGridMaterial 1
   m_Shader: {fileID: -6465566751694194690, guid: f95dcf66ba6d63341b4a3c3c2f6c1523, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -34,7 +34,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Line_Dimension: 0.9
+    - _Line_Dimension: 0.952
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
