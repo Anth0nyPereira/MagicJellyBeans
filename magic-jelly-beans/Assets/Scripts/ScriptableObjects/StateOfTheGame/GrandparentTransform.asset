@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae0697b30c8b9494eb1e1a5bac592913, type: 3}
   m_Name: GrandparentTransform
   m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: -14.43}
+  position: {x: 0, y: 0, z: -13}
   rotation: {x: -0, y: 0, z: 0}
