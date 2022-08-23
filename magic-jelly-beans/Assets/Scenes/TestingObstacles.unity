@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: startTime
       value: 0.041666668
       objectReference: {fileID: 0}
+    - target: {fileID: -5841644371701176809, guid: b3404a99fc5b404499388b5ede266bbf, type: 3}
+      propertyPath: currentTime
+      value: 2.6702318
+      objectReference: {fileID: 0}
     - target: {fileID: -2260910499703449197, guid: b3404a99fc5b404499388b5ede266bbf, type: 3}
       propertyPath: m_RootOrder
       value: 7
