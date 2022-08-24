@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour
             string cName = collidableName.Str;
             foreach (GameObject collidable in collidablesGOs)
             {
-                if (cName == collidable.GetComponent<Collidable>().collidableName.Str)
+                if (cName == collidable.GetComponent<Collidable>().collidableData.CollidableName)
                 {
                     Debug.Log(cName);
                     collidable.SetActive(true);
