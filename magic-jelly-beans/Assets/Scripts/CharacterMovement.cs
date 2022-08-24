@@ -66,6 +66,7 @@ public class CharacterMovement : MonoBehaviour
         RaycastHit hit;
         int layerMask = 1 << 8;
         layerMask = ~layerMask;
+        
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, getVectorBetweenParentCharacter(), out hit, Mathf.Infinity, layerMask))
         {
@@ -73,9 +74,10 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
+            Debug.Log(getVectorBetweenParentCharacter());
             Debug.Log("Did not Hit");
             makeCharacterFallDown();
-            // Debug.Break();
+            Debug.Break();
         }
     }
 
