@@ -26,6 +26,7 @@ public class Collectable : Collidable
             // destroy the gameObject
             DisableCollider();
             ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
+            Debug.Log(colorSO.Color);
             animator.SetTrigger("dissolve");
             other.gameObject.GetComponent<Renderer>().material = colorSO.Materials[0];
         }

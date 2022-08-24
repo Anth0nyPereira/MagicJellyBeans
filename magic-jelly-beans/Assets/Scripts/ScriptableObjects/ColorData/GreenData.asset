@@ -15,5 +15,5 @@ MonoBehaviour:
   color: green
   materials:
   - {fileID: 2100000, guid: f27fd07c03d657042919229debe5ef9c, type: 2}
-  - {fileID: 2100000, guid: b6ee74eb90436dc44b1ede335e05d9dc, type: 2}
+  - {fileID: 2100000, guid: 69f1a20cdc3d89d4d89f685afa4fc70a, type: 2}
   - {fileID: 2100000, guid: ab9fdad755d2eb54b8b70b5c083d2b6e, type: 2}
