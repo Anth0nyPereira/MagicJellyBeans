@@ -10,7 +10,7 @@ public class LevelManager : MonoBehaviour
     // store collidable data --> name, position and isVisible I guess??
 
     [SerializeField]
-    private CollidableNameListSO listOfVisibleCollidables;
+    private CollidableDataList listOfVisibleCollidables;
 
     public void Awake()
     {
@@ -24,9 +24,9 @@ public class LevelManager : MonoBehaviour
 
     private void resetAllCollidables()
     {
-        foreach (StringSO collidableName in listOfVisibleCollidables.ListOfCollidableNames)
+        foreach (CollidableData collidableData in listOfVisibleCollidables.ListOfCollidables)
         {
-            string cName = collidableName.Str;
+            string cName = collidableData.CollidableName;
             
             foreach (GameObject collidable in collidablesGOs)
             {

@@ -13,7 +13,7 @@ public class CheckpointSO : ScriptableObject
     // the character when it starts on that specific checkpoint
 
     [SerializeField]
-    private CollidableNameListSO listOfAvailableCollidables;
+    private CollidableDataList listOfAvailableCollidables;
 }
 
     
