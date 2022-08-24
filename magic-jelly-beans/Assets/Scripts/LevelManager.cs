@@ -27,8 +27,10 @@ public class LevelManager : MonoBehaviour
         foreach (StringSO collidableName in listOfVisibleCollidables.ListOfCollidableNames)
         {
             string cName = collidableName.Str;
+            
             foreach (GameObject collidable in collidablesGOs)
             {
+                Debug.Log(collidable.GetComponent<Collidable>().collidableData.CollidableName);
                 if (cName == collidable.GetComponent<Collidable>().collidableData.CollidableName)
                 {
                     Debug.Log(cName);

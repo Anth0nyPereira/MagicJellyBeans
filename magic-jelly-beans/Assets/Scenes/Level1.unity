@@ -174,11 +174,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: bb54d2eb75958004ca727f2cc8f51da8, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
 --- !u!1 &16418860
 GameObject:
@@ -215,8 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 16418868}
-  boolean: {fileID: 11400000, guid: bb1cc16c22d87574e8d47b857d4ad1eb, type: 2}
-  collidableName: {fileID: 11400000, guid: 461c3ad541ac60545a9bd510509513f8, type: 2}
+  collidableData: {fileID: 11400000, guid: f10124115e496d94eb6931bc29f1e027, type: 2}
 --- !u!114 &16418862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,7 +333,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &16418868
 BoxCollider:
@@ -344,6 +348,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.26311, y: 0.15991199, z: 0.14892}
   m_Center: {x: 0, y: 0.058971997, z: 0}
+--- !u!1 &56281072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 876694032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &56281080
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56281072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932802}
 --- !u!1 &240450389
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +398,42 @@ Transform:
   m_Father: {fileID: 4916941335552462093}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &242706084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 2770122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &242706092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242706084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932802}
+--- !u!1 &281748503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 1889040396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &281748511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281748503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932802}
 --- !u!1001 &354895238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -385,7 +443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
       propertyPath: m_LocalPosition.x
@@ -500,8 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 538468795}
-  boolean: {fileID: 11400000, guid: b3d6533f67b54734e9a45b59e385de99, type: 2}
-  collidableName: {fileID: 11400000, guid: 91ab66f18f24c3b439f166f0a1f42bcb, type: 2}
+  collidableData: {fileID: 0}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &538468794
 MonoBehaviour:
@@ -597,7 +654,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &623642632
 PrefabInstance:
@@ -673,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2813186312662436335, guid: 50759669d50d07e43b2849b0c9aaec3e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2813186312662436335, guid: 50759669d50d07e43b2849b0c9aaec3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -768,12 +825,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d200ed89a574c244be10397e31781c8, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
-      value: banana3 (2)
+      value: banana6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+--- !u!1 &723832986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 701739422}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &723832994
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723832986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932805}
 --- !u!1001 &868287142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,11 +905,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b121231f4fad664d8b665dfdd3b1d9b, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
 --- !u!1001 &876694032
 PrefabInstance:
@@ -840,7 +925,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2364288783738539350, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2364288783738539350, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_LocalPosition.x
@@ -882,11 +967,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: dfb48025a7cd86c418b2ce15550a1d04, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
 --- !u!1 &961739749
 GameObject:
@@ -1057,12 +1147,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: 5ad6e2d1b9e9b5e438836f69b164cb67, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
-      value: banana3 (1)
+      value: banana5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+--- !u!1 &1196755397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 868287142}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1196755405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196755397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932802}
 --- !u!1 &1275127480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1264,7 +1377,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1379797503
 MonoBehaviour:
@@ -1368,8 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1436106731}
-  boolean: {fileID: 11400000, guid: d1585d780a6880c469488ae880881bda, type: 2}
-  collidableName: {fileID: 11400000, guid: 903652e0d00b5a64bbaa503233250884, type: 2}
+  collidableData: {fileID: 0}
   characterIsStillOnGroundEvent: {fileID: 11400000, guid: 64cf39e4e4bd74840928c788a61d6a2d, type: 2}
 --- !u!64 &1436106731
 MeshCollider:
@@ -1448,7 +1560,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1889040396
 PrefabInstance:
@@ -1501,11 +1613,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: a22930209bb8a0d4ba4b53dfa33ffec2, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
-      value: banana3 (3)
+      value: banana7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
 --- !u!65 &1958314908
 BoxCollider:
@@ -1520,6 +1637,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.153348, y: 0.20571, z: 0.113142}
   m_Center: {x: 0, y: 0.058927998, z: 0}
+--- !u!1 &2046483744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 1146887769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2046483752
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046483744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932802}
+--- !u!1 &2072819296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+  m_PrefabInstance: {fileID: 1540996608869351999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2072819304
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072819296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08227203, y: 0.17584202, z: 0.43629208}
+  m_Center: {x: -0.0000000013138539, y: -0.051134, z: 0.07932802}
 --- !u!1 &2101654087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,8 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 2101654089}
-  boolean: {fileID: 11400000, guid: 92dd329da1836ad459406a7d666e49f4, type: 2}
-  collidableName: {fileID: 11400000, guid: b3cfa6995b22f3345911a344f42df02a, type: 2}
+  collidableData: {fileID: 0}
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
@@ -1634,7 +1786,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &270306764261117412
 MonoBehaviour:
@@ -1819,7 +1971,7 @@ Transform:
   - {fileID: 3012855313798308985}
   - {fileID: 2341448591479274943}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &576511902063148593
 Transform:
@@ -1939,7 +2091,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2364288783738539350, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2364288783738539350, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_LocalScale.x
@@ -1997,11 +2149,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
+      propertyPath: collidableData
+      value: 
+      objectReference: {fileID: 11400000, guid: b382af9a4dc5eea4caf4265df31c7db6, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3401670519355694050, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
 --- !u!23 &1587545475362824914
 MeshRenderer:
@@ -2368,8 +2525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 4243679657187543074}
-  boolean: {fileID: 11400000, guid: 37137f420bbd98540a65a95e3f1ff0a9, type: 2}
-  collidableName: {fileID: 11400000, guid: 2230ae3516fd66242b778fe4b9f82e10, type: 2}
+  collidableData: {fileID: 11400000, guid: d048576827588914f9349a3fcbd67c5d, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &4243679657187543076
 MonoBehaviour:
@@ -2457,7 +2613,7 @@ Transform:
   - {fileID: 240450390}
   - {fileID: 961739753}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4916941335552462094
 GameObject:
@@ -2518,8 +2674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 5611254146757354701}
-  boolean: {fileID: 11400000, guid: 94cd0ebd00717524fabb699afcfb6ee7, type: 2}
-  collidableName: {fileID: 11400000, guid: 5fc7490dc40a5b542a4feb897741a7d5, type: 2}
+  collidableData: {fileID: 11400000, guid: e8338827e1b5da543b027036c954afd3, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &5611254146757354703
 MonoBehaviour:
@@ -2702,8 +2857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 6207502804809400249}
-  boolean: {fileID: 11400000, guid: fb3159a9dd3d82c48a78950fcbe01278, type: 2}
-  collidableName: {fileID: 11400000, guid: 3ba9e9e5ba22cad43b0999cc79bf9c82, type: 2}
+  collidableData: {fileID: 11400000, guid: c6585dde7dbe55f4ab6627a3bf6ae946, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &6207502804809400251
 MonoBehaviour:
@@ -2796,8 +2950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 7078380010183874608}
-  boolean: {fileID: 11400000, guid: 204af06bf31b7d445b410ccfa390143d, type: 2}
-  collidableName: {fileID: 11400000, guid: 48d888612bfb7e4478187dbf4e6beae9, type: 2}
+  collidableData: {fileID: 11400000, guid: 04df29217df65954bac801ca73d207cb, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &7078380010183874610
 MonoBehaviour:
@@ -2947,8 +3100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1958314908}
-  boolean: {fileID: 0}
-  collidableName: {fileID: 0}
+  collidableData: {fileID: 11400000, guid: 6149efcfa9dc56c4eae4c2faf5ce9bcf, type: 2}
 --- !u!114 &8164078559939832890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,8 +3187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 8524135746459582589}
-  boolean: {fileID: 11400000, guid: 414a7e853f36bc748928d89c825115a3, type: 2}
-  collidableName: {fileID: 11400000, guid: 8b6a0b32c293ba247bbdb6dc17defa91, type: 2}
+  collidableData: {fileID: 11400000, guid: 6ee8a2c2dc52e8d46b2dccc310f0eb96, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &8524135746459582591
 MonoBehaviour:
@@ -3146,8 +3297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 8541289787452154063}
-  boolean: {fileID: 11400000, guid: a4ddd1ee4e2b3304cabde32720b9312e, type: 2}
-  collidableName: {fileID: 11400000, guid: 8348239d659d97449897e66ca2c91a3c, type: 2}
+  collidableData: {fileID: 11400000, guid: 50f4257018cec0e44aeb6ed650b71c66, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &8541289787452154065
 MonoBehaviour:
@@ -3247,8 +3397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 9005112614899049329}
-  boolean: {fileID: 11400000, guid: 2278b23a9cb61a44899947ca51b15d1f, type: 2}
-  collidableName: {fileID: 11400000, guid: 7163473b2d6939e40a00614faa64575e, type: 2}
+  collidableData: {fileID: 11400000, guid: 0a9785bb4795e854bb6aad116c71c989, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &9005112614899049331
 MonoBehaviour:
@@ -3313,8 +3462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 9054257874498308422}
-  boolean: {fileID: 11400000, guid: 4b11036de04a2784eb3465f02505a944, type: 2}
-  collidableName: {fileID: 11400000, guid: 9f78d5c566c0a9b40b396c25caf70313, type: 2}
+  collidableData: {fileID: 11400000, guid: e8cadb3f84ea1914eb504859bc78535a, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &9054257874498308424
 MonoBehaviour:
@@ -3413,8 +3561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 9095382057108688038}
-  boolean: {fileID: 11400000, guid: 1fe266eaeca1cc4438b3298cc5954968, type: 2}
-  collidableName: {fileID: 11400000, guid: 9459575fda3d7dc479b24a5e1aa06a63, type: 2}
+  collidableData: {fileID: 11400000, guid: 916f0f7aced04914ea9fc220c02b5ee2, type: 2}
   makeCharacterFallDownEvent: {fileID: 11400000, guid: 21cac2e379f3584479f3a25c14b49bb5, type: 2}
 --- !u!114 &9095382057108688040
 MonoBehaviour:

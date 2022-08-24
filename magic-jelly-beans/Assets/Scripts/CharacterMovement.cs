@@ -77,7 +77,7 @@ public class CharacterMovement : MonoBehaviour
             Debug.Log(getVectorBetweenParentCharacter());
             Debug.Log("Did not Hit");
             makeCharacterFallDown();
-            Debug.Break();
+            // Debug.Break();
         }
     }
 
