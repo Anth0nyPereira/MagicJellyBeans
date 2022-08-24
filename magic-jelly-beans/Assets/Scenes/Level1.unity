@@ -382,6 +382,8 @@ GameObject:
   - component: {fileID: 135906008}
   - component: {fileID: 135906010}
   - component: {fileID: 135906009}
+  - component: {fileID: 135906012}
+  - component: {fileID: 135906011}
   m_Layer: 0
   m_Name: wallGrid3
   m_TagString: Untagged
@@ -454,6 +456,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135906007}
   m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+--- !u!114 &135906011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135906007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &135906012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135906007}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
 --- !u!1 &153778120
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +518,7 @@ Transform:
   - {fileID: 365128082}
   - {fileID: 1218537976}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194440898
 GameObject:
@@ -499,6 +531,8 @@ GameObject:
   - component: {fileID: 194440899}
   - component: {fileID: 194440901}
   - component: {fileID: 194440900}
+  - component: {fileID: 194440903}
+  - component: {fileID: 194440902}
   m_Layer: 0
   m_Name: wallGrid2
   m_TagString: Untagged
@@ -571,6 +605,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194440898}
   m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+--- !u!114 &194440902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194440898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &194440903
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194440898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
 --- !u!1 &227392222
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +646,8 @@ GameObject:
   - component: {fileID: 227392223}
   - component: {fileID: 227392225}
   - component: {fileID: 227392224}
+  - component: {fileID: 227392227}
+  - component: {fileID: 227392226}
   m_Layer: 0
   m_Name: wallSlice4
   m_TagString: Untagged
@@ -654,6 +720,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227392222}
   m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+--- !u!114 &227392226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227392222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &227392227
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227392222}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
 --- !u!1 &240450389
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +816,8 @@ GameObject:
   - component: {fileID: 264341928}
   - component: {fileID: 264341930}
   - component: {fileID: 264341929}
+  - component: {fileID: 264341932}
+  - component: {fileID: 264341931}
   m_Layer: 0
   m_Name: wallGrid6
   m_TagString: Untagged
@@ -791,6 +889,36 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264341927}
+  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+--- !u!114 &264341931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264341927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &264341932
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264341927}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
 --- !u!1 &281748503 stripped
 GameObject:
@@ -885,6 +1013,11 @@ Transform:
   m_Father: {fileID: 153778121}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &418259403 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5661739502015808490, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
+  m_PrefabInstance: {fileID: 623642632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &487482429
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,6 +1029,8 @@ GameObject:
   - component: {fileID: 487482430}
   - component: {fileID: 487482432}
   - component: {fileID: 487482431}
+  - component: {fileID: 487482434}
+  - component: {fileID: 487482433}
   m_Layer: 0
   m_Name: wallGrid4
   m_TagString: Untagged
@@ -968,12 +1103,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487482429}
   m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+--- !u!114 &487482433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487482429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &487482434
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487482429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
 --- !u!1001 &623642632
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4916941335552462093}
     m_Modifications:
     - target: {fileID: 3989720428020780994, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
       propertyPath: m_RootOrder
@@ -1027,6 +1192,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: background
       objectReference: {fileID: 0}
+    - target: {fileID: 5661739502015808490, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661739502015808490, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 753
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661739502015808490, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661739502015808490, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5661739502015808490, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32fbb2b20edb62841bad61808bd102be, type: 3}
 --- !u!1001 &693797862
@@ -1042,7 +1227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2813186312662436335, guid: 50759669d50d07e43b2849b0c9aaec3e, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2813186312662436335, guid: 50759669d50d07e43b2849b0c9aaec3e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1182,6 +1367,8 @@ GameObject:
   - component: {fileID: 771401118}
   - component: {fileID: 771401120}
   - component: {fileID: 771401119}
+  - component: {fileID: 771401122}
+  - component: {fileID: 771401121}
   m_Layer: 0
   m_Name: wallGrid5
   m_TagString: Untagged
@@ -1254,6 +1441,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771401117}
   m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+--- !u!114 &771401121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771401117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &771401122
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771401117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
 --- !u!1 &863280610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1482,8 @@ GameObject:
   - component: {fileID: 863280611}
   - component: {fileID: 863280613}
   - component: {fileID: 863280612}
+  - component: {fileID: 863280615}
+  - component: {fileID: 863280614}
   m_Layer: 0
   m_Name: wallSlice3
   m_TagString: Untagged
@@ -1336,6 +1555,36 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863280610}
+  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+--- !u!114 &863280614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863280610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &863280615
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863280610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
 --- !u!1001 &868287142
 PrefabInstance:
@@ -1491,7 +1740,7 @@ Transform:
   m_Children:
   - {fileID: 1266212514}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961739749
 GameObject:
@@ -1970,7 +2219,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1379797503
 MonoBehaviour:
@@ -2052,6 +2301,8 @@ GameObject:
   - component: {fileID: 1807284600}
   - component: {fileID: 1807284602}
   - component: {fileID: 1807284601}
+  - component: {fileID: 1807284604}
+  - component: {fileID: 1807284603}
   m_Layer: 0
   m_Name: wallSlice2
   m_TagString: Untagged
@@ -2123,6 +2374,36 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807284599}
+  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+--- !u!114 &1807284603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807284599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &1807284604
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807284599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
 --- !u!1001 &1889040396
 PrefabInstance:
@@ -2358,7 +2639,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &42393735927259072
 MeshFilter:
@@ -2566,7 +2847,7 @@ Transform:
   - {fileID: 3012855313798308985}
   - {fileID: 2341448591479274943}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &576511902063148593
 Transform:
@@ -3553,8 +3834,9 @@ Transform:
   m_Children:
   - {fileID: 240450390}
   - {fileID: 961739753}
+  - {fileID: 418259403}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4916941335552462094
 GameObject:
@@ -3847,6 +4129,8 @@ GameObject:
   - component: {fileID: 2900797257345885834}
   - component: {fileID: 42393735927259072}
   - component: {fileID: 3581248742348979028}
+  - component: {fileID: 6266649767512208819}
+  - component: {fileID: 6266649767512208818}
   m_Layer: 0
   m_Name: wallGrid1
   m_TagString: Untagged
@@ -3854,6 +4138,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6266649767512208818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266649767512208817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &6266649767512208819
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266649767512208817}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
 --- !u!1 &6294597233558012485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,7 +4460,7 @@ Transform:
   - {fileID: 7644836507482639897}
   - {fileID: 1280255862556134952}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7644836507482639897
 Transform:
@@ -4246,6 +4560,8 @@ GameObject:
   - component: {fileID: 1151388028897792821}
   - component: {fileID: 2823090746170878591}
   - component: {fileID: 1587545474101284587}
+  - component: {fileID: 8164078558953144336}
+  - component: {fileID: 8164078558953144335}
   m_Layer: 0
   m_Name: wallSlice1
   m_TagString: Untagged
@@ -4253,6 +4569,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8164078558953144335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558953144334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 0}
+  collidableData: {fileID: 0}
+  damage: {fileID: 0}
+  updateStressLevel: {fileID: 0}
+--- !u!64 &8164078558953144336
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558953144334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
 --- !u!1 &8164078559939832887
 GameObject:
   m_ObjectHideFlags: 0

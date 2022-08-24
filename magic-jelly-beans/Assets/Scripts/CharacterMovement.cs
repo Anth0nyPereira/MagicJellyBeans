@@ -74,10 +74,18 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log(getVectorBetweenParentCharacter());
-            Debug.Log("Did not Hit");
-            makeCharacterFallDown();
-            // Debug.Break();
+            if (Physics.Raycast(transform.position + new Vector3(0, 0, 0.3f), getVectorBetweenParentCharacter() + new Vector3(0, 0, 0.3f), out hit, Mathf.Infinity, layerMask))
+            {
+                Debug.Log("Did Hit 2");
+            }
+             else
+            {
+                Debug.Log("Did not Hit");
+                // Debug.Break();
+                makeCharacterFallDown();
+                // Debug.Break();
+            }
+
         }
     }
 
