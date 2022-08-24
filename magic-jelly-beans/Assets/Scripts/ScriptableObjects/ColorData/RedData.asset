@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cb7f609fc7a94d499cacf29ef443773, type: 3}
-  m_Name: GreenData
+  m_Name: RedData
   m_EditorClassIdentifier: 
-  color: 
+  color: red
   materials:
-  - {fileID: 2100000, guid: f27fd07c03d657042919229debe5ef9c, type: 2}
-  - {fileID: 2100000, guid: b6ee74eb90436dc44b1ede335e05d9dc, type: 2}
-  - {fileID: 2100000, guid: ab9fdad755d2eb54b8b70b5c083d2b6e, type: 2}
+  - {fileID: 2100000, guid: b058755089ce9b54997dbaf89e0b7b69, type: 2}
+  - {fileID: 2100000, guid: 6c324f9c46c5f9748ba757f19a66f459, type: 2}
+  - {fileID: 2100000, guid: fe6316d948b1a0444b2846fb8be790d3, type: 2}

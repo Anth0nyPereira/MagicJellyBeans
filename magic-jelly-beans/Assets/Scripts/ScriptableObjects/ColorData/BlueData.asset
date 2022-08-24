@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2cb7f609fc7a94d499cacf29ef443773, type: 3}
-  m_Name: PinkData
+  m_Name: BlueData
   m_EditorClassIdentifier: 
-  color: 
+  color: blue
   materials:
-  - {fileID: 2100000, guid: 1a23d557764a72a4dba6d44bbb74ffb6, type: 2}
-  - {fileID: 2100000, guid: 7c7fd20371def1246913b8342298667a, type: 2}
-  - {fileID: 2100000, guid: a0eb591a4b3bee249899529129192305, type: 2}
-  - {fileID: 2100000, guid: 2a5c4024f2cdb0449b31aa73fdf27fe1, type: 2}
+  - {fileID: 2100000, guid: 76d29d72f4c6a3e47b4685aa8c4bcf51, type: 2}
+  - {fileID: 2100000, guid: 2e08ebb4829d7534082cc487a03e25b1, type: 2}
