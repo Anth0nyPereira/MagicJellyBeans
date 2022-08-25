@@ -12,9 +12,13 @@ public class Obstacle : Collidable
 
     private bool firstCollision;
 
+    private GameObject father;
+    private GameObject grandpa;
+
     public void Awake()
     {
         firstCollision = true;
+        
     }
 
     public override void OnCollisionEnter(Collision other)
@@ -63,7 +67,9 @@ public class Obstacle : Collidable
         if (firstCollision)
         {
             Debug.Log("First time colliding, character should be pulled back!");
-            character.gameObject.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 2000);
+            father = character.transform.parent.gameObject;
+            grandpa = father.transform.parent.gameObject;
+            grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
             Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
             firstCollision = false;
 

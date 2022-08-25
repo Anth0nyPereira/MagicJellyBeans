@@ -544,8 +544,9 @@ GameObject:
   - component: {fileID: 135906008}
   - component: {fileID: 135906010}
   - component: {fileID: 135906009}
-  - component: {fileID: 135906012}
   - component: {fileID: 135906011}
+  - component: {fileID: 135906012}
+  - component: {fileID: 135906013}
   m_Layer: 0
   m_Name: wallGrid3
   m_TagString: Untagged
@@ -630,12 +631,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &135906012
-MeshCollider:
+  col: {fileID: 135906012}
+  collidableData: {fileID: 11400000, guid: 3c6f8adb5bdb9894daf3563ea53ffa60, type: 2}
+  damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &135906012
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -644,10 +645,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0011048, y: 2.000039, z: 0.228118}
+  m_Center: {x: -0.00006252527, y: 0.00016051531, z: 0}
+--- !u!114 &135906013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135906007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 135906011}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &153778120
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,8 +721,9 @@ GameObject:
   - component: {fileID: 194440899}
   - component: {fileID: 194440901}
   - component: {fileID: 194440900}
-  - component: {fileID: 194440903}
   - component: {fileID: 194440902}
+  - component: {fileID: 194440903}
+  - component: {fileID: 194440904}
   m_Layer: 0
   m_Name: wallGrid2
   m_TagString: Untagged
@@ -779,12 +808,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &194440903
-MeshCollider:
+  col: {fileID: 194440903}
+  collidableData: {fileID: 11400000, guid: 7af5905e8b760474aa5052e4cdd76d74, type: 2}
+  damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &194440903
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -793,10 +822,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0011048, y: 2.000039, z: 0.228118}
+  m_Center: {x: -0.00006252527, y: 0.00016051531, z: 0}
+--- !u!114 &194440904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194440898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 194440902}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &227392222
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,8 +864,9 @@ GameObject:
   - component: {fileID: 227392223}
   - component: {fileID: 227392225}
   - component: {fileID: 227392224}
-  - component: {fileID: 227392227}
   - component: {fileID: 227392226}
+  - component: {fileID: 227392227}
+  - component: {fileID: 227392228}
   m_Layer: 0
   m_Name: wallSlice4
   m_TagString: Untagged
@@ -894,12 +951,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &227392227
-MeshCollider:
+  col: {fileID: 227392227}
+  collidableData: {fileID: 11400000, guid: f6f10404c37193846a2e7f74f5df67b7, type: 2}
+  damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &227392227
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -908,10 +965,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 0.099999994}
+  m_Center: {x: -0.48408997, y: 0, z: -0.041469}
+--- !u!114 &227392228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227392222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227392226}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &240450389
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,8 +1062,9 @@ GameObject:
   - component: {fileID: 264341928}
   - component: {fileID: 264341930}
   - component: {fileID: 264341929}
-  - component: {fileID: 264341932}
   - component: {fileID: 264341931}
+  - component: {fileID: 264341932}
+  - component: {fileID: 264341933}
   m_Layer: 0
   m_Name: wallGrid6
   m_TagString: Untagged
@@ -1064,12 +1149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &264341932
-MeshCollider:
+  col: {fileID: 264341932}
+  collidableData: {fileID: 11400000, guid: 01837e20493ff6f4a978b885ff2c80d6, type: 2}
+  damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &264341932
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1078,10 +1163,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0011048, y: 2.000039, z: 0.228118}
+  m_Center: {x: -0.00006252527, y: 0.00016051531, z: 0}
+--- !u!114 &264341933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264341927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 264341931}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &281748503 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
@@ -1514,8 +1626,9 @@ GameObject:
   - component: {fileID: 487482430}
   - component: {fileID: 487482432}
   - component: {fileID: 487482431}
-  - component: {fileID: 487482434}
   - component: {fileID: 487482433}
+  - component: {fileID: 487482434}
+  - component: {fileID: 487482435}
   m_Layer: 0
   m_Name: wallGrid4
   m_TagString: Untagged
@@ -1600,12 +1713,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &487482434
-MeshCollider:
+  col: {fileID: 487482434}
+  collidableData: {fileID: 11400000, guid: c0ee05d855882f64d80b49e54ec8da81, type: 2}
+  damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &487482434
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1614,10 +1727,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0011048, y: 2.000039, z: 0.228118}
+  m_Center: {x: -0.00006252527, y: 0.00016051531, z: 0}
+--- !u!114 &487482435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487482429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 487482433}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &693797862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1771,8 +1911,9 @@ GameObject:
   - component: {fileID: 771401118}
   - component: {fileID: 771401120}
   - component: {fileID: 771401119}
-  - component: {fileID: 771401122}
   - component: {fileID: 771401121}
+  - component: {fileID: 771401122}
+  - component: {fileID: 771401123}
   m_Layer: 0
   m_Name: wallGrid5
   m_TagString: Untagged
@@ -1857,12 +1998,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &771401122
-MeshCollider:
+  col: {fileID: 771401122}
+  collidableData: {fileID: 11400000, guid: 63c0aac544dc9414997fa9248ed67090, type: 2}
+  damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &771401122
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1871,10 +2012,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0011048, y: 2.000039, z: 0.228118}
+  m_Center: {x: -0.00006252527, y: 0.00016051531, z: 0}
+--- !u!114 &771401123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771401117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 771401121}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &863280610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,8 +2054,9 @@ GameObject:
   - component: {fileID: 863280611}
   - component: {fileID: 863280613}
   - component: {fileID: 863280612}
-  - component: {fileID: 863280615}
   - component: {fileID: 863280614}
+  - component: {fileID: 863280615}
+  - component: {fileID: 863280616}
   m_Layer: 0
   m_Name: wallSlice3
   m_TagString: Untagged
@@ -1972,12 +2141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &863280615
-MeshCollider:
+  col: {fileID: 863280615}
+  collidableData: {fileID: 11400000, guid: b7dcd09941842694a9c820bd1bc6b4d5, type: 2}
+  damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &863280615
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1986,10 +2155,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 0.099999994}
+  m_Center: {x: -0.4840901, y: 0, z: -0.041469}
+--- !u!114 &863280616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863280610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 863280614}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &868287142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2972,8 +3168,9 @@ GameObject:
   - component: {fileID: 1807284600}
   - component: {fileID: 1807284602}
   - component: {fileID: 1807284601}
-  - component: {fileID: 1807284604}
   - component: {fileID: 1807284603}
+  - component: {fileID: 1807284604}
+  - component: {fileID: 1807284605}
   m_Layer: 0
   m_Name: wallSlice2
   m_TagString: Untagged
@@ -3058,12 +3255,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &1807284604
-MeshCollider:
+  col: {fileID: 1807284604}
+  collidableData: {fileID: 11400000, guid: b97bcc78f6b288c408cee2732477a9ea, type: 2}
+  damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &1807284604
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3072,10 +3269,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 0.099999994}
+  m_Center: {x: -0.48408997, y: 0, z: -0.041469}
+--- !u!114 &1807284605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807284599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1807284603}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1889040396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4746,6 +4970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4916941335552462093}
+  - component: {fileID: 4916941335552462095}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -4753,6 +4978,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &4916941335552462095
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4916941335552462094}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!33 &5513364722577334329
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5161,6 +5402,7 @@ GameObject:
   - component: {fileID: 3581248742348979028}
   - component: {fileID: 6266649767512208819}
   - component: {fileID: 6266649767512208818}
+  - component: {fileID: 6266649767512208820}
   m_Layer: 0
   m_Name: wallGrid1
   m_TagString: Untagged
@@ -5180,12 +5422,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &6266649767512208819
-MeshCollider:
+  col: {fileID: 6266649767512208819}
+  collidableData: {fileID: 11400000, guid: 1dd0fff51dfd05243b77cb8012b9a46c, type: 2}
+  damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &6266649767512208819
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5194,10 +5436,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 4e9b02c39d4b7d641a78844c892bf93e, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 2.0011048, y: 2.000039, z: 0.228118}
+  m_Center: {x: -0.00006252527, y: 0.00016051531, z: 0}
+--- !u!114 &6266649767512208820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266649767512208817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6266649767512208818}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6294597233558012485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5687,8 +5956,9 @@ GameObject:
   - component: {fileID: 1151388028897792821}
   - component: {fileID: 2823090746170878591}
   - component: {fileID: 1587545474101284587}
-  - component: {fileID: 8164078558953144336}
   - component: {fileID: 8164078558953144335}
+  - component: {fileID: 8164078558953144336}
+  - component: {fileID: 8164078558953144337}
   m_Layer: 0
   m_Name: wallSlice1
   m_TagString: Untagged
@@ -5708,12 +5978,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 0}
-  collidableData: {fileID: 0}
-  damage: {fileID: 0}
-  updateStressLevel: {fileID: 0}
---- !u!64 &8164078558953144336
-MeshCollider:
+  col: {fileID: 8164078558953144336}
+  collidableData: {fileID: 11400000, guid: ebcd6a9347b4b934999f3509cb8fff8d, type: 2}
+  damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+--- !u!65 &8164078558953144336
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5722,10 +5992,37 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 0.099999994}
+  m_Center: {x: -0.4840901, y: 0, z: -0.041469}
+--- !u!114 &8164078558953144337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558953144334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8164078558953144335}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8164078559939832887
 GameObject:
   m_ObjectHideFlags: 0
