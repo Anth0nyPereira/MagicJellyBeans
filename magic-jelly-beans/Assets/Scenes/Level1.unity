@@ -635,6 +635,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 3c6f8adb5bdb9894daf3563ea53ffa60, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &135906012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -812,6 +813,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 7af5905e8b760474aa5052e4cdd76d74, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &194440903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -955,6 +957,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: f6f10404c37193846a2e7f74f5df67b7, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &227392227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1153,6 +1156,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 01837e20493ff6f4a978b885ff2c80d6, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &264341932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1717,6 +1721,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: c0ee05d855882f64d80b49e54ec8da81, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &487482434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2002,6 +2007,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 63c0aac544dc9414997fa9248ed67090, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &771401122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2145,6 +2151,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: b7dcd09941842694a9c820bd1bc6b4d5, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &863280615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2638,6 +2645,7 @@ GameObject:
   - component: {fileID: 270306764261117423}
   - component: {fileID: 270306764261117424}
   - component: {fileID: 270306764261117425}
+  - component: {fileID: 270306764261117426}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Character
@@ -3259,6 +3267,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: b97bcc78f6b288c408cee2732477a9ea, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &1807284604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3676,6 +3685,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Character, Assembly-CSharp
         m_MethodName: updateGrandParentTransformData
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &270306764261117426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275127480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1275127483}
+        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+        m_MethodName: makeCharacterNotToMove
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5426,6 +5463,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 1dd0fff51dfd05243b77cb8012b9a46c, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &6266649767512208819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5982,6 +6020,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: ebcd6a9347b4b934999f3509cb8fff8d, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
 --- !u!65 &8164078558953144336
 BoxCollider:
   m_ObjectHideFlags: 0

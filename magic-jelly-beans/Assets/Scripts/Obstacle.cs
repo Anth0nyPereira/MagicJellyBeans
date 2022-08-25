@@ -15,6 +15,9 @@ public class Obstacle : Collidable
     private GameObject father;
     private GameObject grandpa;
 
+    [SerializeField]
+    private VoidEvent tellCharacterToStopMovingEvent;
+
     public void Awake()
     {
         firstCollision = true;
@@ -69,6 +72,9 @@ public class Obstacle : Collidable
             Debug.Log("First time colliding, character should be pulled back!");
             father = character.transform.parent.gameObject;
             grandpa = father.transform.parent.gameObject;
+
+            // grandpa should stop moving
+            tellCharacterToStopMovingEvent.Raise();
             grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
             Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
             firstCollision = false;

@@ -21,6 +21,8 @@ public class CharacterMovement : MonoBehaviour
 
     private bool fallingDown;
 
+    private bool canMove;
+
     private bool coroutineFinished;
 
 
@@ -31,6 +33,7 @@ public class CharacterMovement : MonoBehaviour
         father = this.transform.parent.gameObject;
         grandpa = father.transform.parent.gameObject;
         fallingDown = false;
+        canMove = true;
         coroutineFinished = false;
     }
 
@@ -41,8 +44,11 @@ public class CharacterMovement : MonoBehaviour
 
         if (!fallingDown)
         {
-            grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 1.3f);
-
+            if (canMove)
+            {
+                grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 1.3f);
+            }
+           
             // character walking
             float horizontalI = Input.GetAxisRaw("Horizontal");
             direction = new Vector3(0f, 0f, horizontalI).normalized;
@@ -144,5 +150,10 @@ public class CharacterMovement : MonoBehaviour
     public void makeCharacterNotFallDown()
     {
         fallingDown = false;
+    }
+
+    public void makeCharacterNotToMove()
+    {
+        canMove = false;
     }
 }
