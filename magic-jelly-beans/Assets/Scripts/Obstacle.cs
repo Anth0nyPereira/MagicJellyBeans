@@ -105,7 +105,7 @@ public class Obstacle : Collidable
     public IEnumerator doForceForFixedTime(Action whenCEnds)
     {
         
-        grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
+        grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 80);
         yield return new WaitForSeconds(2);
         whenCEnds();
     }
