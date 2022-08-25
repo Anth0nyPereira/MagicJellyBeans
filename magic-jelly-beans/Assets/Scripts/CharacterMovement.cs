@@ -156,4 +156,9 @@ public class CharacterMovement : MonoBehaviour
     {
         canMove = false;
     }
+
+    public void makeCharacterMoveAgain()
+    {
+        canMove = true;
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class Obstacle : Collidable
 
     [SerializeField]
     private VoidEvent tellCharacterToStopMovingEvent;
+
+    [SerializeField]
+    private VoidEvent tellCharacterCanMoveAgainEvent;
 
     public void Awake()
     {
@@ -75,7 +79,11 @@ public class Obstacle : Collidable
 
             // grandpa should stop moving
             tellCharacterToStopMovingEvent.Raise();
-            grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
+            //grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
+
+            applyForce();
+
+
             Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
             firstCollision = false;
 
@@ -86,5 +94,33 @@ public class Obstacle : Collidable
         {
             Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
         }
+    }
+
+    public void applyForce()
+    {
+        StartCoroutine(doForceForFixedTime(whenCoroutineEnds));
+
+    }
+
+    public IEnumerator doForceForFixedTime(Action whenCEnds)
+    {
+        
+        grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
+        yield return new WaitForSeconds(2);
+        whenCEnds();
+    }
+
+    public void whenCoroutineEnds()
+    {
+        grandpa.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        grandpa.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        // character can move again
+        tellCharacterCanMoveAgainEvent.Raise();
+
+    }
+
+    public void dissipateAllForces()
+    {
+
     }
 }
