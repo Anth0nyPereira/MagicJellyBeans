@@ -5646,8 +5646,10 @@ GameObject:
   - component: {fileID: 1379797501}
   - component: {fileID: 1379797500}
   - component: {fileID: 1379797503}
+  - component: {fileID: 1379797506}
   - component: {fileID: 1379797504}
   - component: {fileID: 1379797505}
+  - component: {fileID: 1379797507}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -5747,6 +5749,48 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: makeCharacterNotFallDown
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379797506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad37f8d1bc0c7364e817a74dca4e97d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1275127482}
+  bar: {fileID: 8342584793141691699}
+--- !u!114 &1379797507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797506}
+        m_TargetAssemblyTypeName: StressLevelManager, Assembly-CSharp
+        m_MethodName: updateStress
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8386,6 +8430,7 @@ GameObject:
   - component: {fileID: 8342584793141691698}
   - component: {fileID: 6562307569533811832}
   - component: {fileID: 7652818453615106284}
+  - component: {fileID: 8342584793141691699}
   m_Layer: 0
   m_Name: Bean
   m_TagString: Untagged
@@ -11028,6 +11073,18 @@ Transform:
   m_Father: {fileID: 5250884514765163207}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8342584793141691699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968555212226123273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fad49906a09784c8de4ac68de66f99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &8346550327762887556
 MeshRenderer:
   m_ObjectHideFlags: 0
