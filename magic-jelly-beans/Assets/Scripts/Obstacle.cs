@@ -22,9 +22,12 @@ public class Obstacle : Collidable
     [SerializeField]
     private VoidEvent tellCharacterCanMoveAgainEvent;
 
+    private float actualStressLevel;
+
     public void Awake()
     {
         firstCollision = true;
+        actualStressLevel = 50;
         
     }
 
@@ -81,7 +84,7 @@ public class Obstacle : Collidable
             tellCharacterToStopMovingEvent.Raise();
             //grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
 
-            applyForce();
+            if (!checkIfStressLevelWillBeOutOfRange()) applyForce();
 
 
             Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
@@ -122,5 +125,22 @@ public class Obstacle : Collidable
     public void dissipateAllForces()
     {
 
+    }
+
+    public bool checkIfStressLevelWillBeOutOfRange()
+    {
+        Debug.Log(actualStressLevel);
+        Debug.Log(damage.Value);
+        Debug.Break();
+        if (actualStressLevel + damage.Value >= 100 || actualStressLevel - damage.Value <= 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void getActualStressLevel(float stressLevel)
+    {
+        actualStressLevel = stressLevel;
     }
 }

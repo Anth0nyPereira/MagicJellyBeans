@@ -10,6 +10,9 @@ public class StressLevelManager : MonoBehaviour
     [SerializeField]
     private StressLevelBar bar;
 
+    [SerializeField]
+    private FloatEvent sendActualStressLevelEvent;
+
     public void updateStress(float damage)
     {
         if (damage < 0)
@@ -32,13 +35,19 @@ public class StressLevelManager : MonoBehaviour
     {
         character.decreaseStressLevel(Mathf.Abs(damage));
         bar.decreaseStress(damage);
+        sendActualStressLevel();
     }
 
     private void increaseStress(float damage)
     {
         character.increaseStressLevel(damage);
         bar.increaseStress(damage);
+        sendActualStressLevel();
     }
 
+    private void sendActualStressLevel()
+    {
+        sendActualStressLevelEvent.Raise(character.StressLevel);
+    }
     
 }

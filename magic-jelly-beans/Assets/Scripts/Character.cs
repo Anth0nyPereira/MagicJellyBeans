@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
 
     private float stressLevel;
 
+    public float StressLevel { get => stressLevel; set => stressLevel = value; }
+
     private void Awake()
     {
         stressLevel = stressLevelSO.Value;
@@ -94,4 +96,5 @@ public class Character : MonoBehaviour
     {
         stressLevel = stressLevelSO.Value;
     }
+
 }

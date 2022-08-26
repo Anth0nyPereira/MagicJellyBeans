@@ -709,6 +709,7 @@ GameObject:
   - component: {fileID: 135906011}
   - component: {fileID: 135906012}
   - component: {fileID: 135906013}
+  - component: {fileID: 135906014}
   m_Layer: 0
   m_Name: wallGrid3
   m_TagString: Untagged
@@ -840,6 +841,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &135906014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135906007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 135906011}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &153778120
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,6 +919,7 @@ GameObject:
   - component: {fileID: 194440902}
   - component: {fileID: 194440903}
   - component: {fileID: 194440904}
+  - component: {fileID: 194440905}
   m_Layer: 0
   m_Name: wallGrid2
   m_TagString: Untagged
@@ -1021,6 +1051,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &194440905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194440898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 194440902}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &213010898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,6 +1198,7 @@ GameObject:
   - component: {fileID: 227392226}
   - component: {fileID: 227392227}
   - component: {fileID: 227392228}
+  - component: {fileID: 227392229}
   m_Layer: 0
   m_Name: wallSlice4
   m_TagString: Untagged
@@ -1271,6 +1330,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &227392229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227392222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227392226}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &240450389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1427,7 @@ GameObject:
   - component: {fileID: 264341931}
   - component: {fileID: 264341932}
   - component: {fileID: 264341933}
+  - component: {fileID: 264341934}
   m_Layer: 0
   m_Name: wallGrid6
   m_TagString: Untagged
@@ -1462,6 +1550,34 @@ MonoBehaviour:
       - m_Target: {fileID: 264341931}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &264341934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264341927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 264341931}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2562,6 +2678,7 @@ GameObject:
   - component: {fileID: 487482433}
   - component: {fileID: 487482434}
   - component: {fileID: 487482435}
+  - component: {fileID: 487482436}
   m_Layer: 0
   m_Name: wallGrid4
   m_TagString: Untagged
@@ -2684,6 +2801,34 @@ MonoBehaviour:
       - m_Target: {fileID: 487482433}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &487482436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487482429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 487482433}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3314,6 +3459,7 @@ GameObject:
   - component: {fileID: 771401121}
   - component: {fileID: 771401122}
   - component: {fileID: 771401123}
+  - component: {fileID: 771401124}
   m_Layer: 0
   m_Name: wallGrid5
   m_TagString: Untagged
@@ -3436,6 +3582,34 @@ MonoBehaviour:
       - m_Target: {fileID: 771401121}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &771401124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771401117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 771401121}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3622,6 +3796,7 @@ GameObject:
   - component: {fileID: 863280614}
   - component: {fileID: 863280615}
   - component: {fileID: 863280616}
+  - component: {fileID: 863280617}
   m_Layer: 0
   m_Name: wallSlice3
   m_TagString: Untagged
@@ -3744,6 +3919,34 @@ MonoBehaviour:
       - m_Target: {fileID: 863280614}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &863280617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863280610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 863280614}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5772,6 +5975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 1275127482}
   bar: {fileID: 8342584793141691699}
+  sendActualStressLevelEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
 --- !u!114 &1379797507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6448,6 +6652,7 @@ GameObject:
   - component: {fileID: 1807284603}
   - component: {fileID: 1807284604}
   - component: {fileID: 1807284605}
+  - component: {fileID: 1807284606}
   m_Layer: 0
   m_Name: wallSlice2
   m_TagString: Untagged
@@ -6570,6 +6775,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1807284603}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1807284606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807284599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1807284603}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10367,6 +10600,7 @@ GameObject:
   - component: {fileID: 6266649767512208819}
   - component: {fileID: 6266649767512208818}
   - component: {fileID: 6266649767512208820}
+  - component: {fileID: 6266649767512208821}
   m_Layer: 0
   m_Name: wallGrid1
   m_TagString: Untagged
@@ -10424,6 +10658,34 @@ MonoBehaviour:
       - m_Target: {fileID: 6266649767512208818}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6266649767512208821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266649767512208817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6266649767512208818}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10937,6 +11199,7 @@ GameObject:
   - component: {fileID: 8164078558953144335}
   - component: {fileID: 8164078558953144336}
   - component: {fileID: 8164078558953144337}
+  - component: {fileID: 8164078558953144338}
   m_Layer: 0
   m_Name: wallSlice1
   m_TagString: Untagged
@@ -10994,6 +11257,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8164078558953144335}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8164078558953144338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558953144334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8164078558953144335}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getActualStressLevel
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
