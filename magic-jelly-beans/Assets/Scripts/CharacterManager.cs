@@ -35,7 +35,10 @@ public class CharacterManager : MonoBehaviour
     public void resetCharacter()
     {
         character.GetComponent<Renderer>().sharedMaterial = cData.Material;
-        
+
+        grandpa.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        grandpa.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
 

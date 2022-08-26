@@ -4,35 +4,46 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-
-
     [SerializeField]
-    private FloatSO minStressLevel;
-
-    [SerializeField]
-    private FloatSO maxStressLevel;
-
-    private float stressLevel;
+    private FloatSO stressLevelSO;
 
     [SerializeField]
     public CharacterData characterData;
 
-   
+    [SerializeField]
+    private VoidEvent resetCharacterEvent;
 
-   
+    private bool flag;
+
+    private float stressLevel;
+
     private void Awake()
     {
-        stressLevel = computeStartingStressLevel();
-
-
+        stressLevel = stressLevelSO.Value;
+        flag = true;
     }
 
+    private void Update()
+    {
+        if (flag)
+        {
+            if (stressLevel <= 0 || stressLevel >= 100)
+            {
+                Die();
+                flag = false;
+            }
+        }
+        
+    }
+
+    /*
     private float computeStartingStressLevel()
     {
         float stress = (minStressLevel.Value + maxStressLevel.Value)/2;
         Debug.Log("starting stress level: " + stress);
         return stress;
     }
+    */
 
     public void decreaseStressLevel(float dam)
     {
@@ -47,6 +58,11 @@ public class Character : MonoBehaviour
     public void Die()
     {
         Debug.Log("I died rip me :(");
+        // play dissolve anim??
+        // reset level, character, stress level
+        resetCharacterEvent.Raise();
+        flag = true;
+
     }
 
     public void updateMaterialData(Material newMaterial)
@@ -72,5 +88,10 @@ public class Character : MonoBehaviour
         characterData.GrandfatherTransform.Position = newTransform.position;
         characterData.GrandfatherTransform.Rotation = new Vector3(rotationTransform.x, rotationTransform.y, rotationTransform.z);
 
+    }
+
+    public void resetStressLevel()
+    {
+        stressLevel = stressLevelSO.Value;
     }
 }
