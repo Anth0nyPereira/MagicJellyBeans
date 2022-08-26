@@ -23,10 +23,15 @@ public class StressLevelManager : MonoBehaviour
         } 
     }
 
+    public void resetBar()
+    {
+        bar.resetPosition();
+    }
+
     private void decreaseStress(float damage)
     {
         character.decreaseStressLevel(Mathf.Abs(damage));
-        bar.decreaseStress(Mathf.Abs(damage));
+        bar.decreaseStress(damage);
     }
 
     private void increaseStress(float damage)
@@ -34,4 +39,6 @@ public class StressLevelManager : MonoBehaviour
         character.increaseStressLevel(damage);
         bar.increaseStress(damage);
     }
+
+    
 }
