@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: yellow
   materials:
-  - {fileID: 2100000, guid: 844f02e913def6b4d966a46d4c73990a, type: 2}
+  - {fileID: 2100000, guid: 8578a07109b0488499ba3b152d91fa84, type: 2}
   - {fileID: 2100000, guid: 47ac2afeba49c254abe9a430edad658b, type: 2}
   - {fileID: 2100000, guid: 5f81d28b39ed5e347889725fc11f579c, type: 2}
   - {fileID: 2100000, guid: 16e769c4230494b41bea15347b321b01, type: 2}
