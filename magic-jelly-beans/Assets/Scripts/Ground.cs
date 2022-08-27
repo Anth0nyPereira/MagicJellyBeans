@@ -13,18 +13,6 @@ public class Ground : Collidable
 
     private bool characterIsGround;
 
-    private GameObject character;
-    private GameObject father;
-    private GameObject grandpa;
-
-    private void Awake()
-    {
-        character = GameObject.FindGameObjectWithTag("Character"); // the one called mesh
-        father = character.transform.parent.gameObject; // the one called meshCenter
-        grandpa = father.transform.parent.gameObject; // the one called Character
-    }
-
-
     public override void OnCollisionEnter(Collision other)
     {
         base.OnCollisionEnter(other);
@@ -69,7 +57,7 @@ public class Ground : Collidable
     {
         ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
         Material foundMaterial = colorSO.Materials[0];
-        if (foundMaterial == character.gameObject.GetComponent<Renderer>().sharedMaterial)
+        if (foundMaterial == character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial)
         {
             return true;
         }

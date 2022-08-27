@@ -34,7 +34,7 @@ public class CharacterManager : MonoBehaviour
 
     public void resetCharacter()
     {
-        character.GetComponent<Renderer>().sharedMaterial = cData.Material;
+        character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial = cData.Material;
 
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);

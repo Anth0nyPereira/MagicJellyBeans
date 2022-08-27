@@ -56,7 +56,7 @@ public class Obstacle : Collidable
     {
         ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
         Material foundMaterial = colorSO.Materials[0];
-        if (foundMaterial == character.gameObject.GetComponent<Renderer>().sharedMaterial)
+        if (foundMaterial == character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial)
         {
             return true;
         }
@@ -131,7 +131,7 @@ public class Obstacle : Collidable
     {
         Debug.Log(actualStressLevel);
         Debug.Log(damage.Value);
-        Debug.Break();
+        // Debug.Break();
         if (actualStressLevel + damage.Value >= 100 || actualStressLevel - damage.Value <= 0)
         {
             return true;
