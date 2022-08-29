@@ -31,6 +31,8 @@ public class CharacterMovement : MonoBehaviour
 
     private bool isUpArrowPressed;
 
+    private Animator animator;
+
 
     void Awake()
     {
@@ -43,6 +45,7 @@ public class CharacterMovement : MonoBehaviour
         coroutineFinished = false;
         cooldown = 0.5f;
         time = 0.0f;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -193,6 +196,7 @@ public class CharacterMovement : MonoBehaviour
     public void Dash()
     {
         makeCharacterNotToMove();
+        animator.SetTrigger("dash");
         StartCoroutine(makeCharacterDash(whenDashEnds));
     }
 
