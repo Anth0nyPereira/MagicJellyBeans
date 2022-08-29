@@ -76,9 +76,6 @@ public class CharacterMovement : MonoBehaviour
             resetCharacter();
             coroutineFinished = false;
         }
-
-        isUpArrowPressed = Input.GetKeyDown(KeyCode.UpArrow);
-        
     }
 
     private void FixedUpdate()
@@ -110,7 +107,7 @@ public class CharacterMovement : MonoBehaviour
 
         time += Time.fixedDeltaTime;
 
-        if (isUpArrowPressed)
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (canMove)
             {
