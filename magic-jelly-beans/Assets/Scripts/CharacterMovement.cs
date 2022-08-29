@@ -25,6 +25,12 @@ public class CharacterMovement : MonoBehaviour
 
     private bool coroutineFinished;
 
+    private float cooldown;
+
+    private float time;
+
+    private bool isUpArrowPressed;
+
 
     void Awake()
     {
@@ -35,6 +41,8 @@ public class CharacterMovement : MonoBehaviour
         fallingDown = false;
         canMove = true;
         coroutineFinished = false;
+        cooldown = 0.5f;
+        time = 0.0f;
     }
 
     void Update()
@@ -65,6 +73,9 @@ public class CharacterMovement : MonoBehaviour
             resetCharacter();
             coroutineFinished = false;
         }
+
+        isUpArrowPressed = Input.GetKeyDown(KeyCode.UpArrow);
+        
     }
 
     private void FixedUpdate()
@@ -92,6 +103,23 @@ public class CharacterMovement : MonoBehaviour
                 // Debug.Break();
             }
 
+        }
+
+        time += Time.fixedDeltaTime;
+
+        if (isUpArrowPressed)
+        {
+            if (canMove)
+            {
+                Debug.Log("dash");
+                
+                if (time > cooldown)
+                {
+                    Debug.Log("Can Dash!!");
+                    Dash();
+                    time = 0.0f;
+                }
+            }
         }
     }
 
@@ -160,5 +188,27 @@ public class CharacterMovement : MonoBehaviour
     public void makeCharacterMoveAgain()
     {
         canMove = true;
+    }
+
+    public void Dash()
+    {
+        makeCharacterNotToMove();
+        StartCoroutine(makeCharacterDash(whenDashEnds));
+    }
+
+    public IEnumerator makeCharacterDash(Action whenCEnds)
+    {
+
+        grandpa.GetComponent<Rigidbody>().AddForce(Vector3.forward * 200);
+        yield return new WaitForSeconds(0.5f);
+        whenCEnds();
+    }
+
+    public void whenDashEnds()
+    {
+        grandpa.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        grandpa.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        makeCharacterMoveAgain();  
+
     }
 }
