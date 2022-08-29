@@ -5398,7 +5398,7 @@ Transform:
   m_GameObject: {fileID: 1275127480}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0.72, z: 0}
-  m_LocalScale: {x: 0.12, y: 0.12, z: 0.12}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 805341338960322997}
@@ -5446,10 +5446,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.99
-  m_Height: 6.81
+  m_Radius: 4.887405
+  m_Height: 36.614914
   m_Direction: 1
-  m_Center: {x: 0, y: -3.02, z: 0}
+  m_Center: {x: 0, y: -4.457419, z: -0.29740435}
 --- !u!54 &1275127485
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8589,61 +8589,14 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275127480}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 3feef3cac4276de45b36a773ad9373ac, type: 3}
+  m_Avatar: {fileID: 9000000, guid: ab1318e5b9614f341813ca6d60d48d1c, type: 3}
   m_Controller: {fileID: 9100000, guid: 0c50a96645cfebb49ad0142ef14b70f5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: '
-
-    Transform ''Head'' has been deleted
-
-    Transform ''Neck''
-    has been deleted
-
-    Transform ''Hand.L'' has been deleted
-
-    Transform ''LowerArm.L''
-    has been deleted
-
-    Transform ''UpperArm.L'' has been deleted
-
-    Transform
-    ''Hand.R'' has been deleted
-
-    Transform ''LowerArm.R'' has been deleted
-
-    Transform
-    ''UpperArm.R'' has been deleted
-
-    Transform ''UpperChest'' has been deleted
-
-    Transform
-    ''Chest'' has been deleted
-
-    Transform ''Spine'' has been deleted
-
-    Transform
-    ''Foot.L'' has been deleted
-
-    Transform ''LowerLeg.L'' has been deleted
-
-    Transform
-    ''UpperLeg.L'' has been deleted
-
-    Transform ''Foot.R'' has been deleted
-
-    Transform
-    ''LowerLeg.R'' has been deleted
-
-    Transform ''UpperLeg.R'' has been deleted
-
-    Transform
-    ''Hips'' has been deleted
-
-    Transform ''Armature.001'' has been deleted'
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -8933,8 +8886,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4312782522253772867}
-  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0}
-  m_LocalPosition: {x: -11.760032, y: 6.3333344, z: 128.23706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.306886, y: 8.268782, z: 7.970967}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10265,8 +10218,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7966764491662697804}
-  m_LocalRotation: {x: 0.08998016, y: -0.21187536, z: -0.9722892, w: 0.040818185}
-  m_LocalPosition: {x: -11.667987, y: -2.7054877, z: 127.770615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.333333, y: 8.333333, z: 8.333333}
   m_ConstrainProportionsScale: 0
   m_Children:
