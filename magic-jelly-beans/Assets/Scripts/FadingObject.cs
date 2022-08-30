@@ -5,23 +5,25 @@ using UnityEngine;
 
 public class FadingObject : MonoBehaviour
 {
-
+    public float timeToFadeIn;
+    public float timeToFadeOut;
     private float fadeSpeed;
 
 
     private void Awake()
     {
-        fadeSpeed = 10f;
+        fadeSpeed = 2f;
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        float thisTime = Time.time;
+        if (thisTime == timeToFadeOut || Mathf.Abs(thisTime - timeToFadeOut) <= 0.01)
         {
             Debug.Log("fade out");
             StartCoroutine(FadeOutObject());
-        } else if (Input.GetKeyDown(KeyCode.S))
+        } else if (thisTime == timeToFadeIn || Mathf.Abs(thisTime - timeToFadeIn) <= 0.01)
         {
             StartCoroutine(FadeInObject());
         }
