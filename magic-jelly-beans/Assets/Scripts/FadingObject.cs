@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,10 @@ public class FadingObject : MonoBehaviour
 
     private float fadeSpeed;
 
+
     private void Awake()
     {
-        fadeSpeed = 0.2f;
+        fadeSpeed = 10f;
     }
 
 
@@ -17,6 +19,7 @@ public class FadingObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            Debug.Log("fade out");
             StartCoroutine(FadeOutObject());
         } else if (Input.GetKeyDown(KeyCode.S))
         {
@@ -26,27 +29,33 @@ public class FadingObject : MonoBehaviour
 
     private IEnumerator FadeOutObject()
     {
-        while (this.GetComponent<Renderer>().material.color.a > 0)
+        while (this.GetComponent<MeshRenderer>().material.color.a > 0)
         {
-            Color color = this.GetComponent<Renderer>().material.color;
+            Debug.Log("here");
+            Color color = this.GetComponent<MeshRenderer>().material.color;
             float fadeAmount = color.a - (fadeSpeed * Time.deltaTime);
 
             color = new Color(color.r, color.g, color.b, fadeAmount);
-            this.GetComponent<Renderer>().material.color = color;
+            this.GetComponent<MeshRenderer>().material.color = color;
             yield return null;
         }
     }
 
     private IEnumerator FadeInObject()
     {
-        while (this.GetComponent<Renderer>().material.color.a < 1)
+        while (this.GetComponent<MeshRenderer>().material.color.a < 1)
         {
-            Color color = this.GetComponent<Renderer>().material.color;
+            Color color = this.GetComponent<MeshRenderer>().material.color;
             float fadeAmount = color.a + (fadeSpeed * Time.deltaTime);
 
             color = new Color(color.r, color.g, color.b, fadeAmount);
-            this.GetComponent<Renderer>().material.color = color;
+            this.GetComponent<MeshRenderer>().material.color = color;
             yield return null;
         }
+    }
+
+    private void whenFadeOutEnds()
+    {
+        ;
     }
 }
