@@ -1326,12 +1326,12 @@ GameObject:
   - component: {fileID: 1083092094217958341}
   - component: {fileID: 4286245962450117460}
   m_Layer: 0
-  m_Name: Load_Game_OnMouseOver_New_Game_OnMouseOver.001
+  m_Name: Load_Game_OnMouseOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &2295212924692058823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1594,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6124418375959748470, guid: 3fc511c86b32f6148a897dbb524f9234, type: 3}
+  - {fileID: 2100000, guid: 2482340ec51d82d468fb82619ca554a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1674,7 +1674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5028428570227810111
 Transform:
   m_ObjectHideFlags: 0
@@ -1964,7 +1964,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8928855212682134198, guid: 3fc511c86b32f6148a897dbb524f9234, type: 3}
+  - {fileID: 2100000, guid: 2482340ec51d82d468fb82619ca554a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
