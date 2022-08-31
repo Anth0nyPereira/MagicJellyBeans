@@ -13,6 +13,11 @@ public class BlinkObject : MonoBehaviour
         InvokeRepeating("changeVisibility", 1.0f, timeToRepeat);
     }
 
+    public void stopBlinking()
+    {
+        CancelInvoke();
+    }
+
     private void changeVisibility()
     {
         if (this.gameObject.activeSelf) this.gameObject.SetActive(false);

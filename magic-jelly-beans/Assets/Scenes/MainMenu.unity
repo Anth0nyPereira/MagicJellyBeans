@@ -921,7 +921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1165506529
 Transform:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1642993457
 Transform:
   m_ObjectHideFlags: 0
@@ -1699,6 +1699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651775278601}
   - component: {fileID: 919132147857835188}
+  - component: {fileID: 919132147857835189}
   m_Layer: 0
   m_Name: press_any_key
   m_TagString: Untagged
@@ -1719,6 +1720,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToRepeat: 1
+--- !u!114 &919132147857835189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147857835187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e951a2c7624d6fa40aa85ae03cedb92b, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 919132147857835188}
+        m_TargetAssemblyTypeName: BlinkObject, Assembly-CSharp
+        m_MethodName: stopBlinking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1031632035880545890
 Transform:
   m_ObjectHideFlags: 0
@@ -2284,6 +2313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482224490046261373}
+  - component: {fileID: 2295212924692058824}
   m_Layer: 0
   m_Name: main_menu
   m_TagString: Untagged
@@ -2291,6 +2321,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2295212924692058824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2295212924692058823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 442835c53194b4c4dacb7553f293dbce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopTextFromBlinkingEvent: {fileID: 11400000, guid: e951a2c7624d6fa40aa85ae03cedb92b, type: 2}
 --- !u!4 &2325615478663566694
 Transform:
   m_ObjectHideFlags: 0
