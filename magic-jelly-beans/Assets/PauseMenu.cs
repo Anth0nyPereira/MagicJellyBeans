@@ -17,6 +17,7 @@ public class PauseMenu : MonoBehaviour
         {
             allUIs.Add(transform.GetChild(i).gameObject);
         }
+        disableAll();
     }
 
     // Update is called once per frame
@@ -29,12 +30,16 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         this.gameObject.GetComponent<Volume>().enabled = true;
+        Debug.Log("here");
+        enableAll();
     }
 
     public void resumeGame()
     {
         Time.timeScale = 1.0f;
         this.gameObject.GetComponent<Volume>().enabled = false;
+        this.transform.parent.gameObject.SetActive(false);
+        disableAll();
     }
 
     private void goToControls()
@@ -65,6 +70,22 @@ public class PauseMenu : MonoBehaviour
             {
                 ui.transform.gameObject.SetActive(false);
             }
+        }
+    }
+
+    private void enableAll()
+    {
+        foreach (GameObject ui in allUIs)
+        {
+            ui.gameObject.SetActive(true);
+        }
+    }
+
+    private void disableAll()
+    {
+        foreach (GameObject ui in allUIs)
+        {
+            ui.gameObject.SetActive(false);
         }
     }
 
