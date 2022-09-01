@@ -94,11 +94,12 @@ public class CharacterMovement : MonoBehaviour
             if (Physics.Raycast(transform.position + new Vector3(0, 0, 1f), getVectorBetweenParentCharacter() + new Vector3(0, 0, 1f), out hit, Mathf.Infinity, layerMask))
             {
                 Debug.Log("Did Hit 2");
+                Debug.Log(hit.collider.name);
             }
              else
             {
                 Debug.Log("Did not Hit");
-                Debug.Break();
+                // Debug.Break();
                 makeCharacterFallDown();
                 // Debug.Break();
             }
