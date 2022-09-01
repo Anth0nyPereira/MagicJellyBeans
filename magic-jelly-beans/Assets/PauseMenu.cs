@@ -75,18 +75,12 @@ public class PauseMenu : MonoBehaviour
 
     private void enableAll()
     {
-        foreach (GameObject ui in allUIs)
-        {
-            ui.gameObject.SetActive(true);
-        }
+        this.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
     private void disableAll()
     {
-        foreach (GameObject ui in allUIs)
-        {
-            ui.gameObject.SetActive(false);
-        }
+        this.gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     private GameObject getGOBasedOnName(string name)

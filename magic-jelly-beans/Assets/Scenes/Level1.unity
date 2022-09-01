@@ -1945,7 +1945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326402283}
   - component: {fileID: 326402284}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3058,7 +3058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 585890283}
   - component: {fileID: 585890284}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: resumeGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3105,7 +3105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603913343}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: letters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3761,7 +3761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801480475}
   - component: {fileID: 801480476}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5193,7 +5193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173961166}
   - component: {fileID: 1173961167}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: saveGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5307,7 +5307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1229169182
 Transform:
   m_ObjectHideFlags: 0
@@ -6476,7 +6476,7 @@ GameObject:
   - component: {fileID: 1455382486}
   - component: {fileID: 1455382485}
   - component: {fileID: 1455382484}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7321,7 +7321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814831597}
   - component: {fileID: 1814831598}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: mainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9189,7 +9189,7 @@ GameObject:
   - component: {fileID: 8700791331386139895}
   - component: {fileID: 5077130461807316890}
   - component: {fileID: 1420832608980674485}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: ResumeGameText_Text.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9331,7 +9331,7 @@ GameObject:
   - component: {fileID: 5178425971920324292}
   - component: {fileID: 3622140209304806808}
   - component: {fileID: 8398845274025624582}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: ResumeGame_New_Game_Normal.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9395,7 +9395,7 @@ GameObject:
   - component: {fileID: 8079690844538831544}
   - component: {fileID: 5896755242097282943}
   - component: {fileID: 6267283723511029135}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Restart_New_Game_Normal.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9670,7 +9670,7 @@ GameObject:
   - component: {fileID: 1385699388564494849}
   - component: {fileID: 8318948543704890967}
   - component: {fileID: 4186781367321296753}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10040,7 +10040,7 @@ GameObject:
   - component: {fileID: 654551627143273481}
   - component: {fileID: 7655885685153512980}
   - component: {fileID: 5372015696086405706}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10632,7 +10632,7 @@ GameObject:
   - component: {fileID: 6375413002810493927}
   - component: {fileID: 8552465995073853131}
   - component: {fileID: 7120623255770948598}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: bean1.001_Plane.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10921,7 +10921,7 @@ GameObject:
   - component: {fileID: 1322827575896269176}
   - component: {fileID: 2034031202981227478}
   - component: {fileID: 7229469900679958107}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: bean1.002_Plane.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10986,7 +10986,7 @@ GameObject:
   - component: {fileID: 4207905470572288149}
   - component: {fileID: 4658229704115795203}
   - component: {fileID: 2092379177935901526}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: bean1_Plane.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11115,7 +11115,7 @@ GameObject:
   - component: {fileID: 5804091642365822632}
   - component: {fileID: 8089500988925941659}
   - component: {fileID: 3612746352380974104}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: bean1.003_Plane.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11531,7 +11531,7 @@ GameObject:
   - component: {fileID: 1087668341656911234}
   - component: {fileID: 7683928330928215522}
   - component: {fileID: 2180275446006962228}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: SaveGame_New_Game_Normal.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11557,7 +11557,7 @@ GameObject:
   - component: {fileID: 4392421588134296664}
   - component: {fileID: 7995093147798623792}
   - component: {fileID: 2425249716528380110}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: MainMenuText_Text.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11914,7 +11914,7 @@ GameObject:
   - component: {fileID: 6910666186170864857}
   - component: {fileID: 3403840671970238539}
   - component: {fileID: 5668206256650992786}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: ControlsText_Text.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12000,7 +12000,7 @@ GameObject:
   - component: {fileID: 1202811084592713910}
   - component: {fileID: 1037834652602062448}
   - component: {fileID: 6105333595837521237}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: P
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12843,7 +12843,7 @@ GameObject:
   - component: {fileID: 6982656066661138762}
   - component: {fileID: 4676622047685854687}
   - component: {fileID: 1553998357310973538}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: Controls_New_Game_Normal.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13728,7 +13728,7 @@ GameObject:
   - component: {fileID: 1418833258066595956}
   - component: {fileID: 3791383704417079518}
   - component: {fileID: 8499843739987153209}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: RestartText_Text.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14063,7 +14063,7 @@ GameObject:
   - component: {fileID: 6516458734266452463}
   - component: {fileID: 3569116922968492443}
   - component: {fileID: 5962423224205565199}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14533,7 +14533,7 @@ GameObject:
   - component: {fileID: 5394155191890685725}
   - component: {fileID: 7503816871838990013}
   - component: {fileID: 938005493123076240}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: MainWireframe_Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14567,7 +14567,7 @@ GameObject:
   - component: {fileID: 7036511420336694139}
   - component: {fileID: 9072110827239580935}
   - component: {fileID: 5163728080513686009}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: U
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15192,7 +15192,7 @@ GameObject:
   - component: {fileID: 262526431011511487}
   - component: {fileID: 2211443745891785586}
   - component: {fileID: 1693498524306530326}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: bean1.004_Plane.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15328,7 +15328,7 @@ GameObject:
   - component: {fileID: 4290461937800027254}
   - component: {fileID: 2905635131850013530}
   - component: {fileID: 7040058301222708619}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: MainMenu_New_Game_Normal.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16626,7 +16626,7 @@ GameObject:
   - component: {fileID: 5503489222181178163}
   - component: {fileID: 4168006398086029964}
   - component: {fileID: 5744502369527194186}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: SaveGameText_Text.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
