@@ -91,7 +91,7 @@ public class CharacterMovement : MonoBehaviour
         }
         else
         {
-            if (Physics.Raycast(transform.position + new Vector3(0, 0, 1f), getVectorBetweenParentCharacter() + new Vector3(0, 0, 1f), out hit, Mathf.Infinity, layerMask))
+            if (Physics.Raycast(transform.position + new Vector3(0, 0, 0.3f), getVectorBetweenParentCharacter() + new Vector3(0, 0, 0.3f), out hit, Mathf.Infinity, layerMask))
             {
                 Debug.Log("Did Hit 2");
                 Debug.Log(hit.collider.name);
