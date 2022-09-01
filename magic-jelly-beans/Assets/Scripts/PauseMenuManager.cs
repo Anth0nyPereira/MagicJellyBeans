@@ -7,6 +7,12 @@ public class PauseMenuManager : MonoBehaviour
 {
     private bool mPaused = false;
 
+    [SerializeField]
+    private VoidEvent pauseGameEvent;
+
+    [SerializeField]
+    private VoidEvent resumeGameEvent;
+
     // Update is called once per frame
     void Update()
     {
@@ -19,15 +25,13 @@ public class PauseMenuManager : MonoBehaviour
 
     private void pauseGame()
     {
-        Time.timeScale = 0.0f;
-        this.gameObject.GetComponent<Volume>().enabled = true;
+        pauseGameEvent.Raise();
         mPaused = true;
     }
 
     private void resumeGame()
     {
-        Time.timeScale = 1.0f;
-        this.gameObject.GetComponent<Volume>().enabled = false;
+        resumeGameEvent.Raise();
         mPaused = false;
     }
 }
