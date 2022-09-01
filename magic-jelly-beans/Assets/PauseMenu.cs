@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class PauseMenu : MonoBehaviour
 {
-
+    public GameObject blackBackground;
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -29,16 +29,16 @@ public class PauseMenu : MonoBehaviour
     public void pauseGame()
     {
         Time.timeScale = 0.0f;
-        this.gameObject.GetComponent<Volume>().enabled = true;
         Debug.Log("here");
+        blackBackground.SetActive(true);
         enableAll();
     }
 
     public void resumeGame()
     {
         Time.timeScale = 1.0f;
-        this.gameObject.GetComponent<Volume>().enabled = false;
         this.transform.parent.gameObject.SetActive(false);
+        blackBackground.SetActive(false);
         disableAll();
     }
 
