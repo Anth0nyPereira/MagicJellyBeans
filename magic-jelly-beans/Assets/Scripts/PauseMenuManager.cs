@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -19,12 +20,14 @@ public class PauseMenuManager : MonoBehaviour
     private void pauseGame()
     {
         Time.timeScale = 0.0f;
+        this.gameObject.GetComponent<Volume>().enabled = true;
         mPaused = true;
     }
 
     private void resumeGame()
     {
         Time.timeScale = 1.0f;
+        this.gameObject.GetComponent<Volume>().enabled = false;
         mPaused = false;
     }
 }
