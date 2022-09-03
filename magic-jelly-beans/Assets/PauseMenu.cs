@@ -36,8 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void pauseGame()
     {
-        // Time.timeScale = 0.3f;
-        // makeCharacterNotToMoveEvent.Raise();
+        makeCharacterNotToMoveEvent.Raise();
         Debug.Log("FUCKING PAUSE OK");
         // Debug.Break();
         enableAll();
@@ -46,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     public void resumeGame()
     {
         Time.timeScale = 1.0f;
-        // makeCharacterMoveAgainEvent.Raise();
+        makeCharacterMoveAgainEvent.Raise();
         disableAll();
     }
 
