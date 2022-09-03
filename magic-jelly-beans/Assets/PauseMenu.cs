@@ -5,7 +5,13 @@ using UnityEngine.Rendering;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject blackBackground;
+
+    [SerializeField]
+    private VoidEvent makeCharacterNotToMoveEvent;
+
+    [SerializeField]
+    private VoidEvent makeCharacterMoveAgainEvent;
+
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -17,6 +23,8 @@ public class PauseMenu : MonoBehaviour
         {
             allUIs.Add(transform.GetChild(i).gameObject);
         }
+
+
         disableAll();
     }
 
@@ -28,17 +36,17 @@ public class PauseMenu : MonoBehaviour
 
     public void pauseGame()
     {
-        Time.timeScale = 0.0f;
-        Debug.Log("here");
-        blackBackground.SetActive(true);
+        // Time.timeScale = 0.3f;
+        // makeCharacterNotToMoveEvent.Raise();
+        Debug.Log("FUCKING PAUSE OK");
+        // Debug.Break();
         enableAll();
     }
 
     public void resumeGame()
     {
         Time.timeScale = 1.0f;
-        this.transform.parent.gameObject.SetActive(false);
-        blackBackground.SetActive(false);
+        // makeCharacterMoveAgainEvent.Raise();
         disableAll();
     }
 
@@ -75,12 +83,18 @@ public class PauseMenu : MonoBehaviour
 
     private void enableAll()
     {
-        this.gameObject.transform.parent.gameObject.SetActive(true);
+        foreach (GameObject ui in allUIs)
+        {
+            ui.SetActive(true);
+        }
     }
 
     private void disableAll()
     {
-        this.gameObject.transform.parent.gameObject.SetActive(false);
+        foreach (GameObject ui in allUIs)
+        {
+            ui.SetActive(false);
+        }
     }
 
     private GameObject getGOBasedOnName(string name)
