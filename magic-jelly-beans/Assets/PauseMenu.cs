@@ -44,7 +44,6 @@ public class PauseMenu : MonoBehaviour
 
     public void resumeGame()
     {
-        Time.timeScale = 1.0f;
         makeCharacterMoveAgainEvent.Raise();
         disableAll();
     }
