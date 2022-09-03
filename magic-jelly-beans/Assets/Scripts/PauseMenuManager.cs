@@ -36,4 +36,9 @@ public class PauseMenuManager : MonoBehaviour
         Debug.Log("Resume Game");
         mPaused = false;
     }
+
+    public void tellManagerToResumeGame()
+    {
+        this.resumeGame();
+    }
 }

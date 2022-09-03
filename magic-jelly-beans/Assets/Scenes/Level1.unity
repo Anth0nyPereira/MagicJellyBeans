@@ -2027,6 +2027,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear: {fileID: 2270124195978909283}
   objectToDisappear: {fileID: 670050522159065958}
+  updatePauseMenuEvent: {fileID: 0}
 --- !u!1 &348205372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,7 +3217,6 @@ GameObject:
   - component: {fileID: 585890285}
   - component: {fileID: 585890286}
   - component: {fileID: 585890287}
-  - component: {fileID: 585890288}
   m_Layer: 0
   m_Name: resumeGame
   m_TagString: UI
@@ -3296,50 +3296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear: {fileID: 2406440270175543685}
   objectToDisappear: {fileID: 610106196879233490}
---- !u!114 &585890288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585890282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
+  updatePauseMenuEvent: {fileID: 11400000, guid: cb6f3bfd151f01d40b1fd958b5c2fbd8, type: 2}
 --- !u!1 &603913342
 GameObject:
   m_ObjectHideFlags: 0
@@ -5391,6 +5348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear: {fileID: 2652945057685815417}
   objectToDisappear: {fileID: 3533197035544112929}
+  updatePauseMenuEvent: {fileID: 0}
 --- !u!65 &1173961170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6410,6 +6368,7 @@ GameObject:
   - component: {fileID: 1379797507}
   - component: {fileID: 1379797508}
   - component: {fileID: 1379797509}
+  - component: {fileID: 1379797510}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -6602,6 +6561,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseGameEvent: {fileID: 11400000, guid: 8ebfabe379528a849aef23d6a9a48a99, type: 2}
   resumeGameEvent: {fileID: 11400000, guid: 0d3535be080672848b88fbab49f52783, type: 2}
+--- !u!114 &1379797510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: cb6f3bfd151f01d40b1fd958b5c2fbd8, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797509}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: tellManagerToResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1452398444
 GameObject:
   m_ObjectHideFlags: 0
@@ -7462,6 +7449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToAppear: {fileID: 7750297185183254631}
   objectToDisappear: {fileID: 8036290906590576584}
+  updatePauseMenuEvent: {fileID: 0}
 --- !u!65 &1814831601
 BoxCollider:
   m_ObjectHideFlags: 0
