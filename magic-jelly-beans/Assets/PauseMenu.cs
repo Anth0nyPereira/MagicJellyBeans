@@ -12,6 +12,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private VoidEvent makeCharacterMoveAgainEvent;
 
+    [SerializeField]
+    private VoidEvent resetCharacterEvent;
+
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -48,14 +51,11 @@ public class PauseMenu : MonoBehaviour
         disableAll();
     }
 
-    private void goToControls()
+    public void restart()
     {
-        disableOthers("controls");
-    }
-
-    private void restart()
-    {
-
+        disableAll();
+        resetCharacterEvent.Raise();
+        
     }
 
     private void saveGame()

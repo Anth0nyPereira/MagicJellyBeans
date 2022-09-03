@@ -13,6 +13,9 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField]
     private VoidEvent resumeGameEvent;
 
+    [SerializeField]
+    private VoidEvent restartGameEvent;
+
     // Update is called once per frame
     void Update()
     {
@@ -37,8 +40,19 @@ public class PauseMenuManager : MonoBehaviour
         mPaused = false;
     }
 
+    private void restart()
+    {
+        restartGameEvent.Raise();
+        mPaused = false;
+    }
+
     public void tellManagerToResumeGame()
     {
         this.resumeGame();
+    }
+
+    public void tellManagerToRestartGame()
+    {
+        this.restart();
     }
 }
