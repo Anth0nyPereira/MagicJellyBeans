@@ -84,7 +84,13 @@ public class Obstacle : Collidable
             tellCharacterToStopMovingEvent.Raise();
             //grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
 
-            if (!checkIfStressLevelWillBeOutOfRange()) applyForce();
+            if (!checkIfStressLevelWillBeOutOfRange())
+            {
+                applyForce();
+            } else
+            {
+                whenCoroutineEnds();
+            }
 
 
             Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
@@ -129,8 +135,8 @@ public class Obstacle : Collidable
 
     public bool checkIfStressLevelWillBeOutOfRange()
     {
-        Debug.Log(actualStressLevel);
-        Debug.Log(damage.Value);
+        // Debug.Log(actualStressLevel);
+        // Debug.Log(damage.Value);
         // Debug.Break();
         if (actualStressLevel + damage.Value >= 100 || actualStressLevel - damage.Value <= 0)
         {

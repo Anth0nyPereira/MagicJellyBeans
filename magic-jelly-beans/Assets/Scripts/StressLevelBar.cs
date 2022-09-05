@@ -9,18 +9,6 @@ public class StressLevelBar : MonoBehaviour
 
     private float maxDistance = 0.3f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void decreaseStress(float damage)
     {
         float dst = convertScale(damage);
