@@ -20,8 +20,15 @@ public class TimerChangeScene : MonoBehaviour
         }
     }
 
+    public void skipIntro()
+    {
+        changeScene();
+    }
+
     private void changeScene()
     {
         SceneManager.LoadScene(nameOfNextScene, LoadSceneMode.Single);
     }
+
+
 }

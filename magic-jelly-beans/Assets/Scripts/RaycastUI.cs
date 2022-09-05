@@ -51,6 +51,7 @@ public class RaycastUI : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        Debug.Log("Click");
         if (Physics.Raycast(ray, out hit))
         {
             if (hit.collider.gameObject.tag == "UI" && hit.collider.name == this.GetComponent<UserInterface>().uiName.Str)
