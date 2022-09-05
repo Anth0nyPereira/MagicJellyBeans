@@ -134,6 +134,9 @@ GameObject:
   - component: {fileID: 2112146}
   - component: {fileID: 2112145}
   - component: {fileID: 2112144}
+  - component: {fileID: 2112149}
+  - component: {fileID: 2112148}
+  - component: {fileID: 2112147}
   m_Layer: 0
   m_Name: tit7
   m_TagString: Untagged
@@ -200,14 +203,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112143}
-  m_LocalRotation: {x: 0, y: 0, z: 0.89609945, w: 0.44385338}
+  m_LocalRotation: {x: -0, y: -0, z: 0.89609945, w: 0.44385338}
   m_LocalPosition: {x: 0.948, y: 0.944, z: 180.285}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.3}
+--- !u!114 &2112147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2112148}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2112148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 2112149}
+  collidableData: {fileID: 11400000, guid: f465eeb6dc20c134e8cdec9d1a2cec13, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &2112149
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1001 &2770122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1888,7 +1951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 222073837}
-  collidableData: {fileID: 11400000, guid: 4945725168eec3341bd1a0028b757d83, type: 2}
+  collidableData: {fileID: 11400000, guid: 57800161828485d408590e84eb0e0cd0, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
@@ -2357,6 +2420,9 @@ GameObject:
   - component: {fileID: 253616751}
   - component: {fileID: 253616750}
   - component: {fileID: 253616749}
+  - component: {fileID: 253616754}
+  - component: {fileID: 253616753}
+  - component: {fileID: 253616752}
   m_Layer: 0
   m_Name: tit6
   m_TagString: Untagged
@@ -2423,14 +2489,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253616748}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 1.329, z: 137.179}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &253616752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253616748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 253616753}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &253616753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253616748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 253616754}
+  collidableData: {fileID: 11400000, guid: d01f790839d789649bfa0148095269c8, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &253616754
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253616748}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &264341927
 GameObject:
   m_ObjectHideFlags: 0
@@ -3604,6 +3730,9 @@ GameObject:
   - component: {fileID: 373913562}
   - component: {fileID: 373913561}
   - component: {fileID: 373913560}
+  - component: {fileID: 373913565}
+  - component: {fileID: 373913564}
+  - component: {fileID: 373913563}
   m_Layer: 0
   m_Name: tit8
   m_TagString: Untagged
@@ -3670,14 +3799,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373913559}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 1.133, y: -0.043, z: 179.605}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &373913563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373913559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 373913564}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &373913564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373913559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 373913565}
+  collidableData: {fileID: 11400000, guid: d939b2aa05b66cb43889cf53bc638ff9, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &373913565
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373913559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &415445086
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,7 +5629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 569747630}
-  collidableData: {fileID: 11400000, guid: 4945725168eec3341bd1a0028b757d83, type: 2}
+  collidableData: {fileID: 11400000, guid: 3c2970da2b6106f4c88f3b10aeae90a7, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
@@ -6256,6 +6445,9 @@ GameObject:
   - component: {fileID: 710290837}
   - component: {fileID: 710290836}
   - component: {fileID: 710290835}
+  - component: {fileID: 710290840}
+  - component: {fileID: 710290839}
+  - component: {fileID: 710290838}
   m_Layer: 0
   m_Name: tit5
   m_TagString: Untagged
@@ -6322,14 +6514,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 710290834}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.348, y: -0.214, z: 138.575}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &710290838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710290834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 710290839}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &710290839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710290834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 710290840}
+  collidableData: {fileID: 11400000, guid: 4581554f1a2144243b0e724559e06b1f, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &710290840
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710290834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &717714376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7099,6 +7351,9 @@ GameObject:
   - component: {fileID: 868878594}
   - component: {fileID: 868878593}
   - component: {fileID: 868878592}
+  - component: {fileID: 868878597}
+  - component: {fileID: 868878596}
+  - component: {fileID: 868878595}
   m_Layer: 0
   m_Name: tit4
   m_TagString: Untagged
@@ -7165,14 +7420,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868878591}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -1.348, y: -0.214, z: 136.389}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &868878595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868878591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 868878596}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &868878596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868878591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 868878597}
+  collidableData: {fileID: 11400000, guid: e40dc50afd07fa3418824bd1ccc2ffdf, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &868878597
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868878591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1001 &876694032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7701,6 +8016,9 @@ GameObject:
   - component: {fileID: 998921480}
   - component: {fileID: 998921479}
   - component: {fileID: 998921478}
+  - component: {fileID: 998921484}
+  - component: {fileID: 998921483}
+  - component: {fileID: 998921482}
   m_Layer: 0
   m_Name: tit2
   m_TagString: Untagged
@@ -7792,9 +8110,69 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998921482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998921477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 998921483}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &998921483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998921477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 998921484}
+  collidableData: {fileID: 11400000, guid: 1a1b994fce8fa6d4085df1e4acda69d7, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &998921484
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998921477}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &1070671290
 GameObject:
   m_ObjectHideFlags: 0
@@ -7995,6 +8373,15 @@ Transform:
   - {fileID: 222073835}
   - {fileID: 569747628}
   - {fileID: 1092758978}
+  - {fileID: 5450234717094507668}
+  - {fileID: 998921481}
+  - {fileID: 1533334154}
+  - {fileID: 868878594}
+  - {fileID: 710290837}
+  - {fileID: 253616751}
+  - {fileID: 2112146}
+  - {fileID: 373913562}
+  - {fileID: 1660645165}
   m_Father: {fileID: 898438725}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8187,11 +8574,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1092758980}
-  collidableData: {fileID: 11400000, guid: b626e2fe42e2c9946a2f2b4c136f695d, type: 2}
+  collidableData: {fileID: 11400000, guid: 4ab3469e75cf48343bb9455c52799d39, type: 2}
   damage: {fileID: 11400000, guid: a647a3da1dbfa8f45b0ed87699b7c664, type: 2}
-  updateStressLevel: {fileID: 0}
-  tellCharacterToStopMovingEvent: {fileID: 0}
-  tellCharacterCanMoveAgainEvent: {fileID: 0}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
 --- !u!64 &1092758980
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10561,6 +10948,9 @@ GameObject:
   - component: {fileID: 1533334154}
   - component: {fileID: 1533334153}
   - component: {fileID: 1533334152}
+  - component: {fileID: 1533334157}
+  - component: {fileID: 1533334156}
+  - component: {fileID: 1533334155}
   m_Layer: 0
   m_Name: tit3
   m_TagString: Untagged
@@ -10632,9 +11022,69 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1533334155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533334151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1533334156}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1533334156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533334151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 1533334157}
+  collidableData: {fileID: 11400000, guid: 8cc260530d19e0d4ab2d36f582aa334b, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &1533334157
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533334151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &1549125895
 GameObject:
   m_ObjectHideFlags: 0
@@ -11144,6 +11594,9 @@ GameObject:
   - component: {fileID: 1660645165}
   - component: {fileID: 1660645164}
   - component: {fileID: 1660645163}
+  - component: {fileID: 1660645168}
+  - component: {fileID: 1660645167}
+  - component: {fileID: 1660645166}
   m_Layer: 0
   m_Name: tit9
   m_TagString: Untagged
@@ -11210,14 +11663,74 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660645162}
-  m_LocalRotation: {x: 0, y: 0, z: 0.89609945, w: 0.44385338}
+  m_LocalRotation: {x: -0, y: -0, z: 0.89609945, w: 0.44385338}
   m_LocalPosition: {x: 0.981, y: 0.944, z: 178.622}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 127.3}
+--- !u!114 &1660645166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660645162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1660645167}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1660645167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660645162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 1660645168}
+  collidableData: {fileID: 11400000, guid: e066909cbc6854441ad4d37e9f305160, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &1660645168
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660645162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &1684674460
 GameObject:
   m_ObjectHideFlags: 0
@@ -17960,6 +18473,9 @@ GameObject:
   - component: {fileID: 7166406531427683806}
   - component: {fileID: 5931674898017184074}
   - component: {fileID: 7166406531427683807}
+  - component: {fileID: 7166406531427683810}
+  - component: {fileID: 7166406531427683809}
+  - component: {fileID: 7166406531427683808}
   m_Layer: 0
   m_Name: tit1
   m_TagString: Untagged
@@ -19790,7 +20306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1072797507}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5458506115494530740
@@ -21974,6 +22490,66 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7166406531427683808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825017228746909615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7166406531427683809}
+        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
+        m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7166406531427683809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825017228746909615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 7166406531427683810}
+  collidableData: {fileID: 11400000, guid: 487a8f5d4d0fc7040bb49c312d319e1a, type: 2}
+  damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+--- !u!64 &7166406531427683810
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825017228746909615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7b237672c80ab3b44bb44c95e67c0695, type: 3}
 --- !u!1 &7175783415973001472
 GameObject:
   m_ObjectHideFlags: 0
@@ -23325,9 +23901,9 @@ MonoBehaviour:
   col: {fileID: 8346550327762887559}
   collidableData: {fileID: 11400000, guid: b626e2fe42e2c9946a2f2b4c136f695d, type: 2}
   damage: {fileID: 11400000, guid: a647a3da1dbfa8f45b0ed87699b7c664, type: 2}
-  updateStressLevel: {fileID: 0}
-  tellCharacterToStopMovingEvent: {fileID: 0}
-  tellCharacterCanMoveAgainEvent: {fileID: 0}
+  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
+  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
 --- !u!64 &8346550327762887559
 MeshCollider:
   m_ObjectHideFlags: 0
