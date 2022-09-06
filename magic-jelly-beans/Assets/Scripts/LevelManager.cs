@@ -12,6 +12,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private CollidableDataList listOfVisibleCollidables;
 
+    [SerializeField]
+    private CollidableDataList listOfObstacles;
+
     public void Awake()
     {
         collidablesGOs = GameObject.FindGameObjectsWithTag("Collidable");
@@ -19,10 +22,11 @@ public class LevelManager : MonoBehaviour
 
     public void makeCharacterNotFallDown()
     {
+        resetObstacleFlags();
         resetAllCollidables();
     }
 
-    private void resetAllCollidables()
+    private void resetAllCollidables() // I think I just need to put here collectables and grounds
     {
         foreach (CollidableData collidableData in listOfVisibleCollidables.ListOfCollidables)
         {
@@ -30,15 +34,25 @@ public class LevelManager : MonoBehaviour
             
             foreach (GameObject collidable in collidablesGOs)
             {
-                Debug.Log(collidable.GetComponent<Collidable>().collidableData.CollidableName);
+                // Debug.Log(collidable.GetComponent<Collidable>().collidableData.CollidableName);
                 if (cName == collidable.GetComponent<Collidable>().collidableData.CollidableName)
                 {
-                    Debug.Log(cName);
+                    // Debug.Log(cName);
                     collidable.SetActive(true);
                     collidable.GetComponent<Collider>().enabled = true;
                 }
             }
             
+        }
+    }
+
+    private void resetObstacleFlags()
+    {
+        foreach (CollidableData obstacleData in listOfObstacles.ListOfCollidables)
+        {
+            string oName = obstacleData.CollidableName;
+            GameObject obstacle = GameObject.Find(oName);
+            obstacle.GetComponent<Obstacle>().resetCollisionFlag();
         }
     }
 }

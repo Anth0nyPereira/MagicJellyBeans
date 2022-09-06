@@ -22,7 +22,8 @@ public class Collidable : MonoBehaviour
 
     public virtual void OnCollisionEnter(Collision other)
     {
-        Debug.Log("I collided with " + other.gameObject.name);
+        ;
+        // Debug.Log("I collided with " + other.gameObject.name);
     }
 
     public ColorSO getColorBasedOnName(string colorName)

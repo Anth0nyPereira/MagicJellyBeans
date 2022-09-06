@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 60790008}
   m_Layer: 0
   m_Name: wallStylish4
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 135906014}
   m_Layer: 0
   m_Name: wallGrid3
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1472,6 +1472,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &188956706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1719,7 +1720,7 @@ GameObject:
   - component: {fileID: 194440905}
   m_Layer: 0
   m_Name: wallGrid2
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2358,7 +2359,7 @@ GameObject:
   - component: {fileID: 227392229}
   m_Layer: 0
   m_Name: wallSlice4
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2532,7 +2533,7 @@ GameObject:
   - component: {fileID: 229524714}
   m_Layer: 0
   m_Name: wallCross3
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3102,7 +3103,7 @@ GameObject:
   - component: {fileID: 264341934}
   m_Layer: 0
   m_Name: wallGrid6
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3462,7 +3463,7 @@ GameObject:
   - component: {fileID: 316952059}
   m_Layer: 0
   m_Name: wallSlice5
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3564,7 +3565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 316952061}
-  collidableData: {fileID: 11400000, guid: f6f10404c37193846a2e7f74f5df67b7, type: 2}
+  collidableData: {fileID: 11400000, guid: 1aff4a22195929b4e9fd3da0e23a1fc3, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
@@ -4452,7 +4453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375223969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.045, z: 92.9}
+  m_LocalPosition: {x: -0.342, y: -2.051, z: 93.485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4476,6 +4477,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &375223972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4606,7 +4608,7 @@ GameObject:
   - component: {fileID: 416158087}
   m_Layer: 0
   m_Name: wallCross2
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5288,7 +5290,7 @@ GameObject:
   - component: {fileID: 451850396}
   m_Layer: 0
   m_Name: wallStylish3
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5660,6 +5662,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &471872629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5907,7 +5910,7 @@ GameObject:
   - component: {fileID: 487482436}
   m_Layer: 0
   m_Name: wallGrid4
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7881,7 +7884,7 @@ GameObject:
   - component: {fileID: 771401124}
   m_Layer: 0
   m_Name: wallGrid5
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8218,7 +8221,7 @@ GameObject:
   - component: {fileID: 863280617}
   m_Layer: 0
   m_Name: wallSlice3
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8728,6 +8731,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &891089158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10442,7 +10446,7 @@ GameObject:
   - component: {fileID: 1150387444}
   m_Layer: 0
   m_Name: wallWheel2
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10779,7 +10783,7 @@ GameObject:
   - component: {fileID: 1172585093}
   m_Layer: 0
   m_Name: wallWheel3
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11275,7 +11279,7 @@ GameObject:
   - component: {fileID: 1219353661}
   m_Layer: 0
   m_Name: wallStylish2
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11857,7 +11861,7 @@ GameObject:
   - component: {fileID: 1263158343}
   m_Layer: 0
   m_Name: wallStylish5
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12094,6 +12098,7 @@ GameObject:
   - component: {fileID: 270306764261117426}
   - component: {fileID: 270306764261117427}
   - component: {fileID: 270306764261117428}
+  - component: {fileID: 270306764261117429}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Character
@@ -12575,6 +12580,7 @@ GameObject:
   - component: {fileID: 1379797511}
   - component: {fileID: 1379797514}
   - component: {fileID: 1379797513}
+  - component: {fileID: 1379797515}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -12597,6 +12603,8 @@ MonoBehaviour:
   cData: {fileID: 11400000, guid: b424833523f1c4a4ba775bf73fe6664a, type: 2}
   cInitialData: {fileID: 11400000, guid: 5b279fca782c6c549a8ba1324999f2d5, type: 2}
   makeCharacterNotFallDownEvent: {fileID: 11400000, guid: 25d7da2048b05994eb92f4b7a2697df5, type: 2}
+  resetStressLevelEvent: {fileID: 11400000, guid: 936267143f655b54d9b03c043c5bb147, type: 2}
+  resetDyingFlagEvent: {fileID: 0}
 --- !u!4 &1379797501
 Transform:
   m_ObjectHideFlags: 0
@@ -12625,6 +12633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listOfVisibleCollidables: {fileID: 11400000, guid: dd81f19953f12824b9f530a066c7480a, type: 2}
+  listOfObstacles: {fileID: 11400000, guid: 3afb3eab3355b2a47b11cf7510de19fb, type: 2}
 --- !u!114 &1379797504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12906,6 +12915,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1379797515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 936267143f655b54d9b03c043c5bb147, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797506}
+        m_TargetAssemblyTypeName: StressLevelManager, Assembly-CSharp
+        m_MethodName: resetStress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1452398444
 GameObject:
   m_ObjectHideFlags: 0
@@ -12994,6 +13031,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &1484237291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13256,7 +13294,7 @@ GameObject:
   - component: {fileID: 1549125897}
   m_Layer: 0
   m_Name: wallSlice6
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13358,7 +13396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1549125899}
-  collidableData: {fileID: 11400000, guid: f6f10404c37193846a2e7f74f5df67b7, type: 2}
+  collidableData: {fileID: 11400000, guid: 283893ac55635ca49ba3bc3499d55e6a, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
@@ -14484,7 +14522,7 @@ GameObject:
   - component: {fileID: 1724718688}
   m_Layer: 0
   m_Name: wallStylish6
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14858,7 +14896,7 @@ GameObject:
   - component: {fileID: 1807284606}
   m_Layer: 0
   m_Name: wallSlice2
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15205,6 +15243,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &1855888592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17370,7 +17409,7 @@ GameObject:
   - component: {fileID: 2096342964}
   m_Layer: 0
   m_Name: wallCross4
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17565,6 +17604,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 0}
 --- !u!65 &2101654089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17997,6 +18037,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &270306764261117429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275127480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1275127482}
+        m_TargetAssemblyTypeName: Character, Assembly-CSharp
+        m_MethodName: writeNewStressLevelIntoSO
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &335584727960863764
 Transform:
   m_ObjectHideFlags: 0
@@ -21546,7 +21614,7 @@ GameObject:
   - component: {fileID: 7021267726230322239}
   m_Layer: 0
   m_Name: wallStylish1
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24447,7 +24515,7 @@ GameObject:
   - component: {fileID: 6266649767512208821}
   m_Layer: 0
   m_Name: wallGrid1
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26311,7 +26379,7 @@ GameObject:
   - component: {fileID: 8034114561444905715}
   m_Layer: 0
   m_Name: wallCross1
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26685,7 +26753,7 @@ GameObject:
   - component: {fileID: 8164078558953144338}
   m_Layer: 0
   m_Name: wallSlice1
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27653,6 +27721,7 @@ MonoBehaviour:
   updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
   updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
   updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
+  writeActualStressLevelIntoSOEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
 --- !u!65 &8590835742955047617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29218,7 +29287,7 @@ GameObject:
   - component: {fileID: 9140630047228943586}
   m_Layer: 0
   m_Name: wallWheel1
-  m_TagString: Untagged
+  m_TagString: Collidable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -17,16 +17,16 @@ public class Collectable : Collidable
 
     public override void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other);
+        // Debug.Log(other);
         if (other.gameObject.tag == "Character")
         {
-            Debug.Log("I'm colliding with the character");
+            // Debug.Log("I'm colliding with the character");
             // do something to the player
             // get the corresponding color that the player should have when colliding with this kind of object
             // destroy the gameObject
             DisableCollider();
             ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
-            Debug.Log(colorSO.Color);
+            // Debug.Log(colorSO.Color);
             animator.SetTrigger("dissolve");
             other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material = colorSO.Materials[0];
         }

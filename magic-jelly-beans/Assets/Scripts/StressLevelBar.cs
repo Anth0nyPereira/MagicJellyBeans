@@ -28,6 +28,7 @@ public class StressLevelBar : MonoBehaviour
 
 
     // the bar has 0.3 of length; so, if 0.3 corresponds to 100, a value corresponds to a certain damage
+    // it can move till 0.15 forward and 0.15 backwards
     private float convertScale(float damage)
     {
         Debug.Log("damage: " + damage);

@@ -31,6 +31,12 @@ public class Obstacle : Collidable
         
     }
 
+    private void Update()
+    {
+        Debug.Log(firstCollision);
+
+    }
+
     public override void OnCollisionEnter(Collision other)
     {
         Debug.Log("entered oncollisionenter");
@@ -128,11 +134,6 @@ public class Obstacle : Collidable
 
     }
 
-    public void dissipateAllForces()
-    {
-
-    }
-
     public bool checkIfStressLevelWillBeOutOfRange()
     {
         // Debug.Log(actualStressLevel);
@@ -148,5 +149,10 @@ public class Obstacle : Collidable
     public void getActualStressLevel(float stressLevel)
     {
         actualStressLevel = stressLevel;
+    }
+
+    public void resetCollisionFlag()
+    {
+        firstCollision = true;
     }
 }

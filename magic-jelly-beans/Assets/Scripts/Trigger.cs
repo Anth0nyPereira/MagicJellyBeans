@@ -9,7 +9,7 @@ public class Trigger : Collidable
        
     }
 
-    public override void OnCollisionEnter(Collision other)
+    public virtual void OnCollisionEnter(Collision other)
     {
         // when the player collides with the object, show something to the player?? a text appears or something
         Physics.IgnoreCollision(base.GetComponent<Collider>(), other.collider);

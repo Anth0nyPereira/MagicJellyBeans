@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
 
     private float stressLevel;
 
+    private float previousDamage;
+
     public float StressLevel { get => stressLevel; set => stressLevel = value; }
 
     private void Awake()
@@ -27,34 +29,31 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log("STRESSSS LEVEL: " + stressLevel);
         if (flag)
         {
-            if (stressLevel <= 0 || stressLevel >= 100)
+            if (checkIfStressLevelIsOutOfBonds())
             {
+                revertDamage();
                 Die();
-                flag = false;
             }
+                
         }
         
     }
 
-    /*
-    private float computeStartingStressLevel()
-    {
-        float stress = (minStressLevel.Value + maxStressLevel.Value)/2;
-        Debug.Log("starting stress level: " + stress);
-        return stress;
-    }
-    */
-
     public void decreaseStressLevel(float dam)
     {
+        previousDamage = -dam;
         stressLevel -= dam;
+        
     }
     public void increaseStressLevel(float dam)
     {
+        previousDamage = dam;
         stressLevel += dam;
-        Debug.Log("new stress level: " + stressLevel);
+        // Debug.Log("new stress level: " + stressLevel);
+        
     }
 
     public void Die()
@@ -63,7 +62,7 @@ public class Character : MonoBehaviour
         // play dissolve anim??
         // reset level, character, stress level
         resetCharacterEvent.Raise();
-        flag = true;
+        
 
     }
 
@@ -92,9 +91,48 @@ public class Character : MonoBehaviour
 
     }
 
+    public void writeNewStressLevelIntoSO()
+    {
+        if (checkIfStressLevelIsOutOfBonds()) return;
+        stressLevelSO.Value = stressLevel;
+        // Debug.Break();
+    }
+
     public void resetStressLevel()
     {
         stressLevel = stressLevelSO.Value;
+    }
+
+    public void resetFlag()
+    {
+        flag = true;
+    }
+
+    private void OnApplicationQuit()
+    {
+        stressLevelSO.Value = 50;
+    }
+
+    private bool checkIfStressLevelIsOutOfBonds()
+    {
+        if (stressLevel < 0 || stressLevel > 100)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private void revertDamage()
+    {
+        if (previousDamage < 0)
+        {
+            stressLevel += Mathf.Abs(previousDamage);
+        } else
+        {
+            stressLevel -= Mathf.Abs(previousDamage);
+        }
+        previousDamage = 0;
+        Debug.Log("stress level reverted: " + stressLevel);
     }
 
 }

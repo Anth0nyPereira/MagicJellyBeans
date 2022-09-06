@@ -31,6 +31,11 @@ public class StressLevelManager : MonoBehaviour
         bar.resetPosition();
     }
 
+    public void resetStress()
+    {
+        character.resetStressLevel();
+    }
+
     private void decreaseStress(float damage)
     {
         character.decreaseStressLevel(Mathf.Abs(damage));
@@ -47,6 +52,8 @@ public class StressLevelManager : MonoBehaviour
 
     private void sendActualStressLevel()
     {
+        Debug.Log(character.StressLevel);
+        // Debug.Break();
         sendActualStressLevelEvent.Raise(character.StressLevel);
     }
     

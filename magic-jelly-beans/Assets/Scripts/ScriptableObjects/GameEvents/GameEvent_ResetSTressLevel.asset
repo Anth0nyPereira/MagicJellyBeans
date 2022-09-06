@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac5eb318d99e7f944ab8947d7a7b1c0f, type: 3}
-  m_Name: GameEvent_LogGround1
+  m_Script: {fileID: 11500000, guid: e4af2921e65971c40b31994f6c6bde11, type: 3}
+  m_Name: GameEvent_ResetSTressLevel
   m_EditorClassIdentifier: 

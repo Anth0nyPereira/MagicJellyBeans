@@ -13,6 +13,11 @@ public class Checkpoint : Trigger
     [SerializeField]
     private MaterialEvent updateNewCharacterColorMaterial;
 
+    [SerializeField]
+    private VoidEvent writeActualStressLevelIntoSOEvent;
+
+    private float actualStressLevel = 50.0f;
+
     public override void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Character")
@@ -25,11 +30,17 @@ public class Checkpoint : Trigger
 
             updateNewParentTransform.Raise(father.transform);
             updateNewGrandParentTransform.Raise(grandpa.transform);
-            Debug.Log(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
+            // Debug.Log(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
             updateNewCharacterColorMaterial.Raise(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
-            Debug.Break();
+            writeActualStressLevelIntoSOEvent.Raise();
+            // Debug.Break();
         }
         
 
+    }
+
+    public void getActualStressLevel(float stressLevel)
+    {
+        actualStressLevel = stressLevel;
     }
 }
