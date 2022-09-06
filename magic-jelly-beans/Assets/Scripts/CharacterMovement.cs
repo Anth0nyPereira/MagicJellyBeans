@@ -214,4 +214,9 @@ public class CharacterMovement : MonoBehaviour
         makeCharacterMoveAgain();  
 
     }
+
+    public void PlayDeathAnime()
+    {
+        animator.SetTrigger("death");
+    } 
 }

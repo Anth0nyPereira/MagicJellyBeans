@@ -13,6 +13,15 @@ public class Character : MonoBehaviour
     [SerializeField]
     private VoidEvent resetCharacterEvent;
 
+    [SerializeField]
+    private VoidEvent playDeathAnimationEvent;
+
+    [SerializeField]
+    private VoidEvent characterStopsMovingEvent;
+
+    [SerializeField]
+    private VoidEvent characterCanMoveAgainEvent;
+
     private bool flag;
 
     private float stressLevel;
@@ -35,7 +44,7 @@ public class Character : MonoBehaviour
             if (checkIfStressLevelIsOutOfBonds())
             {
                 revertDamage();
-                Die();
+                PlayDeathAnimation();
             }
                 
         }
@@ -56,12 +65,19 @@ public class Character : MonoBehaviour
         
     }
 
+    public void PlayDeathAnimation()
+    {
+        characterStopsMovingEvent.Raise();
+        playDeathAnimationEvent.Raise();
+    }
+
     public void Die()
     {
         Debug.Log("I died rip me :(");
         // play dissolve anim??
         // reset level, character, stress level
         resetCharacterEvent.Raise();
+        characterCanMoveAgainEvent.Raise();
         
 
     }
