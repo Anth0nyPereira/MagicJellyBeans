@@ -58,15 +58,16 @@ public class CharacterMovement : MonoBehaviour
             if (canMove)
             {
                 grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 1.3f);
-            }
-           
-            // character walking
-            float horizontalI = Input.GetAxisRaw("Horizontal");
-            direction = new Vector3(0f, 0f, horizontalI).normalized;
 
-            if (direction.magnitude >= 0.1)
-            {
-                father.transform.Rotate(speed * Time.deltaTime * direction * 100, Space.World);
+
+                // character walking
+                float horizontalI = Input.GetAxisRaw("Horizontal");
+                direction = new Vector3(0f, 0f, horizontalI).normalized;
+
+                if (direction.magnitude >= 0.1)
+                {
+                    father.transform.Rotate(speed * Time.deltaTime * direction * 100, Space.World);
+                }
             }
 
         }
