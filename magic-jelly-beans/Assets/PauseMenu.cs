@@ -15,6 +15,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private VoidEvent resetCharacterEvent;
 
+    [SerializeField]
+    private VoidEvent tellManagerToMakeAudioStopEvent;
+
+    [SerializeField]
+    private VoidEvent tellManagerToMakeAudioResumeEvent;
+
+    [SerializeField]
+    private VoidEvent tellManagerToMakeAudioStartFromTheBeginningEvent;
+
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -40,7 +49,7 @@ public class PauseMenu : MonoBehaviour
     public void pauseGame()
     {
         makeCharacterNotToMoveEvent.Raise();
-        Debug.Log("FUCKING PAUSE OK");
+        tellManagerToMakeAudioStopEvent.Raise();
         // Debug.Break();
         enableAll();
     }
@@ -48,12 +57,14 @@ public class PauseMenu : MonoBehaviour
     public void resumeGame()
     {
         makeCharacterMoveAgainEvent.Raise();
+        tellManagerToMakeAudioResumeEvent.Raise();
         disableAll();
     }
 
     public void restart()
     {
         disableAll();
+        tellManagerToMakeAudioStartFromTheBeginningEvent.Raise();
         resetCharacterEvent.Raise();
         
     }
