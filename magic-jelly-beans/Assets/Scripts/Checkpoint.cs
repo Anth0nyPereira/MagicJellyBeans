@@ -25,7 +25,9 @@ public class Checkpoint : Trigger
 
             updateNewParentTransform.Raise(father.transform);
             updateNewGrandParentTransform.Raise(grandpa.transform);
-            updateNewCharacterColorMaterial.Raise(other.gameObject.GetComponent<Renderer>().sharedMaterial);
+            Debug.Log(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
+            updateNewCharacterColorMaterial.Raise(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
+            Debug.Break();
         }
         
 

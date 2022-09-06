@@ -5,8 +5,6 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
 
-    public Transform initialPos;
-
     [SerializeField]
     private CharacterData cData;
 
@@ -28,8 +26,8 @@ public class CharacterManager : MonoBehaviour
         father = character.transform.parent.gameObject; // the one called meshCenter
         grandpa = father.transform.parent.gameObject; // the one called Character
 
-        setTransform(grandpa, cInitialData.GrandfatherTransform);
-        setTransform(father, cInitialData.ParentTransform, true);
+        setTransform(grandpa, cData.GrandfatherTransform);
+        setTransform(father, cData.ParentTransform, true);
     }
 
     public void resetCharacter()
@@ -56,5 +54,14 @@ public class CharacterManager : MonoBehaviour
             obj.transform.localRotation = Quaternion.Euler(trans.Rotation);
         }
         
+    }
+
+    private void OnApplicationQuit()
+    {
+        cData.Material = cInitialData.Material;
+        cData.ParentTransform.Position = cInitialData.ParentTransform.Position;
+        cData.ParentTransform.Rotation = cInitialData.ParentTransform.Rotation;
+        cData.GrandfatherTransform.Position = cInitialData.GrandfatherTransform.Position;
+        cData.GrandfatherTransform.Rotation = cInitialData.GrandfatherTransform.Rotation;
     }
 }
