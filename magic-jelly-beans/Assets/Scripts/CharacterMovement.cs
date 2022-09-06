@@ -133,6 +133,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void resetCharacter()
     {
+        animator.SetTrigger("run");
         resetCharacterEvent.Raise();
     }
 
