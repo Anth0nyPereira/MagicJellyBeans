@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 57166449}
-  collidableData: {fileID: 11400000, guid: 9811a0c84d297374092aa7722c683df4, type: 2}
+  collidableData: {fileID: 11400000, guid: c67243b07e2e0ae4aa3a2d6418e86717, type: 2}
 --- !u!114 &57166451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3310,7 +3310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 258562692}
-  collidableData: {fileID: 11400000, guid: 2a2e6057529f4de4ab128940ad0d2509, type: 2}
+  collidableData: {fileID: 11400000, guid: 95af2d14d0fedb747a5eb85c47d81f0e, type: 2}
 --- !u!114 &258562694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5004,7 +5004,7 @@ PrefabInstance:
     - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: collidableData
       value: 
-      objectReference: {fileID: 11400000, guid: af5bc1f103973804897a8f854224b7af, type: 2}
+      objectReference: {fileID: 11400000, guid: 5c26dbba0ac381a42901712c96517583, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana14
@@ -10027,7 +10027,7 @@ PrefabInstance:
     - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: collidableData
       value: 
-      objectReference: {fileID: 11400000, guid: 0461fad927aadef42809cb1cbac86c54, type: 2}
+      objectReference: {fileID: 11400000, guid: 82ad3eace9ca0364a822975936330825, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana12
@@ -12012,7 +12012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1199678393}
-  collidableData: {fileID: 11400000, guid: 9811a0c84d297374092aa7722c683df4, type: 2}
+  collidableData: {fileID: 11400000, guid: 0e63a07471225f649a2ef1ce3777b55e, type: 2}
 --- !u!114 &1199678395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14955,7 +14955,7 @@ PrefabInstance:
     - target: {fileID: 3401670519355694061, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: collidableData
       value: 
-      objectReference: {fileID: 11400000, guid: 0461fad927aadef42809cb1cbac86c54, type: 2}
+      objectReference: {fileID: 11400000, guid: 168878b4d9c2f59439e485271c4c1530, type: 2}
     - target: {fileID: 6807625561162325613, guid: d27eebfc920e64042aa519c2d01ad129, type: 3}
       propertyPath: m_Name
       value: banana13
@@ -16270,7 +16270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col: {fileID: 1808050668}
-  collidableData: {fileID: 11400000, guid: 9811a0c84d297374092aa7722c683df4, type: 2}
+  collidableData: {fileID: 11400000, guid: 195063ccbad83994b86414d8078eeff0, type: 2}
 --- !u!114 &1808050670
 MonoBehaviour:
   m_ObjectHideFlags: 0
