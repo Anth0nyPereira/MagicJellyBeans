@@ -24,6 +24,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private VoidEvent tellManagerToMakeAudioStartFromTheBeginningEvent;
 
+    [SerializeField]
+    private VoidEvent makeAllStoredDataDefaultEvent;
+
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -65,6 +68,7 @@ public class PauseMenu : MonoBehaviour
     {
         disableAll();
         tellManagerToMakeAudioStartFromTheBeginningEvent.Raise();
+        makeAllStoredDataDefaultEvent.Raise();
         resetCharacterEvent.Raise();
         
     }

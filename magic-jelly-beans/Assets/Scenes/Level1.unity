@@ -6465,6 +6465,7 @@ MonoBehaviour:
   tellManagerToMakeAudioStopEvent: {fileID: 11400000, guid: 4527eef5a43c37d468486ddb01de88c9, type: 2}
   tellManagerToMakeAudioResumeEvent: {fileID: 11400000, guid: 27d07f8445da3ae4894385ca70028f45, type: 2}
   tellManagerToMakeAudioStartFromTheBeginningEvent: {fileID: 11400000, guid: 85e3d1c39e7b8834183bed7f3f1854ef, type: 2}
+  makeAllStoredDataDefaultEvent: {fileID: 11400000, guid: 562378f22a39a8c40b02f7e4bcc4802f, type: 2}
 --- !u!114 &541826334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12172,6 +12173,7 @@ MonoBehaviour:
   playDeathAnimationEvent: {fileID: 11400000, guid: 5920b7dcc06070f419dfe22716012cde, type: 2}
   characterStopsMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   characterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  defaultMaterial: {fileID: 0}
 --- !u!114 &1275127483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12616,6 +12618,8 @@ GameObject:
   - component: {fileID: 1379797514}
   - component: {fileID: 1379797513}
   - component: {fileID: 1379797515}
+  - component: {fileID: 1379797516}
+  - component: {fileID: 1379797517}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -12640,6 +12644,7 @@ MonoBehaviour:
   makeCharacterNotFallDownEvent: {fileID: 11400000, guid: 25d7da2048b05994eb92f4b7a2697df5, type: 2}
   resetStressLevelEvent: {fileID: 11400000, guid: 936267143f655b54d9b03c043c5bb147, type: 2}
   resetDyingFlagEvent: {fileID: 0}
+  turnStressLevelDefaultEvent: {fileID: 11400000, guid: 111c6ae0e02c2b7419554645c78d1312, type: 2}
 --- !u!4 &1379797501
 Transform:
   m_ObjectHideFlags: 0
@@ -12969,6 +12974,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1379797506}
         m_TargetAssemblyTypeName: StressLevelManager, Assembly-CSharp
         m_MethodName: resetStress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379797516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 562378f22a39a8c40b02f7e4bcc4802f, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797500}
+        m_TargetAssemblyTypeName: CharacterManager, Assembly-CSharp
+        m_MethodName: turnDataDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379797517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 111c6ae0e02c2b7419554645c78d1312, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797506}
+        m_TargetAssemblyTypeName: StressLevelManager, Assembly-CSharp
+        m_MethodName: setDefaultStressLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18968,6 +19029,7 @@ GameObject:
   - component: {fileID: 7652818453615106284}
   - component: {fileID: 8342584793141691699}
   - component: {fileID: 8342584793141691700}
+  - component: {fileID: 8342584793141691701}
   m_Layer: 0
   m_Name: Bean
   m_TagString: Untagged
@@ -27237,6 +27299,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8342584793141691699}
         m_TargetAssemblyTypeName: StressLevelBar, Assembly-CSharp
         m_MethodName: writePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8342584793141691701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968555212226123273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 111c6ae0e02c2b7419554645c78d1312, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8342584793141691699}
+        m_TargetAssemblyTypeName: StressLevelBar, Assembly-CSharp
+        m_MethodName: setDefaultBarPosition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

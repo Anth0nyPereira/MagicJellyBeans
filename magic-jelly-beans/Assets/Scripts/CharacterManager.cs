@@ -20,6 +20,9 @@ public class CharacterManager : MonoBehaviour
     [SerializeField]
     private VoidEvent resetDyingFlagEvent;
 
+    [SerializeField]
+    private VoidEvent turnStressLevelDefaultEvent;
+
     private GameObject character; // the child one, actually
 
     private GameObject father;
@@ -50,6 +53,17 @@ public class CharacterManager : MonoBehaviour
         makeCharacterNotFallDownEvent.Raise();
 
         // quaternion.euler is used to convert from Vector3 to Quaternion
+    }
+
+    public void turnDataDefault()
+    {
+        cData.Material = cInitialData.Material;
+        cData.ParentTransform.Position = cInitialData.ParentTransform.Position;
+        cData.ParentTransform.Rotation = cInitialData.ParentTransform.Rotation;
+        cData.GrandfatherTransform.Position = cInitialData.GrandfatherTransform.Position;
+        cData.GrandfatherTransform.Rotation = cInitialData.GrandfatherTransform.Rotation;
+        turnStressLevelDefaultEvent.Raise();
+
     }
 
     private void resetStress()

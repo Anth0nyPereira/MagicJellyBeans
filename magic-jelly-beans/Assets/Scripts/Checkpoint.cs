@@ -33,15 +33,9 @@ public class Checkpoint : Trigger
             // Debug.Log(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
             updateNewCharacterColorMaterial.Raise(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
             writeActualStressLevelIntoSOEvent.Raise();
-            Debug.Break();
         }
         
 
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("on collision stay");
     }
 
     public void getActualStressLevel(float stressLevel)

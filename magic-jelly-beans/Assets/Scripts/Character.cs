@@ -6,7 +6,7 @@ using System;
 public class Character : MonoBehaviour
 {
     [SerializeField]
-    private FloatSO stressLevelSO;
+    public FloatSO stressLevelSO;
 
     [SerializeField]
     public CharacterData characterData;
@@ -22,6 +22,9 @@ public class Character : MonoBehaviour
 
     [SerializeField]
     private VoidEvent characterCanMoveAgainEvent;
+
+    [SerializeField]
+    private Material defaultMaterial;
 
     private bool flag;
 
