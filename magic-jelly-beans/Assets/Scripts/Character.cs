@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
 
     private bool flag;
 
-    private float stressLevel;
+    public float stressLevel;
 
     private float previousDamage;
 
