@@ -28,6 +28,7 @@ public class StressLevelManager : MonoBehaviour
 
     public void resetBar()
     {
+        Debug.Log("reset bar");
         bar.resetPosition();
     }
 

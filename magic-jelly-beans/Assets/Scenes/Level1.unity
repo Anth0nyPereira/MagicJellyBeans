@@ -18967,6 +18967,7 @@ GameObject:
   - component: {fileID: 6562307569533811832}
   - component: {fileID: 7652818453615106284}
   - component: {fileID: 8342584793141691699}
+  - component: {fileID: 8342584793141691700}
   m_Layer: 0
   m_Name: Bean
   m_TagString: Untagged
@@ -27217,6 +27218,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barPosition: {fileID: 11400000, guid: 1eecc397acfec3848912e0628eb73051, type: 2}
+--- !u!114 &8342584793141691700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968555212226123273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 1611f024e52d3e140908a920635a9458, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8342584793141691699}
+        m_TargetAssemblyTypeName: StressLevelBar, Assembly-CSharp
+        m_MethodName: writePosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &8346550327762887556
 MeshRenderer:
   m_ObjectHideFlags: 0
