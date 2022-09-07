@@ -17,13 +17,9 @@ public class RaycastUI : MonoBehaviour
 
     void Update()
     {
-        makeHoverRaycast();
+        if (objectToAppear != null && objectToDisappear != null) makeHoverRaycast();
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            makeClickRaycast();
-
-        }
+        if (Input.GetMouseButtonDown(0)) makeClickRaycast();
     }
 
     private void makeHoverRaycast()
