@@ -74,6 +74,11 @@ public class CharacterManager : MonoBehaviour
 
     }
 
+    public void setDataValuesFromSavedFile(StoredData storedData)
+    {
+        Debug.Log("here all parameters from cData will be updated with the values coming from the save system");
+    }
+
     private void resetStress()
     {
         resetStressLevelEvent.Raise();

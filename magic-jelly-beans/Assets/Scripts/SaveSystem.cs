@@ -11,6 +11,9 @@ public class SaveSystem : MonoBehaviour
     private FloatSO stressLevelSO;
 
     [SerializeField]
+    private FloatSO barPosition;
+
+    [SerializeField]
     private StoredDataEvent updateDataBecauseOfSavedFileEvent;
 
     public void save()
@@ -19,7 +22,7 @@ public class SaveSystem : MonoBehaviour
         Debug.Log(this.getPath());
         FileStream stream = new FileStream(this.getPath(), FileMode.Create); // stream of data contained in a file
 
-        StoredData dataThatWillBeWritten = new StoredData(characterData, stressLevelSO);
+        StoredData dataThatWillBeWritten = new StoredData(characterData, stressLevelSO, barPosition);
         formatter.Serialize(stream, dataThatWillBeWritten); // write info
         stream.Close();
     }
