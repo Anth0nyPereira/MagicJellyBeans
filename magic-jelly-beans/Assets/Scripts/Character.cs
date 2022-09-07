@@ -124,7 +124,7 @@ public class Character : MonoBehaviour
     public void resetStressLevel() // stress level that was written on SO after colliding with checkpoint
     {
         stressLevel = stressLevelSO.Value;
-        Debug.Log("stress level after restarting in a checkpoint: " + stressLevel);
+        // Debug.Log("stress level after restarting in a checkpoint: " + stressLevel);
     }
 
     public void resetFlag()

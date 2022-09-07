@@ -35,12 +35,15 @@ public class StressLevelManager : MonoBehaviour
     public void resetStress()
     {
         character.resetStressLevel();
+        Debug.Log("resetted stress: " + character.stressLevel);
+        sendActualStressLevelEvent.Raise(character.StressLevel);
     }
 
     public void setDefaultStressLevel()
     {
         character.stressLevelSO.Value = 50;
         character.StressLevel = character.stressLevelSO.Value;
+        sendActualStressLevelEvent.Raise(character.StressLevel);
     }
 
     private void decreaseStress(float damage)
@@ -59,6 +62,8 @@ public class StressLevelManager : MonoBehaviour
 
     private void sendActualStressLevel()
     {
+        Debug.Log("send actual stress level: " + character.StressLevel);
+        // Debug.Break();
         sendActualStressLevelEvent.Raise(character.StressLevel);
     }    
 }
