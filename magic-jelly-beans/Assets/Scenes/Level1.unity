@@ -256,6 +256,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: f465eeb6dc20c134e8cdec9d1a2cec13, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -888,6 +889,7 @@ GameObject:
   - component: {fileID: 60790010}
   - component: {fileID: 60790009}
   - component: {fileID: 60790008}
+  - component: {fileID: 60790012}
   m_Layer: 0
   m_Name: wallStylish4
   m_TagString: Collidable
@@ -1032,6 +1034,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 6fbb33edf37efe848b909a3a7223a83c, type: 2}
   damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -1049,6 +1052,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
+--- !u!114 &60790012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60790004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &78705574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1258,7 @@ GameObject:
   - component: {fileID: 135906012}
   - component: {fileID: 135906013}
   - component: {fileID: 135906014}
+  - component: {fileID: 135906015}
   m_Layer: 0
   m_Name: wallGrid3
   m_TagString: Collidable
@@ -1315,6 +1347,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 3c6f8adb5bdb9894daf3563ea53ffa60, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -1387,6 +1420,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &135906015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135906007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 135906011}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &153778120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1499,7 @@ GameObject:
   - component: {fileID: 188956705}
   m_Layer: 0
   m_Name: checkpoint3
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1721,6 +1782,7 @@ GameObject:
   - component: {fileID: 194440903}
   - component: {fileID: 194440904}
   - component: {fileID: 194440905}
+  - component: {fileID: 194440906}
   m_Layer: 0
   m_Name: wallGrid2
   m_TagString: Collidable
@@ -1809,6 +1871,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 7af5905e8b760474aa5052e4cdd76d74, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -1872,6 +1935,34 @@ MonoBehaviour:
       - m_Target: {fileID: 194440902}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &194440906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194440898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 194440902}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2202,6 +2293,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 57800161828485d408590e84eb0e0cd0, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -2362,6 +2454,7 @@ GameObject:
   - component: {fileID: 227392227}
   - component: {fileID: 227392228}
   - component: {fileID: 227392229}
+  - component: {fileID: 227392230}
   m_Layer: 0
   m_Name: wallSlice4
   m_TagString: Collidable
@@ -2376,9 +2469,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227392222}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 94}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000002, y: 1.0000002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1266212514}
@@ -2450,6 +2543,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: f6f10404c37193846a2e7f74f5df67b7, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -2522,6 +2616,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &227392230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227392222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227392226}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &229524707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2537,6 +2659,7 @@ GameObject:
   - component: {fileID: 229524709}
   - component: {fileID: 229524715}
   - component: {fileID: 229524714}
+  - component: {fileID: 229524716}
   m_Layer: 0
   m_Name: wallCross3
   m_TagString: Collidable
@@ -2575,6 +2698,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 0921ae41b68339641b7ade400315b071, type: 2}
   damage: {fileID: 11400000, guid: 20843c4915a931a4e8940fce3c9ae995, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -2689,6 +2813,34 @@ MonoBehaviour:
       - m_Target: {fileID: 229524709}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &229524716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229524707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2886,6 +3038,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: d01f790839d789649bfa0148095269c8, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -3109,6 +3262,7 @@ GameObject:
   - component: {fileID: 264341932}
   - component: {fileID: 264341933}
   - component: {fileID: 264341934}
+  - component: {fileID: 264341935}
   m_Layer: 0
   m_Name: wallGrid6
   m_TagString: Collidable
@@ -3197,6 +3351,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 01837e20493ff6f4a978b885ff2c80d6, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -3260,6 +3415,34 @@ MonoBehaviour:
       - m_Target: {fileID: 264341931}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &264341935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264341927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 264341931}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3470,6 +3653,7 @@ GameObject:
   - component: {fileID: 316952061}
   - component: {fileID: 316952060}
   - component: {fileID: 316952059}
+  - component: {fileID: 316952065}
   m_Layer: 0
   m_Name: wallSlice5
   m_TagString: Collidable
@@ -3577,6 +3761,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 1aff4a22195929b4e9fd3da0e23a1fc3, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -3630,6 +3815,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316952057}
   m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+--- !u!114 &316952065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316952057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &326396839
 GameObject:
   m_ObjectHideFlags: 0
@@ -4391,6 +4604,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: d939b2aa05b66cb43889cf53bc638ff9, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -4451,7 +4665,7 @@ GameObject:
   - component: {fileID: 375223971}
   m_Layer: 0
   m_Name: checkpoint2
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4464,7 +4678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375223969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.023, y: -2.051, z: 93.131}
+  m_LocalPosition: {x: -0.503, y: -1.282, z: 95.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4617,6 +4831,7 @@ GameObject:
   - component: {fileID: 416158085}
   - component: {fileID: 416158088}
   - component: {fileID: 416158087}
+  - component: {fileID: 416158089}
   m_Layer: 0
   m_Name: wallCross2
   m_TagString: Collidable
@@ -4725,6 +4940,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 7fc72c7d010bfd341acc4af9c16f7e92, type: 2}
   damage: {fileID: 11400000, guid: 20843c4915a931a4e8940fce3c9ae995, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -4789,6 +5005,34 @@ MonoBehaviour:
       - m_Target: {fileID: 416158085}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &416158089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416158080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5300,6 +5544,7 @@ GameObject:
   - component: {fileID: 451850398}
   - component: {fileID: 451850397}
   - component: {fileID: 451850396}
+  - component: {fileID: 451850400}
   m_Layer: 0
   m_Name: wallStylish3
   m_TagString: Collidable
@@ -5444,6 +5689,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: e560d83f516f8c64996fc411e4fac893, type: 2}
   damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -5461,6 +5707,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
+--- !u!114 &451850400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451850392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &462601492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5638,7 +5912,7 @@ GameObject:
   - component: {fileID: 471872628}
   m_Layer: 0
   m_Name: checkpoint6
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5921,6 +6195,7 @@ GameObject:
   - component: {fileID: 487482434}
   - component: {fileID: 487482435}
   - component: {fileID: 487482436}
+  - component: {fileID: 487482437}
   m_Layer: 0
   m_Name: wallGrid4
   m_TagString: Collidable
@@ -6009,6 +6284,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: c0ee05d855882f64d80b49e54ec8da81, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -6072,6 +6348,34 @@ MonoBehaviour:
       - m_Target: {fileID: 487482433}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &487482437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487482429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 487482433}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6466,6 +6770,7 @@ MonoBehaviour:
   tellManagerToMakeAudioResumeEvent: {fileID: 11400000, guid: 27d07f8445da3ae4894385ca70028f45, type: 2}
   tellManagerToMakeAudioStartFromTheBeginningEvent: {fileID: 11400000, guid: 85e3d1c39e7b8834183bed7f3f1854ef, type: 2}
   makeAllStoredDataDefaultEvent: {fileID: 11400000, guid: 562378f22a39a8c40b02f7e4bcc4802f, type: 2}
+  turnOnCheckpointCollidersEvent: {fileID: 11400000, guid: 93c4beac1c609194eaf906546724f949, type: 2}
 --- !u!114 &541826334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6604,6 +6909,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 3c2970da2b6106f4c88f3b10aeae90a7, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -7005,6 +7311,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 53743fa5e4b4d1f41bb6bc4092e1412c, type: 2}
   damage: {fileID: 11400000, guid: a647a3da1dbfa8f45b0ed87699b7c664, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -7655,6 +7962,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 4581554f1a2144243b0e724559e06b1f, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -7900,6 +8208,7 @@ GameObject:
   - component: {fileID: 771401122}
   - component: {fileID: 771401123}
   - component: {fileID: 771401124}
+  - component: {fileID: 771401125}
   m_Layer: 0
   m_Name: wallGrid5
   m_TagString: Collidable
@@ -7988,6 +8297,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 63c0aac544dc9414997fa9248ed67090, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -8051,6 +8361,34 @@ MonoBehaviour:
       - m_Target: {fileID: 771401121}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &771401125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771401117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 771401121}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8238,6 +8576,7 @@ GameObject:
   - component: {fileID: 863280615}
   - component: {fileID: 863280616}
   - component: {fileID: 863280617}
+  - component: {fileID: 863280618}
   m_Layer: 0
   m_Name: wallSlice3
   m_TagString: Collidable
@@ -8326,6 +8665,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: b7dcd09941842694a9c820bd1bc6b4d5, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -8389,6 +8729,34 @@ MonoBehaviour:
       - m_Target: {fileID: 863280614}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &863280618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863280610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 863280614}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8593,6 +8961,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: e40dc50afd07fa3418824bd1ccc2ffdf, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -8715,7 +9084,7 @@ GameObject:
   - component: {fileID: 891089157}
   m_Layer: 0
   m_Name: checkpoint5
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9261,6 +9630,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: ed291fe280019e24a8372adf06ea616b, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -9573,6 +9943,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 1a1b994fce8fa6d4085df1e4acda69d7, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -9956,6 +10327,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 4945725168eec3341bd1a0028b757d83, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -10083,6 +10455,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 4ab3469e75cf48343bb9455c52799d39, type: 2}
   damage: {fileID: 11400000, guid: a647a3da1dbfa8f45b0ed87699b7c664, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -10469,6 +10842,7 @@ GameObject:
   - component: {fileID: 1150387446}
   - component: {fileID: 1150387445}
   - component: {fileID: 1150387444}
+  - component: {fileID: 1150387448}
   m_Layer: 0
   m_Name: wallWheel2
   m_TagString: Collidable
@@ -10613,6 +10987,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 502c5721d7acb9f4bb58eea2265c9238, type: 2}
   damage: {fileID: 11400000, guid: 1c6d13b24b020ff40b079ee77162bd4e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -10630,6 +11005,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 5bd155a1affbb7c48988f97dc1896be1, type: 3}
+--- !u!114 &1150387448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150387440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1157613524
 GameObject:
   m_ObjectHideFlags: 0
@@ -10807,6 +11210,7 @@ GameObject:
   - component: {fileID: 1172585095}
   - component: {fileID: 1172585094}
   - component: {fileID: 1172585093}
+  - component: {fileID: 1172585097}
   m_Layer: 0
   m_Name: wallWheel3
   m_TagString: Collidable
@@ -10951,6 +11355,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: eac4eeaa4666bae44b9f719a714b8b13, type: 2}
   damage: {fileID: 11400000, guid: 1c6d13b24b020ff40b079ee77162bd4e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -10968,6 +11373,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 5bd155a1affbb7c48988f97dc1896be1, type: 3}
+--- !u!114 &1172585097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172585089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1173961165
 GameObject:
   m_ObjectHideFlags: 0
@@ -11304,6 +11737,7 @@ GameObject:
   - component: {fileID: 1219353663}
   - component: {fileID: 1219353662}
   - component: {fileID: 1219353661}
+  - component: {fileID: 1219353665}
   m_Layer: 0
   m_Name: wallStylish2
   m_TagString: Collidable
@@ -11448,6 +11882,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: d2aa38ca326e2404a95d0457121cf47a, type: 2}
   damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -11465,6 +11900,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
+--- !u!114 &1219353665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219353657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1229169181
 GameObject:
   m_ObjectHideFlags: 0
@@ -11887,6 +12350,7 @@ GameObject:
   - component: {fileID: 1263158345}
   - component: {fileID: 1263158344}
   - component: {fileID: 1263158343}
+  - component: {fileID: 1263158347}
   m_Layer: 0
   m_Name: wallStylish5
   m_TagString: Collidable
@@ -12031,6 +12495,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 45ef482e405849c4b9a84925c0f736d6, type: 2}
   damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -12048,6 +12513,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
+--- !u!114 &1263158347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263158339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1266212513
 GameObject:
   m_ObjectHideFlags: 0
@@ -12174,6 +12667,7 @@ MonoBehaviour:
   characterStopsMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   characterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   defaultMaterial: {fileID: 0}
+  stressLevel: 0
 --- !u!114 &1275127483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12620,6 +13114,7 @@ GameObject:
   - component: {fileID: 1379797515}
   - component: {fileID: 1379797516}
   - component: {fileID: 1379797517}
+  - component: {fileID: 1379797518}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -12645,6 +13140,7 @@ MonoBehaviour:
   resetStressLevelEvent: {fileID: 11400000, guid: 936267143f655b54d9b03c043c5bb147, type: 2}
   resetDyingFlagEvent: {fileID: 0}
   turnStressLevelDefaultEvent: {fileID: 11400000, guid: 111c6ae0e02c2b7419554645c78d1312, type: 2}
+  sendCharacterTransformEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
 --- !u!4 &1379797501
 Transform:
   m_ObjectHideFlags: 0
@@ -13039,6 +13535,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1379797518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 93c4beac1c609194eaf906546724f949, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797503}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: turnOnCheckpointColliders
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1452398444
 GameObject:
   m_ObjectHideFlags: 0
@@ -13090,7 +13614,7 @@ GameObject:
   - component: {fileID: 1484237290}
   m_Layer: 0
   m_Name: checkpoint7
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13329,6 +13853,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 8cc260530d19e0d4ab2d36f582aa334b, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -13389,6 +13914,7 @@ GameObject:
   - component: {fileID: 1549125899}
   - component: {fileID: 1549125898}
   - component: {fileID: 1549125897}
+  - component: {fileID: 1549125903}
   m_Layer: 0
   m_Name: wallSlice6
   m_TagString: Collidable
@@ -13496,6 +14022,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 283893ac55635ca49ba3bc3499d55e6a, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -13549,6 +14076,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549125895}
   m_Mesh: {fileID: -2432090755550338912, guid: 99bfad237b7ec0f44b9f7050e3ce0143, type: 3}
+--- !u!114 &1549125903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549125895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1561417345
 GameObject:
   m_ObjectHideFlags: 0
@@ -14129,6 +14684,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: e066909cbc6854441ad4d37e9f305160, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -14619,6 +15175,7 @@ GameObject:
   - component: {fileID: 1724718690}
   - component: {fileID: 1724718689}
   - component: {fileID: 1724718688}
+  - component: {fileID: 1724718692}
   m_Layer: 0
   m_Name: wallStylish6
   m_TagString: Collidable
@@ -14763,6 +15320,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 491755d5e3c43fc4aa582e452b99ffcb, type: 2}
   damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -14780,6 +15338,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
+--- !u!114 &1724718692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724718684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1771289134
 GameObject:
   m_ObjectHideFlags: 0
@@ -14907,6 +15493,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: cb5764cab3bc9f34893db6537e661849, type: 2}
   damage: {fileID: 11400000, guid: a647a3da1dbfa8f45b0ed87699b7c664, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -14995,6 +15582,7 @@ GameObject:
   - component: {fileID: 1807284604}
   - component: {fileID: 1807284605}
   - component: {fileID: 1807284606}
+  - component: {fileID: 1807284607}
   m_Layer: 0
   m_Name: wallSlice2
   m_TagString: Collidable
@@ -15083,6 +15671,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: b97bcc78f6b288c408cee2732477a9ea, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -15146,6 +15735,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1807284603}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1807284607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807284599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1807284603}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15308,7 +15925,7 @@ GameObject:
   - component: {fileID: 1855888591}
   m_Layer: 0
   m_Name: checkpoint4
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15764,6 +16381,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 9730be73428087a4eb887b0aae2fd379, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -17510,6 +18128,7 @@ GameObject:
   - component: {fileID: 2096342959}
   - component: {fileID: 2096342965}
   - component: {fileID: 2096342964}
+  - component: {fileID: 2096342966}
   m_Layer: 0
   m_Name: wallCross4
   m_TagString: Collidable
@@ -17548,6 +18167,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 4777398f627ad784ea9b4eb3e4b925b1, type: 2}
   damage: {fileID: 11400000, guid: 20843c4915a931a4e8940fce3c9ae995, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -17662,6 +18282,34 @@ MonoBehaviour:
       - m_Target: {fileID: 2096342959}
         m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
         m_MethodName: getColorList
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2096342966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096342957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20567,7 +21215,7 @@ GameObject:
   - component: {fileID: 8590835742955047616}
   m_Layer: 0
   m_Name: checkpoint1
-  m_TagString: Untagged
+  m_TagString: Checkpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21802,6 +22450,7 @@ GameObject:
   - component: {fileID: 7021267726230322241}
   - component: {fileID: 7021267726230322240}
   - component: {fileID: 7021267726230322239}
+  - component: {fileID: 7021267726230322243}
   m_Layer: 0
   m_Name: wallStylish1
   m_TagString: Collidable
@@ -24703,6 +25352,7 @@ GameObject:
   - component: {fileID: 6266649767512208818}
   - component: {fileID: 6266649767512208820}
   - component: {fileID: 6266649767512208821}
+  - component: {fileID: 6266649767512208822}
   m_Layer: 0
   m_Name: wallGrid1
   m_TagString: Collidable
@@ -24726,6 +25376,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 1dd0fff51dfd05243b77cb8012b9a46c, type: 2}
   damage: {fileID: 11400000, guid: b8e86da344729d447a972591f82af196, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -24789,6 +25440,34 @@ MonoBehaviour:
       - m_Target: {fileID: 6266649767512208818}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6266649767512208822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266649767512208817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6266649767512208818}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25600,6 +26279,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 021adfdff6ce4ae4d86a72d78b9b46cd, type: 2}
   damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -25617,6 +26297,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
+--- !u!114 &7021267726230322243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968108781914773071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &7036511420336694139
 Transform:
   m_ObjectHideFlags: 0
@@ -25870,6 +26578,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 487a8f5d4d0fc7040bb49c312d319e1a, type: 2}
   damage: {fileID: 11400000, guid: 520fe21abdbe50842bbf1e5509c9ab37, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -26570,6 +27279,7 @@ GameObject:
   - component: {fileID: 8034114561444905717}
   - component: {fileID: 8034114561444905716}
   - component: {fileID: 8034114561444905715}
+  - component: {fileID: 8034114561444905719}
   m_Layer: 0
   m_Name: wallCross1
   m_TagString: Collidable
@@ -26669,6 +27379,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 25eeabe6365a5244ab8bdf036c7b6efb, type: 2}
   damage: {fileID: 11400000, guid: 20843c4915a931a4e8940fce3c9ae995, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -26686,6 +27397,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: c328306f55dedfe408b34ff1a766bc59, type: 3}
+--- !u!114 &8034114561444905719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034114561444905713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8036290906590576584
 GameObject:
   m_ObjectHideFlags: 0
@@ -26945,6 +27684,7 @@ GameObject:
   - component: {fileID: 8164078558953144336}
   - component: {fileID: 8164078558953144337}
   - component: {fileID: 8164078558953144338}
+  - component: {fileID: 8164078558953144339}
   m_Layer: 0
   m_Name: wallSlice1
   m_TagString: Collidable
@@ -26968,6 +27708,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: ebcd6a9347b4b934999f3509cb8fff8d, type: 2}
   damage: {fileID: 11400000, guid: 3b40e2c6e7188b14aa69bbab9e0fb56e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -27031,6 +27772,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8164078558953144335}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getActualStressLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8164078558953144339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164078558953144334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8164078558953144335}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27417,6 +28186,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: b626e2fe42e2c9946a2f2b4c136f695d, type: 2}
   damage: {fileID: 11400000, guid: a647a3da1dbfa8f45b0ed87699b7c664, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -28227,6 +28997,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 8579c314dc4eddb43aa8bec26b002890, type: 2}
   damage: {fileID: 11400000, guid: 462e01c9e60ffb849ad67ce04a4e8d28, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 0}
@@ -29538,6 +30309,7 @@ GameObject:
   - component: {fileID: 9140630047228943588}
   - component: {fileID: 9140630047228943587}
   - component: {fileID: 9140630047228943586}
+  - component: {fileID: 9140630047228943590}
   m_Layer: 0
   m_Name: wallWheel1
   m_TagString: Collidable
@@ -29617,6 +30389,7 @@ MonoBehaviour:
   collidableData: {fileID: 11400000, guid: 12d80e43e20ae514faa903af57d1ea28, type: 2}
   damage: {fileID: 11400000, guid: 1c6d13b24b020ff40b079ee77162bd4e, type: 2}
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
+  firstCollision: 0
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
   stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
@@ -29634,6 +30407,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 5bd155a1affbb7c48988f97dc1896be1, type: 3}
+--- !u!114 &9140630047228943590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140630047228943585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 60790010}
+        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
+        m_MethodName: getCharacterPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &9154997281567460114
 Transform:
   m_ObjectHideFlags: 0

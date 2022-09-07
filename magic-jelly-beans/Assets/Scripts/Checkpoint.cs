@@ -34,8 +34,8 @@ public class Checkpoint : Trigger
             updateNewCharacterColorMaterial.Raise(other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material);
             writeActualStressLevelIntoSOEvent.Raise();
         }
-        
 
+        col.enabled = false;
     }
 
     public void getActualStressLevel(float stressLevel)

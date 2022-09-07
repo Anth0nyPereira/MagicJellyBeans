@@ -27,6 +27,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private VoidEvent makeAllStoredDataDefaultEvent;
 
+    [SerializeField]
+    private VoidEvent turnOnCheckpointCollidersEvent;
+
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -69,6 +72,7 @@ public class PauseMenu : MonoBehaviour
         disableAll();
         tellManagerToMakeAudioStartFromTheBeginningEvent.Raise();
         makeAllStoredDataDefaultEvent.Raise();
+        turnOnCheckpointCollidersEvent.Raise();
         resetCharacterEvent.Raise();
         
     }

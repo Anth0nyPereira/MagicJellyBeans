@@ -23,6 +23,9 @@ public class CharacterManager : MonoBehaviour
     [SerializeField]
     private VoidEvent turnStressLevelDefaultEvent;
 
+    [SerializeField]
+    private TransformEvent sendCharacterTransformEvent;
+
     private GameObject character; // the child one, actually
 
     private GameObject father;
@@ -37,6 +40,11 @@ public class CharacterManager : MonoBehaviour
 
         setTransform(grandpa, cData.GrandfatherTransform);
         setTransform(father, cData.ParentTransform, true);
+    }
+
+    private void Update()
+    {
+        sendCharacterTransformEvent.Raise(grandpa.transform);
     }
 
     public void resetCharacter()

@@ -30,8 +30,6 @@ public class Character : MonoBehaviour
 
     public float stressLevel;
 
-    private float previousDamage;
-
     private bool stressIsOutOfRange;
 
     public float StressLevel { get => stressLevel; set => stressLevel = value; }
@@ -61,13 +59,13 @@ public class Character : MonoBehaviour
 
     public void decreaseStressLevel(float dam)
     {
-        previousDamage = -dam;
+        
         stressLevel -= dam;
         
     }
     public void increaseStressLevel(float dam)
     {
-        previousDamage = dam;
+        
         stressLevel += dam;
         // Debug.Log("new stress level: " + stressLevel);
         
@@ -126,7 +124,7 @@ public class Character : MonoBehaviour
     public void resetStressLevel() // stress level that was written on SO after colliding with checkpoint
     {
         stressLevel = stressLevelSO.Value;
-        Debug.Log("reseted stress level: " + stressLevel);
+        Debug.Log("stress level after restarting in a checkpoint: " + stressLevel);
     }
 
     public void resetFlag()
@@ -146,25 +144,6 @@ public class Character : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    private void revertDamage()
-    {
-        if (previousDamage < 0)
-        {
-            stressLevel += Mathf.Abs(previousDamage);
-        } else
-        {
-            stressLevel -= Mathf.Abs(previousDamage);
-        }
-        previousDamage = 0;
-        Debug.Log("stress level reverted: " + stressLevel);
-    }
-
-    public IEnumerator waitForSeconds(float seconds, Action funct)
-    {
-        yield return new WaitForSeconds(seconds);
-        funct();
     }
 
     public void stressLevelIsOutOfRange()

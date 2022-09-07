@@ -11,7 +11,7 @@ public class Obstacle : Collidable
     [SerializeField]
     private FloatEvent updateStressLevel;
 
-    private bool firstCollision;
+    public bool firstCollision;
 
     private GameObject father;
     private GameObject grandpa;
@@ -27,12 +27,25 @@ public class Obstacle : Collidable
     [SerializeField]
     private VoidEvent stressLevelIsOutOfRangeEvent;
 
+    private Vector3 characterPosition;
+
     public void Awake()
     {
         firstCollision = true;
         actualStressLevel = 50;
         col.enabled = true;
         
+    }
+
+    private void Update()
+    {
+        if (this.transform.position.z < characterPosition.z)
+        {
+            Debug.Log(this.transform.position.z);
+            Debug.Log(characterPosition.z);
+            Debug.Log("first collision for: " + this.name);
+            firstCollision = true;
+        }
     }
 
     public override void OnCollisionEnter(Collision other)
@@ -161,7 +174,11 @@ public class Obstacle : Collidable
 
     public void resetCollisionFlag()
     {
-        // firstCollision = true;
-        ;
+        firstCollision = true;
+    }
+
+    public void getCharacterPosition(Transform characterTransform)
+    {
+        characterPosition = characterTransform.position;
     }
 }

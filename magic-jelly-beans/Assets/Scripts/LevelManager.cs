@@ -15,15 +15,26 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     private CollidableDataList listOfObstacles;
 
+    private GameObject[] checkpoints;
+
     public void Awake()
     {
-        collidablesGOs = GameObject.FindGameObjectsWithTag("Collidable");
+        collidablesGOs = GameObject.FindGameObjectsWithTag("Collidable"); // ground and collectables
+        checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
     }
 
     public void makeCharacterNotFallDown()
     {
         resetObstacleFlags();
         resetAllCollidables();
+    }
+
+    public void turnOnCheckpointColliders()
+    {
+        foreach (GameObject ch in checkpoints)
+        {
+            ch.GetComponent<Collider>().enabled = true;
+        }
     }
 
     private void resetAllCollidables() // I think I just need to put here collectables and grounds
@@ -55,6 +66,9 @@ public class LevelManager : MonoBehaviour
             GameObject obstacle = GameObject.Find(oName);
             // Debug.Log(obstacle);
             obstacle.GetComponent<Obstacle>().resetCollisionFlag();
+            Debug.Log(obstacle.GetComponent<Obstacle>().firstCollision);
         }
     }
+
+   
 }

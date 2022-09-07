@@ -40,7 +40,7 @@ public class StressLevelManager : MonoBehaviour
     public void setDefaultStressLevel()
     {
         character.stressLevelSO.Value = 50;
-        character.stressLevel = character.stressLevelSO.Value;
+        character.StressLevel = character.stressLevelSO.Value;
     }
 
     private void decreaseStress(float damage)
@@ -59,7 +59,6 @@ public class StressLevelManager : MonoBehaviour
 
     private void sendActualStressLevel()
     {
-        if (character.StressLevel < 0 || character.StressLevel > 100) return;
         sendActualStressLevelEvent.Raise(character.StressLevel);
     }    
 }
