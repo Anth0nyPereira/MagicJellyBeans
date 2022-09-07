@@ -66,7 +66,7 @@ public class LevelManager : MonoBehaviour
             GameObject obstacle = GameObject.Find(oName);
             // Debug.Log(obstacle);
             obstacle.GetComponent<Obstacle>().resetCollisionFlag();
-            Debug.Log(obstacle.GetComponent<Obstacle>().firstCollision);
+            //Debug.Log(obstacle.GetComponent<Obstacle>().firstCollision);
         }
     }
 

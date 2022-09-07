@@ -41,9 +41,9 @@ public class Obstacle : Collidable
     {
         if (this.transform.position.z < characterPosition.z)
         {
-            Debug.Log(this.transform.position.z);
-            Debug.Log(characterPosition.z);
-            Debug.Log("first collision for: " + this.name);
+            //Debug.Log(this.transform.position.z);
+            //Debug.Log(characterPosition.z);
+            // Debug.Log("first collision for: " + this.name);
             firstCollision = true;
         }
     }
