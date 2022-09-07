@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Character : MonoBehaviour
 {
@@ -28,23 +29,27 @@ public class Character : MonoBehaviour
 
     private float previousDamage;
 
+    private bool stressIsOutOfRange;
+
     public float StressLevel { get => stressLevel; set => stressLevel = value; }
 
     private void Awake()
     {
         stressLevel = stressLevelSO.Value;
         flag = true;
+        stressIsOutOfRange = false;
     }
 
     private void Update()
     {
-        Debug.Log("STRESSSS LEVEL: " + stressLevel);
+        // Debug.Log("STRESSSS LEVEL: " + stressLevel);
         if (flag)
         {
-            if (checkIfStressLevelIsOutOfBonds())
+            if (stressIsOutOfRange)
             {
-                revertDamage();
-                PlayDeathAnimation();
+                // revertDamage();
+                playDeathAnimation();
+                stressLevelIsNotOutOfRange();
             }
                 
         }
@@ -65,21 +70,21 @@ public class Character : MonoBehaviour
         
     }
 
-    public void PlayDeathAnimation()
+    public void playDeathAnimation()
     {
         characterStopsMovingEvent.Raise();
         playDeathAnimationEvent.Raise();
     }
 
-    public void Die()
+    public void die()
     {
+        Debug.Log("emtering die function");
         Debug.Log("I died rip me :(");
         // play dissolve anim??
         // reset level, character, stress level
         resetCharacterEvent.Raise();
         characterCanMoveAgainEvent.Raise();
         
-
     }
 
     public void updateMaterialData(Material newMaterial)
@@ -111,12 +116,14 @@ public class Character : MonoBehaviour
     {
         if (checkIfStressLevelIsOutOfBonds()) return;
         stressLevelSO.Value = stressLevel;
+        Debug.Log("stress level when hit checkpoint: " + stressLevelSO.Value);
         // Debug.Break();
     }
 
-    public void resetStressLevel()
+    public void resetStressLevel() // stress level that was written on SO after colliding with checkpoint
     {
         stressLevel = stressLevelSO.Value;
+        Debug.Log("reseted stress level: " + stressLevel);
     }
 
     public void resetFlag()
@@ -151,4 +158,25 @@ public class Character : MonoBehaviour
         Debug.Log("stress level reverted: " + stressLevel);
     }
 
+    public IEnumerator waitForSeconds(float seconds, Action funct)
+    {
+        yield return new WaitForSeconds(seconds);
+        funct();
+    }
+
+    public void stressLevelIsOutOfRange()
+    {
+        stressIsOutOfRange = true;
+    }
+
+    public void stressLevelIsNotOutOfRange()
+    {
+        stressIsOutOfRange = false;
+    }
+
+    public void deathAnimHasFinished()
+    {
+        Debug.Log("death anim has finished");
+        die();
+    }
 }

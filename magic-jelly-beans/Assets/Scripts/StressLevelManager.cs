@@ -17,11 +17,11 @@ public class StressLevelManager : MonoBehaviour
     {
         if (damage < 0)
         {
-            Debug.Log("Make stress level decrease");
+            //Debug.Log("Make stress level decrease");
             decreaseStress(damage);
         } else
         {
-            Debug.Log("Make stress level increase");
+            // Debug.Log("Make stress level increase");
             increaseStress(damage);
         } 
     }
@@ -52,9 +52,7 @@ public class StressLevelManager : MonoBehaviour
 
     private void sendActualStressLevel()
     {
-        Debug.Log(character.StressLevel);
-        // Debug.Break();
+        if (character.StressLevel < 0 || character.StressLevel > 100) return;
         sendActualStressLevelEvent.Raise(character.StressLevel);
-    }
-    
+    }    
 }

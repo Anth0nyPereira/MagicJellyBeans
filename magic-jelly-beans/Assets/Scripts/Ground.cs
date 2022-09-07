@@ -22,7 +22,7 @@ public class Ground : Collidable
     {
         if (other.gameObject.tag == "Character")
         {
-            Debug.Log("Character is on terrain!!");
+            // Debug.Log("Character is on terrain!!");
             if (checkIfSameColor(other))
             {
                 makeCharacterFallDown(other);

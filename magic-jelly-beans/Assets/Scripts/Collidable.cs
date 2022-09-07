@@ -22,7 +22,7 @@ public class Collidable : MonoBehaviour
 
     public virtual void OnCollisionEnter(Collision other)
     {
-        ;
+        col.enabled = true;
         // Debug.Log("I collided with " + other.gameObject.name);
     }
 

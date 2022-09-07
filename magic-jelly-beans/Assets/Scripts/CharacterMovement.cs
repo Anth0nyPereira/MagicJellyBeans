@@ -33,6 +33,9 @@ public class CharacterMovement : MonoBehaviour
 
     private Animator animator;
 
+    [SerializeField]
+    private VoidEvent deathAnimHasFinishedEvent;
+
 
     void Awake()
     {
@@ -88,18 +91,18 @@ public class CharacterMovement : MonoBehaviour
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, getVectorBetweenParentCharacter(), out hit, Mathf.Infinity, layerMask))
         {
-            Debug.Log("Did Hit");
+            // Debug.Log("Did Hit");
         }
         else
         {
             if (Physics.Raycast(transform.position + new Vector3(0, 0, 0.3f), getVectorBetweenParentCharacter() + new Vector3(0, 0, 0.3f), out hit, Mathf.Infinity, layerMask))
             {
-                Debug.Log("Did Hit 2");
+                // Debug.Log("Did Hit 2");
                 Debug.Log(hit.collider.name);
             }
              else
             {
-                Debug.Log("Did not Hit");
+                // Debug.Log("Did not Hit");
                 // Debug.Break();
                 makeCharacterFallDown();
                 // Debug.Break();
@@ -113,11 +116,11 @@ public class CharacterMovement : MonoBehaviour
         {
             if (canMove)
             {
-                Debug.Log("dash");
+                // Debug.Log("dash");
                 
                 if (time > cooldown)
                 {
-                    Debug.Log("Can Dash!!");
+                    // Debug.Log("Can Dash!!");
                     Dash();
                     time = 0.0f;
                 }
@@ -133,7 +136,6 @@ public class CharacterMovement : MonoBehaviour
 
     public void resetCharacter()
     {
-        animator.SetTrigger("run");
         resetCharacterEvent.Raise();
     }
 
@@ -220,4 +222,10 @@ public class CharacterMovement : MonoBehaviour
     {
         animator.SetTrigger("death");
     } 
+
+    private void deathAnimHasFinished()
+    {
+        animator.SetTrigger("running");
+        deathAnimHasFinishedEvent.Raise();
+    }
 }

@@ -258,6 +258,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &2112149
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1033,6 +1034,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &60790011
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1315,6 +1317,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &135906012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1808,6 +1811,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &194440903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2200,6 +2204,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &222073837
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2447,6 +2452,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &227392227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2571,6 +2577,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &229524710
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2881,6 +2888,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &253616754
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3191,6 +3199,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &264341932
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3570,6 +3579,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!23 &316952063
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4383,6 +4393,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &373913565
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4453,7 +4464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375223969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.342, y: -2.051, z: 93.485}
+  m_LocalPosition: {x: 0.023, y: -2.051, z: 93.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4716,6 +4727,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &416158086
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5434,6 +5446,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &451850399
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5998,6 +6011,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &487482434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6591,6 +6605,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &569747630
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6991,6 +7006,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &666456509
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7640,6 +7656,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &710290840
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7972,6 +7989,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &771401122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8309,6 +8327,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &863280615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8575,6 +8594,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &868878597
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9242,6 +9262,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &964271407
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9553,6 +9574,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &998921484
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9935,6 +9957,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &1085440774
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10061,6 +10084,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &1092758980
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10590,6 +10614,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &1150387447
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10927,6 +10952,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &1172585096
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11423,6 +11449,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &1219353664
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12005,6 +12032,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &1263158346
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12100,6 +12128,8 @@ GameObject:
   - component: {fileID: 270306764261117428}
   - component: {fileID: 270306764261117429}
   - component: {fileID: 270306764261117430}
+  - component: {fileID: 270306764261117431}
+  - component: {fileID: 270306764261117432}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Character
@@ -12157,6 +12187,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   speed: 2
   resetCharacterEvent: {fileID: 11400000, guid: 15d42a7c6f07c7c4580433eb7fbe0c80, type: 2}
+  deathAnimHasFinishedEvent: {fileID: 11400000, guid: f4f105a2233f7bf40bbfa0c4b2162c41, type: 2}
 --- !u!136 &1275127484
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12167,10 +12198,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 4.887405
-  m_Height: 23.824654
+  m_Radius: 2.6
+  m_Height: 22.19
   m_Direction: 1
-  m_Center: {x: 0, y: 1.9377313, z: -0.29740435}
+  m_Center: {x: 0.42, y: 1.9377313, z: -0.66}
 --- !u!54 &1275127485
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13239,6 +13270,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &1533334157
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13405,6 +13437,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!23 &1549125901
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14037,6 +14070,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &1660645168
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14670,6 +14704,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &1724718691
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14813,6 +14848,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &1771289140
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -14988,6 +15024,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &1807284604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15668,6 +15705,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &1893791810
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17451,6 +17489,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &2096342960
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18037,13 +18076,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'death'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -18094,6 +18127,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1275127483}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: PlayDeathAnime
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &270306764261117431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275127480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1275127482}
+        m_TargetAssemblyTypeName: Character, Assembly-CSharp
+        m_MethodName: stressLevelIsOutOfRange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &270306764261117432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275127480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f4f105a2233f7bf40bbfa0c4b2162c41, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1275127482}
+        m_TargetAssemblyTypeName: Character, Assembly-CSharp
+        m_MethodName: deathAnimHasFinished
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24576,6 +24665,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &6266649767512208819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25449,6 +25539,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &7021267726230322242
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25718,6 +25809,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &7166406531427683810
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26516,6 +26608,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &8034114561444905718
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26814,6 +26907,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!65 &8164078558953144336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27206,6 +27300,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &8346550327762887559
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28015,6 +28110,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 0}
 --- !u!64 &8631689341565485370
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29404,6 +29500,7 @@ MonoBehaviour:
   updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
   tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
   tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
+  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
 --- !u!64 &9140630047228943589
 MeshCollider:
   m_ObjectHideFlags: 0

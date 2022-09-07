@@ -24,22 +24,22 @@ public class Obstacle : Collidable
 
     private float actualStressLevel;
 
+    [SerializeField]
+    private VoidEvent stressLevelIsOutOfRangeEvent;
+
     public void Awake()
     {
         firstCollision = true;
         actualStressLevel = 50;
+        col.enabled = true;
         
-    }
-
-    private void Update()
-    {
-        Debug.Log(firstCollision);
-
     }
 
     public override void OnCollisionEnter(Collision other)
     {
+        Debug.Log(collidableData.name + " " + firstCollision);
         Debug.Log("entered oncollisionenter");
+        if (actualStressLevel < 0 || actualStressLevel > 100) return;
         if (other.gameObject.tag == "Character")
         {
             Debug.Log("Character was hit by an obstacle!");
@@ -71,7 +71,6 @@ public class Obstacle : Collidable
 
     public void characterCanPass(Collision character)
     {
-        Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
         Debug.Log("Hurraaayyyyy!! Decrease stress level");
 
         // invoke event to make character's stress level decrease
@@ -90,16 +89,24 @@ public class Obstacle : Collidable
             tellCharacterToStopMovingEvent.Raise();
             //grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
 
-            if (!checkIfStressLevelWillBeOutOfRange())
+            
+            if (!checkIfStressLevelIsOutOfRange())
             {
                 applyForce();
             } else
             {
+                Debug.Log("dont apply force");
+                Debug.Log(actualStressLevel);
                 whenCoroutineEnds();
+                stressLevelIsOutOfRangeEvent.Raise();
+                return;
             }
+            
+            // applyForce();
+            
 
 
-            Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
+            // Debug.Log("Autch!! I received some damage that is converted in stress amount!!");
             firstCollision = false;
 
             // invoke event to make character's stress level increase
@@ -107,7 +114,8 @@ public class Obstacle : Collidable
 
         } else // second time colliding
         {
-            Physics.IgnoreCollision(base.GetComponent<Collider>(), character.collider);
+            Debug.Log("ignoring");
+            firstCollision = true;
         }
     }
 
@@ -134,12 +142,12 @@ public class Obstacle : Collidable
 
     }
 
-    public bool checkIfStressLevelWillBeOutOfRange()
+    public bool checkIfStressLevelIsOutOfRange()
     {
         // Debug.Log(actualStressLevel);
         // Debug.Log(damage.Value);
         // Debug.Break();
-        if (actualStressLevel + damage.Value >= 100 || actualStressLevel - damage.Value <= 0)
+        if (actualStressLevel + damage.Value > 100 || actualStressLevel - damage.Value < 0)
         {
             return true;
         }
@@ -153,6 +161,7 @@ public class Obstacle : Collidable
 
     public void resetCollisionFlag()
     {
-        firstCollision = true;
+        // firstCollision = true;
+        ;
     }
 }

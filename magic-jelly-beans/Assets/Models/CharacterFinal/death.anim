@@ -60633,7 +60633,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3.8
+    m_StopTime: 3.6666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -120345,8 +120345,8 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 3.8
-    functionName: Die
+  - time: 3.6666667
+    functionName: deathAnimHasFinished
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

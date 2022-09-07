@@ -51,7 +51,9 @@ public class LevelManager : MonoBehaviour
         foreach (CollidableData obstacleData in listOfObstacles.ListOfCollidables)
         {
             string oName = obstacleData.CollidableName;
+            // Debug.Log(oName);
             GameObject obstacle = GameObject.Find(oName);
+            // Debug.Log(obstacle);
             obstacle.GetComponent<Obstacle>().resetCollisionFlag();
         }
     }
