@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checkpoint : Trigger
+public class Checkpoint : Collidable
 {
     [SerializeField]
     private TransformEvent updateNewParentTransform;
