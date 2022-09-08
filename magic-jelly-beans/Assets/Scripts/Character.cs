@@ -23,9 +23,6 @@ public class Character : MonoBehaviour
     [SerializeField]
     private VoidEvent characterCanMoveAgainEvent;
 
-    [SerializeField]
-    private Material defaultMaterial;
-
     private bool flag;
 
     public float stressLevel;

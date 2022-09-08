@@ -23,6 +23,7 @@ public class MainMenuManager : MonoBehaviour
             this.transform.GetChild(4).gameObject.SetActive(false);
             this.transform.GetChild(1).gameObject.SetActive(true);
             this.transform.GetChild(2).gameObject.SetActive(true);
+            this.transform.GetChild(5).gameObject.SetActive(true);
             flag = false;
             stopTextFromBlinkingEvent.Raise();
         }
