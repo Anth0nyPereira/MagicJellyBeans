@@ -45,7 +45,7 @@ public class Obstacle : Collidable
     {
 
         if (characterPositionZ == -100) return;
-        if (GetComponent <Animator>() == null)
+        if (GetComponent<Animator>() == null)
         {
             if (this.transform.position.z < characterPositionZ)
             {
@@ -53,18 +53,10 @@ public class Obstacle : Collidable
             }
         } else
         {
-            if (Mathf.Abs(this.transform.position.z - characterPositionZ) > 6)
+            if (Mathf.Abs(this.transform.position.z - characterPositionZ) > 3)
             {
                 firstCollision=true;
             }
-        }
-        
-
-        if (this.name == "penis1")
-        {
-            Debug.Log(this.transform.position.z);
-            Debug.Log(characterPositionZ);
-            Debug.Log("first collision for: " + this.name);
         }
     }
 
@@ -76,7 +68,7 @@ public class Obstacle : Collidable
         if (other.gameObject.tag == "Character")
         {
             characterCollidedWithObstacleEvent.Raise();
-            // Debug.Log("Character was hit by an obstacle!");
+            Debug.Log("Character was hit by an obstacle!");
             if (checkIfSameColor(other))
             {
                 // Debug.Log("Character and obstacle have the same color, so character can pass through and damage/stress points decrease");
@@ -117,6 +109,7 @@ public class Obstacle : Collidable
         {
             stressLevelIsOutOfRangeEvent.Raise();
         }
+        this.GetComponent<Collider>().enabled = false;
 
             
     }

@@ -36,7 +36,7 @@ public class LevelManager : MonoBehaviour
 
     public void makeCharacterNotFallDown()
     {
-        resetObstacleFlags();
+        resetObstacles();
         resetAllCollidables();
         resetObstacleAnimator();
     }
@@ -69,7 +69,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void resetObstacleFlags()
+    private void resetObstacles()
     {
         foreach (CollidableData obstacleData in listOfObstacles.ListOfCollidables)
         {
@@ -77,6 +77,7 @@ public class LevelManager : MonoBehaviour
             // Debug.Log(oName);
             GameObject obstacle = GameObject.Find(oName);
             // Debug.Log(obstacle);
+            obstacle.GetComponent<Collider>().enabled = true;
             obstacle.GetComponent<Obstacle>().resetCollisionFlag();
             //Debug.Log(obstacle.GetComponent<Obstacle>().firstCollision);
         }
