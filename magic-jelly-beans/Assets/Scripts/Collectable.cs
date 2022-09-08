@@ -28,7 +28,7 @@ public class Collectable : Collidable
             ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
             // Debug.Log(colorSO.Color);
             animator.SetTrigger("dissolve");
-            other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material = colorSO.Materials[0];
+            other.gameObject.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial = colorSO.Materials[0];
         }
     }
 

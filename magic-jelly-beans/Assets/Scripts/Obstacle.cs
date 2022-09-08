@@ -75,7 +75,9 @@ public class Obstacle : Collidable
     {
         ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
         Material foundMaterial = colorSO.Materials[0];
-        if (foundMaterial == character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial)
+        Debug.Log(foundMaterial);
+        Debug.Log(character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial);
+        if (foundMaterial == character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial || character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial.name.Contains(foundMaterial.name))
         {
             return true;
         }
