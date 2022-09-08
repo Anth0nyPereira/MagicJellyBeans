@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdb4172c6d8a1f24d8549a323887ee99, type: 3}
   m_Name: youEscapedMainMenu
   m_EditorClassIdentifier: 
-  str: skip
+  str: youEscapedMainMenu
