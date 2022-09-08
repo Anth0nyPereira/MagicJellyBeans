@@ -159,11 +159,12 @@ public class Obstacle : Collidable
 
     public bool checkIfStressLevelIsOutOfRange()
     {
-        // Debug.Log(actualStressLevel);
-        // Debug.Log(damage.Value);
-        // Debug.Break();
+        
         if (actualStressLevel + damage.Value > 100 || actualStressLevel - damage.Value < 0)
         {
+            Debug.Log(actualStressLevel);
+            Debug.Log(damage.Value);
+            Debug.Break();
             return true;
         }
         return false;
