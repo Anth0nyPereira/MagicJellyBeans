@@ -57,6 +57,7 @@ public class PauseMenuManager : MonoBehaviour
 
     private void returnToMainMenu()
     {
+        this.restart();
         returnToMainMenuEvent.Raise();
     }
 
