@@ -170,9 +170,9 @@ public class Obstacle : Collidable
         
         if (actualStressLevel + posOrNegDamage > 100 || actualStressLevel + posOrNegDamage < 0)
         {
-            Debug.Log(actualStressLevel);
-            Debug.Log(posOrNegDamage);
-            Debug.Break();
+            // Debug.Log(actualStressLevel);
+            // Debug.Log(posOrNegDamage);
+            // Debug.Break();
             return true;
         }
         return false;
