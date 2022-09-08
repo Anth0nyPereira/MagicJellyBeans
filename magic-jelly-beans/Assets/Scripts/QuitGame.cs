@@ -25,7 +25,7 @@ public class QuitGame : MonoBehaviour
         stressLevelSO.Value = 50;
         barPosition.Value = 0;
 
-        UnityEditor.EditorApplication.isPlaying = false;
+        // UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }
