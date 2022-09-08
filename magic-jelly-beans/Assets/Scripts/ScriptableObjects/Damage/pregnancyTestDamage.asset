@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b04e0c8a1ca6a1b4586d99ab78b097a8, type: 3}
   m_Name: pregnancyTestDamage
   m_EditorClassIdentifier: 
-  val: 50
+  val: 35

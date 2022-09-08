@@ -75,8 +75,8 @@ public class Obstacle : Collidable
     {
         ColorSO colorSO = getColorBasedOnMaterial(GetComponent<Renderer>().sharedMaterial);
         Material foundMaterial = colorSO.Materials[0];
-        Debug.Log(foundMaterial);
-        Debug.Log(character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial);
+        //Debug.Log(foundMaterial);
+        //Debug.Log(character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial);
         if (foundMaterial == character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial || character.transform.GetChild(0).GetComponent<Renderer>().sharedMaterial.name.Contains(foundMaterial.name))
         {
             return true;
@@ -88,8 +88,16 @@ public class Obstacle : Collidable
     {
         Debug.Log("Hurraaayyyyy!! Decrease stress level");
 
-        // invoke event to make character's stress level decrease
-        updateStressLevel.Raise(-damage.Value);
+        if (!checkIfStressLevelIsOutOfRange(-damage.Value))
+        {
+            // invoke event to make character's stress level decrease
+            updateStressLevel.Raise(-damage.Value);
+        } else
+        {
+            stressLevelIsOutOfRangeEvent.Raise();
+        }
+
+            
     }
 
     public void characterCannotPass(Collision character)
@@ -105,7 +113,7 @@ public class Obstacle : Collidable
             //grandpa.GetComponent<Rigidbody>().AddForce(-Vector3.forward * 40);
 
             
-            if (!checkIfStressLevelIsOutOfRange())
+            if (!checkIfStressLevelIsOutOfRange(damage.Value))
             {
                 applyForce();
             } else
@@ -157,13 +165,13 @@ public class Obstacle : Collidable
 
     }
 
-    public bool checkIfStressLevelIsOutOfRange()
+    public bool checkIfStressLevelIsOutOfRange(float posOrNegDamage)
     {
         
-        if (actualStressLevel + damage.Value > 100 || actualStressLevel - damage.Value < 0)
+        if (actualStressLevel + posOrNegDamage > 100 || actualStressLevel + posOrNegDamage < 0)
         {
             Debug.Log(actualStressLevel);
-            Debug.Log(damage.Value);
+            Debug.Log(posOrNegDamage);
             Debug.Break();
             return true;
         }
