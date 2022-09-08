@@ -27,42 +27,63 @@ public class Obstacle : Collidable
     [SerializeField]
     private VoidEvent stressLevelIsOutOfRangeEvent;
 
-    private Vector3 characterPosition;
+    private float characterPositionZ;
+
+    [SerializeField]
+    private VoidEvent characterCollidedWithObstacleEvent;
 
     public void Awake()
     {
         firstCollision = true;
         actualStressLevel = 50;
         col.enabled = true;
+        characterPositionZ = -100; // random low value
         
     }
 
     private void Update()
     {
-        if (this.transform.position.z < characterPosition.z)
+
+        if (characterPositionZ == -100) return;
+        if (GetComponent <Animator>() == null)
         {
-            //Debug.Log(this.transform.position.z);
-            //Debug.Log(characterPosition.z);
-            // Debug.Log("first collision for: " + this.name);
-            firstCollision = true;
+            if (this.transform.position.z < characterPositionZ)
+            {
+                firstCollision = true;
+            }
+        } else
+        {
+            if (Mathf.Abs(this.transform.position.z - characterPositionZ) > 6)
+            {
+                firstCollision=true;
+            }
+        }
+        
+
+        if (this.name == "penis1")
+        {
+            Debug.Log(this.transform.position.z);
+            Debug.Log(characterPositionZ);
+            Debug.Log("first collision for: " + this.name);
         }
     }
 
     public override void OnCollisionEnter(Collision other)
     {
-        Debug.Log(collidableData.name + " " + firstCollision);
-        Debug.Log("entered oncollisionenter");
+        // Debug.Log(collidableData.name + " " + firstCollision);
+        // Debug.Log("entered oncollisionenter");
         if (actualStressLevel < 0 || actualStressLevel > 100) return;
         if (other.gameObject.tag == "Character")
         {
-            Debug.Log("Character was hit by an obstacle!");
+            characterCollidedWithObstacleEvent.Raise();
+            // Debug.Log("Character was hit by an obstacle!");
             if (checkIfSameColor(other))
             {
-                Debug.Log("Character and obstacle have the same color, so character can pass through and damage/stress points decrease");
+                // Debug.Log("Character and obstacle have the same color, so character can pass through and damage/stress points decrease");
                 characterCanPass(other);
             } else
             {
-                Debug.Log("They have not the same color, character collides once with the obstacle, is pushed backwards and then can pass through; character stress points increase");
+                // Debug.Log("They have not the same color, character collides once with the obstacle, is pushed backwards and then can pass through; character stress points increase");
                 characterCannotPass(other);
             }
         }
@@ -86,7 +107,7 @@ public class Obstacle : Collidable
 
     public void characterCanPass(Collision character)
     {
-        Debug.Log("Hurraaayyyyy!! Decrease stress level");
+        // Debug.Log("Hurraaayyyyy!! Decrease stress level");
 
         if (!checkIfStressLevelIsOutOfRange(-damage.Value))
         {
@@ -118,10 +139,11 @@ public class Obstacle : Collidable
                 applyForce();
             } else
             {
-                Debug.Log("dont apply force");
-                Debug.Log(actualStressLevel);
+                // Debug.Log("dont apply force");
+                // Debug.Log(actualStressLevel);
                 whenCoroutineEnds();
                 stressLevelIsOutOfRangeEvent.Raise();
+                firstCollision = false;
                 return;
             }
             
@@ -137,8 +159,7 @@ public class Obstacle : Collidable
 
         } else // second time colliding
         {
-            Debug.Log("ignoring");
-            firstCollision = true;
+            // Debug.Log("ignoring");
         }
     }
 
@@ -190,6 +211,8 @@ public class Obstacle : Collidable
 
     public void getCharacterPosition(Transform characterTransform)
     {
-        characterPosition = characterTransform.position;
+        // Debug.Log(characterTransform.position);
+        characterPositionZ = characterTransform.position.z;
+        // Debug.Log("characterPositionZ: " + characterPositionZ);
     }
 }

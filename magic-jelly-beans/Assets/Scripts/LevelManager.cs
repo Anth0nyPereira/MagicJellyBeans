@@ -17,16 +17,28 @@ public class LevelManager : MonoBehaviour
 
     private GameObject[] checkpoints;
 
+    private List<GameObject> animatedObstacles;
+
     public void Awake()
     {
         collidablesGOs = GameObject.FindGameObjectsWithTag("Collidable"); // ground and collectables
         checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+        animatedObstacles = new List<GameObject>();
+
+        foreach (CollidableData obstacleData in listOfObstacles.ListOfCollidables)
+        {
+            string oName = obstacleData.CollidableName;
+            GameObject obstacle = GameObject.Find(oName);
+            // Debug.Log(obstacle);
+            if (obstacle.GetComponent<Animator>() != null) animatedObstacles.Add(obstacle);
+        }
     }
 
     public void makeCharacterNotFallDown()
     {
         resetObstacleFlags();
         resetAllCollidables();
+        resetObstacleAnimator();
     }
 
     public void turnOnCheckpointColliders()
@@ -67,6 +79,14 @@ public class LevelManager : MonoBehaviour
             // Debug.Log(obstacle);
             obstacle.GetComponent<Obstacle>().resetCollisionFlag();
             //Debug.Log(obstacle.GetComponent<Obstacle>().firstCollision);
+        }
+    }
+
+    private void resetObstacleAnimator()
+    {
+        foreach (GameObject animatedObstacle in animatedObstacles)
+        {
+            animatedObstacle.GetComponent<Animator>().enabled = true;
         }
     }
 

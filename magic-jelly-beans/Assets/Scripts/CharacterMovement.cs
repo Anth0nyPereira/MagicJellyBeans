@@ -36,6 +36,8 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private VoidEvent deathAnimHasFinishedEvent;
 
+    private bool characterCollidedWithObstacle;
+
 
     void Awake()
     {
@@ -49,6 +51,7 @@ public class CharacterMovement : MonoBehaviour
         cooldown = 0.5f;
         time = 0.0f;
         animator = GetComponent<Animator>();
+        characterCollidedWithObstacle = false;
     }
 
     void Update()
@@ -204,18 +207,27 @@ public class CharacterMovement : MonoBehaviour
 
     public IEnumerator makeCharacterDash(Action whenCEnds)
     {
-
-        grandpa.GetComponent<Rigidbody>().AddForce(Vector3.forward * 200);
-        yield return new WaitForSeconds(0.5f);
+        if (characterCollidedWithObstacle) yield return new WaitForSeconds(0f);
+        else
+        {
+            grandpa.GetComponent<Rigidbody>().AddForce(Vector3.forward * 200);
+            yield return new WaitForSeconds(0.5f);
+        }
         whenCEnds();
     }
 
     public void whenDashEnds()
     {
+        characterCollidedWithObstacle = false;
         grandpa.GetComponent<Rigidbody>().velocity = Vector3.zero;
         grandpa.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         makeCharacterMoveAgain();  
 
+    }
+
+    public void doesTheCharacterCollideWithObstacle()
+    {
+        characterCollidedWithObstacle = true;
     }
 
     public void PlayDeathAnime()
