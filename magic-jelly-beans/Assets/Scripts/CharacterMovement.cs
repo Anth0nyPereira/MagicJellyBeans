@@ -14,7 +14,7 @@ public class CharacterMovement : MonoBehaviour
     private GameObject grandpa;
 
     public Vector3 direction;
-    public float speed = 2f;
+    public float speed = 2.0f;
 
     [SerializeField]
     private VoidEvent resetCharacterEvent;
@@ -32,6 +32,8 @@ public class CharacterMovement : MonoBehaviour
     private bool isUpArrowPressed;
 
     private Animator animator;
+
+    private float translateSpeed;
 
     [SerializeField]
     private VoidEvent deathAnimHasFinishedEvent;
@@ -52,10 +54,14 @@ public class CharacterMovement : MonoBehaviour
         time = 0.0f;
         animator = GetComponent<Animator>();
         characterCollidedWithObstacle = false;
+        translateSpeed = 1.3f;
     }
 
     void Update()
     {
+        if (grandpa.transform.position.z >= 188) translateSpeed = 8.0f;
+        else translateSpeed = 1.3f;
+
         // I guess it's better to send an event telling that the character is no longer in contact with ground and give that information
         // to this class
 
@@ -63,7 +69,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (canMove)
             {
-                grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 1.3f);
+                grandpa.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * translateSpeed);
 
 
                 // character walking
