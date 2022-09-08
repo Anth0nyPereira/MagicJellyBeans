@@ -16,14 +16,23 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField]
     private VoidEvent restartGameEvent;
 
+    [SerializeField]
+    private VoidEvent returnToMainMenuEvent;
+
+    private bool isLocked;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (!isLocked)
         {
-            if (!mPaused) pauseGame();
-            else resumeGame();
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                if (!mPaused) pauseGame();
+                else resumeGame();
+            }
         }
+        
     }
 
     private void pauseGame()
@@ -46,6 +55,11 @@ public class PauseMenuManager : MonoBehaviour
         mPaused = false;
     }
 
+    private void returnToMainMenu()
+    {
+        returnToMainMenuEvent.Raise();
+    }
+
     public void tellManagerToResumeGame()
     {
         this.resumeGame();
@@ -54,5 +68,14 @@ public class PauseMenuManager : MonoBehaviour
     public void tellManagerToRestartGame()
     {
         this.restart();
+    }
+
+    public void tellManagerToReturnToMainMenu()
+    {
+        this.returnToMainMenu();
+    }
+    public void lockPause()
+    {
+        isLocked = true;
     }
 }

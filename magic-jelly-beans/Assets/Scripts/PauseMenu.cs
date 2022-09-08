@@ -30,6 +30,9 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private VoidEvent turnOnCheckpointCollidersEvent;
 
+    [SerializeField]
+    private VoidEvent tellManagerToReturnToMainMenuEvent;
+
     private List<GameObject> allUIs;
 
     private void Awake()
@@ -82,9 +85,9 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-    private void mainMenu()
+    public void mainMenu()
     {
-
+        tellManagerToReturnToMainMenuEvent.Raise();
     }
 
     private void disableOthers(string name)

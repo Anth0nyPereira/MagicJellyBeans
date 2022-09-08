@@ -7128,6 +7128,7 @@ MonoBehaviour:
   tellManagerToMakeAudioStartFromTheBeginningEvent: {fileID: 11400000, guid: 85e3d1c39e7b8834183bed7f3f1854ef, type: 2}
   makeAllStoredDataDefaultEvent: {fileID: 11400000, guid: 562378f22a39a8c40b02f7e4bcc4802f, type: 2}
   turnOnCheckpointCollidersEvent: {fileID: 11400000, guid: 93c4beac1c609194eaf906546724f949, type: 2}
+  tellManagerToReturnToMainMenuEvent: {fileID: 11400000, guid: 83454d6d55b31404d9a58c45fee21876, type: 2}
 --- !u!114 &541826334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14749,6 +14750,8 @@ GameObject:
   - component: {fileID: 1379797516}
   - component: {fileID: 1379797517}
   - component: {fileID: 1379797518}
+  - component: {fileID: 1379797519}
+  - component: {fileID: 1379797520}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -14946,6 +14949,7 @@ MonoBehaviour:
   pauseGameEvent: {fileID: 11400000, guid: 8ebfabe379528a849aef23d6a9a48a99, type: 2}
   resumeGameEvent: {fileID: 11400000, guid: 0d3535be080672848b88fbab49f52783, type: 2}
   restartGameEvent: {fileID: 11400000, guid: 0d4df599d9ade4a4f8499cf8d5886b9c, type: 2}
+  returnToMainMenuEvent: {fileID: 11400000, guid: 78813ae8e09785c4ca1a34c728d2f3a9, type: 2}
 --- !u!114 &1379797510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15188,6 +15192,62 @@ MonoBehaviour:
       - m_Target: {fileID: 1379797503}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: turnOnCheckpointColliders
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379797519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 25bd145131462dc46a76eed84f2c19f3, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797509}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: lockPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1379797520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379797499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341f73c10d3edb3499849c5208869c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 83454d6d55b31404d9a58c45fee21876, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1379797509}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: tellManagerToReturnToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

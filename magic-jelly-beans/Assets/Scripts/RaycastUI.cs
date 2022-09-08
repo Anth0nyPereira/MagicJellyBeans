@@ -30,7 +30,7 @@ public class RaycastUI : MonoBehaviour
         {
             if (hit.collider.gameObject.tag == "UI" && hit.collider.name == this.GetComponent<UserInterface>().uiName.Str)
             {
-                Debug.Log("UI");
+                // Debug.Log("UI");
                 objectToAppear.SetActive(true);
                 objectToDisappear.SetActive(false);
 
@@ -50,13 +50,13 @@ public class RaycastUI : MonoBehaviour
         Debug.Log("Click");
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log(hit.collider.gameObject.tag);
-            Debug.Log(hit.collider.name);
-            Debug.Log(this.GetComponent<UserInterface>().uiName.Str);
+            // Debug.Log(hit.collider.gameObject.tag);
+            // Debug.Log(hit.collider.name);
+            // Debug.Log(this.GetComponent<UserInterface>().uiName.Str);
             if (hit.collider.gameObject.tag == "UI" && hit.collider.name == this.GetComponent<UserInterface>().uiName.Str)
             {
-                Debug.Log("CMONNNNN");
-                updatePauseMenuEvent.Raise();
+                // Debug.Log("CMONNNNN");
+                if (updatePauseMenuEvent != null) updatePauseMenuEvent.Raise();
             }
         }
     }
