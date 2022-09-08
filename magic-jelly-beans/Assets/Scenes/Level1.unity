@@ -1038,213 +1038,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57166447}
   m_Mesh: {fileID: -2432090755550338912, guid: c213ff381f5fdf84b94a3de069ef3cb0, type: 3}
---- !u!1 &60790004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 60790005}
-  - component: {fileID: 60790007}
-  - component: {fileID: 60790006}
-  - component: {fileID: 60790011}
-  - component: {fileID: 60790010}
-  - component: {fileID: 60790009}
-  - component: {fileID: 60790008}
-  - component: {fileID: 60790012}
-  m_Layer: 0
-  m_Name: wallStylish4
-  m_TagString: Collidable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &60790005
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_LocalRotation: {x: 0.6031333, y: -0.36909384, z: -0.6031333, w: -0.36909384}
-  m_LocalPosition: {x: 0, y: 0, z: 208.01}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1266212514}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 242.93, y: 90, z: 0}
---- !u!23 &60790006
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: fe6316d948b1a0444b2846fb8be790d3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &60790007
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
---- !u!114 &60790008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d90c8e911da5864ba8f6e4baa3ff5b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 67cdf4a65a341b84faf4df47f5e98cd9, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 60790010}
-        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
-        m_MethodName: getActualStressLevel
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &60790009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c92a6d2743ce865458da0696143074fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 2314300446216b94385380f084b8fa11, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 60790010}
-        m_TargetAssemblyTypeName: Collidable, Assembly-CSharp
-        m_MethodName: getColorList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &60790010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d5f5e2139b0d22408c1489e680fd5e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  col: {fileID: 60790011}
-  collidableData: {fileID: 11400000, guid: 6fbb33edf37efe848b909a3a7223a83c, type: 2}
-  damage: {fileID: 11400000, guid: cbd1716ce2c87fa48a3cf185bbc65863, type: 2}
-  updateStressLevel: {fileID: 11400000, guid: aeca7386a3c36954d89fc0c5338ea925, type: 2}
-  firstCollision: 0
-  tellCharacterToStopMovingEvent: {fileID: 11400000, guid: 96e2cf90217d2b643a19bf627a2a5a1f, type: 2}
-  tellCharacterCanMoveAgainEvent: {fileID: 11400000, guid: 11ce9495720ab6c4ea80291bb8b57a9e, type: 2}
-  stressLevelIsOutOfRangeEvent: {fileID: 11400000, guid: f593e35f335f7484380bce4e319d3dc2, type: 2}
-  characterCollidedWithObstacleEvent: {fileID: 11400000, guid: e751b917ba058554dad38dc68d8c4222, type: 2}
---- !u!64 &60790011
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2432090755550338912, guid: 162221eb1ee2e2e4d91abc77cde1dfc8, type: 3}
---- !u!114 &60790012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60790004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd336e8317c2f5448b742ddcffc9d64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: a5d28bf266f6a8f41ad9e3c189c1199a, type: 2}
-  unityEventResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 60790010}
-        m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
-        m_MethodName: getCharacterPosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &78705574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1441,7 @@ Transform:
   - {fileID: 1452398445}
   - {fileID: 1907909202}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &188956703
 GameObject:
@@ -2849,7 +2642,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1266212514}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: -135.8, y: 90, z: 0}
 --- !u!114 &229524709
 MonoBehaviour:
@@ -3008,7 +2801,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -4004,7 +3797,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -5476,7 +5269,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -6170,7 +5963,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -10001,7 +9794,7 @@ Transform:
   - {fileID: 1266212514}
   - {fileID: 1072797507}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912865859
 GameObject:
@@ -11968,7 +11761,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -12337,7 +12130,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -13033,7 +12826,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -13651,7 +13444,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1266212514}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 242.93, y: 90, z: 0}
 --- !u!23 &1263158341
 MeshRenderer:
@@ -13810,7 +13603,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -13870,7 +13663,6 @@ Transform:
   - {fileID: 1172585090}
   - {fileID: 416158081}
   - {fileID: 451850393}
-  - {fileID: 60790005}
   - {fileID: 229524708}
   - {fileID: 2096342958}
   - {fileID: 1263158340}
@@ -15545,7 +15337,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -15860,7 +15652,7 @@ Transform:
   - {fileID: 471872627}
   - {fileID: 1484237289}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1587380838
 GameObject:
@@ -16755,7 +16547,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1266212514}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 398.9, y: 90, z: 0}
 --- !u!23 &1724718686
 MeshRenderer:
@@ -16914,7 +16706,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -19696,7 +19488,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2013600144
 MonoBehaviour:
@@ -20364,7 +20156,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1266212514}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: -90.18, y: 90, z: 0}
 --- !u!114 &2096342959
 MonoBehaviour:
@@ -20523,7 +20315,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -20535,122 +20327,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &2101654087
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2101654092}
-  - component: {fileID: 2101654091}
-  - component: {fileID: 2101654090}
-  - component: {fileID: 2101654089}
-  - component: {fileID: 2101654088}
-  m_Layer: 0
-  m_Name: checkpoint1
-  m_TagString: Collidable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2101654088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101654087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f1839114cfab04d8a1bcd9cc61dbac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  col: {fileID: 2101654089}
-  collidableData: {fileID: 0}
-  updateNewParentTransform: {fileID: 11400000, guid: 6d43ddd1571ead64c9fe247be055dc9d, type: 2}
-  updateNewGrandParentTransform: {fileID: 11400000, guid: 13864212916855845a8ec634941cf489, type: 2}
-  updateNewCharacterColorMaterial: {fileID: 11400000, guid: 0c7a8034101ffc6429772256b6843a1d, type: 2}
-  writeActualStressLevelIntoSOEvent: {fileID: 0}
---- !u!65 &2101654089
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101654087}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2101654090
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101654087}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2101654091
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101654087}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2101654092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101654087}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11263162, y: -0.15, z: -5.24}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2146404724
 GameObject:
   m_ObjectHideFlags: 0
@@ -20697,7 +20373,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3519165772051108
 MeshFilter:
@@ -21351,7 +21027,7 @@ Transform:
   - {fileID: 3012855313798308985}
   - {fileID: 2341448591479274943}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &543450652814728020
 Transform:
@@ -21385,7 +21061,7 @@ Transform:
   - {fileID: 6688742048609742366}
   - {fileID: 8639931106199378198}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &546552678357050749
 Transform:
@@ -23312,7 +22988,7 @@ Transform:
   - {fileID: 7220097579807839434}
   - {fileID: 4016225062048724193}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2168823631787320739
 MeshFilter:
@@ -24043,7 +23719,7 @@ Transform:
   - {fileID: 9129519862343374242}
   - {fileID: 1712957911522113370}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3100662197134820378
 Transform:
@@ -28607,7 +28283,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -29709,7 +29385,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
@@ -32723,7 +32399,7 @@ MonoBehaviour:
   unityEventResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 60790010}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Obstacle, Assembly-CSharp
         m_MethodName: getCharacterPosition
         m_Mode: 0
