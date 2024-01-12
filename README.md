@@ -1,1 +1,3 @@
 # MagicJellyBeans
+
+The nightmare has just begun...
